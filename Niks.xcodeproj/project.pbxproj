@@ -13,7 +13,9 @@
 		2A097F2929F785B000ED9644 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A097F2829F785B000ED9644 /* Preview Assets.xcassets */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
 		2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE502B129F945F9000D7C06 /* ExampleView.swift */; };
-		DD96F92C29FA19610053790D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F92B29FA19610053790D /* SwiftUIView.swift */; };
+		DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645629FA3370009BAFEE /* TimerComponent.swift */; };
+		DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645829FA345F009BAFEE /* SidebarComponent.swift */; };
+		DD96F93229FA19DB0053790D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F93129FA19DB0053790D /* ButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,9 @@
 		2A097F2829F785B000ED9644 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
 		2AE502B129F945F9000D7C06 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
-		DD96F92B29FA19610053790D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = ../../../../Documents/XCode/MiniChallenge_1/TestComponent/SwiftUIView.swift; sourceTree = "<group>"; };
+		DD93645629FA3370009BAFEE /* TimerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
+		DD93645829FA345F009BAFEE /* SidebarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarComponent.swift; sourceTree = "<group>"; };
+		DD96F93129FA19DB0053790D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 		2A097F3129F7885C00ED9644 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				DD96F92B29FA19610053790D /* SwiftUIView.swift */,
+				DD96F93129FA19DB0053790D /* ButtonComponent.swift */,
+				DD93645629FA3370009BAFEE /* TimerComponent.swift */,
+				DD93645829FA345F009BAFEE /* SidebarComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -171,10 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A097F2429F785AF00ED9644 /* ContentView.swift in Sources */,
+				DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */,
+				DD96F93229FA19DB0053790D /* ButtonComponent.swift in Sources */,
 				2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */,
 				2A097F2229F785AF00ED9644 /* NiksApp.swift in Sources */,
+				DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */,
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
-				DD96F92C29FA19610053790D /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
