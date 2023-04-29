@@ -15,22 +15,22 @@ struct BackgroundExampleView: View {
         
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
         ZStack {
-            Image("background-home")
+            Image("BackgroundHome")
                 .resizable()
                 .scaledToFill()
             
             //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
             GeometryReader { geometry in
-                Image("homepod")
+                Image("Homepod")
                     .position(x: geometry.size.width / 18, y: geometry.size.height / 1.6)
                     .onTapGesture {
                         print("homepod tapped")
                     }
                 
-                Image("character")
+                Image("Character")
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.8)
                 
-                Image("yoga-mat")
+                Image("YogaMat")
                     .position(x: geometry.size.width / 1.17, y: geometry.size.height / 1.38)
                     .onTapGesture {
                         print("yogamat tapped")
