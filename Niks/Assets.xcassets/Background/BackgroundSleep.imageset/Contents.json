@@ -1,17 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "Yoga Mat 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Yoga Mat 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Yoga Mat 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
