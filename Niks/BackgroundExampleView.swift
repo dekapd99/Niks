@@ -22,7 +22,7 @@ struct BackgroundExampleView: View {
             //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
             GeometryReader { geometry in
                 Image("Homepod")
-                    .position(x: geometry.size.width / 18, y: geometry.size.height / 1.6)
+                    .position(x: geometry.size.width / 20, y: geometry.size.height / 1.65)
                     .onTapGesture {
                         print("homepod tapped")
                     }
