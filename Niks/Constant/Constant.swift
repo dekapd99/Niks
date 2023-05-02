@@ -6,19 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 struct Constant {
-    
-    
-    struct IconStyle {
-        static var Speaker: String = "speaker.wave.3"
-        static var XMark: String = "xmark.circle"
-        static var QMark: String = "questionmark.circle"
-        static var Pause: String = "pause.circle.fill"
-        static var Play: String = "play.circle.fill"
+    struct BackgroundImage {
+        static let BackgroundHome: String = "BackgroundHome"
+        static let BackgroundSleep: String = "BackgroundSleep"
+        static let BackgroundStretch: String = "BackgroundStretch"
     }
-    
-    
-    
+    struct ColorStyle {
+        static let DarkPurple: Color = Color("DarkPurple")
+        static let LightBlue: Color = Color("LightBlue")
+        static let LightPink: Color = Color("LightPink")
+        static let Purple: Color = Color("Purple")
+        static let SoftBlack: Color = Color("SoftBlack")
+        static let SoftWhite: Color = Color("SoftWhite")
+    }
+    struct IconStyle {
+        static let Speaker: String = "speaker.wave.3"
+        static let XMark: String = "xmark.circle"
+        static let QMark: String = "questionmark.circle"
+        static let Pause: String = "pause.circle.fill"
+        static let Play: String = "play.circle.fill"
+    }
 }
