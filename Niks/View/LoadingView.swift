@@ -9,19 +9,27 @@ import SwiftUI
 
 struct LoadingView: View {
     //MARK: - PROPERTIES
+    @State private var rotationAngle: Double = 0
     
     //MARK: - BODY
     var body: some View {
+        
         ZStack {
             Color("LightBlue")
             
-            VStack(spacing: 100) {
+            VStack(spacing: 124) {
                 LoadingComponent()
+                    .rotationEffect(Angle(degrees: rotationAngle))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 2.0).repeatForever(autoreverses: false)) {
+                            self.rotationAngle = 360
+                        }
+                    }
                 
                 Text("Tips: Let’s make a habit out of this to make you sleep easier!")
                     .descriptionStyle()
-            }
-        }
+            }//: - VSTACK LOADING & TIPS
+        }//: - ZSTACK COLOR
         .ignoresSafeArea()
     }//: - BODY
 }

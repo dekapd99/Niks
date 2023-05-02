@@ -13,6 +13,8 @@ struct TitleModifier: ViewModifier {
         content
             .font(.system(size: 28, weight: .bold))
             .foregroundColor(Color("SoftBlack"))
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }
 
@@ -28,6 +30,8 @@ struct DescriptionModifier: ViewModifier {
         content
             .font(.system(size: 22, weight: .medium))
             .foregroundColor(Color("SoftBlack"))
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }
 
@@ -43,6 +47,8 @@ struct TutorialNumberModifier: ViewModifier {
         content
             .font(.system(size: 20, weight: .regular))
             .foregroundColor(Color("SoftBlack"))
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }
 
@@ -58,6 +64,8 @@ struct PopupTextModifier: ViewModifier {
         content
             .font(.system(size: 18, weight: .regular))
             .foregroundColor(Color("SoftBlack"))
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }
 
