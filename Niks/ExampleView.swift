@@ -70,7 +70,7 @@ struct ExampleView: View {
                         
                         RoundedRectangle(cornerRadius: 50)
                             .frame(width: 327, height: 50)
-                            .foregroundColor(Color("Purple"))
+                            .foregroundColor(Color("LightBlue"))
                         Text("Button With Purple Color")
                             .foregroundColor(Color.white)
                     }
