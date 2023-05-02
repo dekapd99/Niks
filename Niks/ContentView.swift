@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     //MARK: - PROPERTIES
-    
+    @State var toggle = true
     //MARK: - BODY
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world")
+        ZStack{
+            BackgroundExampleView()
+            GeometryReader { geometry in
+                SidebarComponent(
+                    toggle: $toggle,
+                    bounds: CGPoint(
+                        x: geometry.size.width,
+                        y: geometry.size.height),
+                    colorgrad: .white)
+            }
         }
-        .padding()
     }//: - BODY
 }
 

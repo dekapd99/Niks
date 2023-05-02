@@ -10,17 +10,19 @@ import SwiftUI
 struct TimerComponent: View {
     let timer: CGFloat
     let colorgrad: Color
+    let diameter: CGFloat
+    let wideness: CGFloat
     var body: some View {
-        CircularProgressBar(timer: timer, colorgrad: colorgrad)
+        CircularProgressBar(diameter: diameter, wideness: wideness, timer: timer, colorgrad: colorgrad)
     }
 }
 
 struct CircularProgressBar: View {
-    let diameter: CGFloat = 150
+    let diameter: CGFloat
     let smoothness: CGFloat = 1.5
-    let wideness: CGFloat = 30
+    let wideness: CGFloat
     let fontgrad: Font = .title
-    let fontsize: CGFloat = 20
+    var fontsize: CGFloat {return wideness - 10}
     let opt: Int = 0
     let shadowOpac: CGFloat = 0.4
     var colorPrimary: Color {return colorgrad.opacity(0.3)}
@@ -102,9 +104,9 @@ struct CircularProgressBar: View {
     }
 }
 
-struct TimerComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerComponent(timer: 30,
-                       colorgrad: .teal)
-    }
-}
+//struct TimerComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerComponent(timer: 30,
+//                       colorgrad: .teal)
+//    }
+//}

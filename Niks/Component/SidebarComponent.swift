@@ -17,18 +17,18 @@ struct SidebarComponent: View {
     let opac: CGFloat = 0.8
     let leftIndent: CGFloat = 50
     let verticalIndent: CGFloat = 40
-    var colorPrimary: Color {return colorgrad.opacity(0.3)}
+    var colorPrimary: Color {return colorgrad.opacity(0.8)}
     var colorSecondary: Color {return colorgrad}
     var pos: CGPoint {
         return CGPoint(x: getWidth()-getWidth()/2, y: bounds.y-bounds.y/2)
     }
-    var barExpandWidth: CGFloat {
+    var barExpandWidth: CGFloat{
         return bounds.x * 0.30
     }
     @State var opacView: CGFloat = 0
     var body: some View {
-        VStack(alignment: .leading){
-            SidebarContentView(width: getWidth(), colorgrad: colorgrad)
+        VStack(alignment: .leading) {
+            SidebarContentView(colorgrad: colorgrad)
                 .padding(.leading, getLeftPadding())
                 .frame(width: getWidth(), height: bounds.y)
                 .opacity(getOpac())
@@ -53,7 +53,7 @@ struct SidebarComponent: View {
     func getOpac() -> CGFloat {
         return toggle ? 1 : 0
     }
-    func getLeftPadding() -> CGFloat {
+    func getLeftPadding() -> CGFloat{
         return getWidth() == 0 ? 0 : leftIndent
     }
     func getBound(screenSize: CGSize) -> CGPoint{
@@ -63,138 +63,77 @@ struct SidebarComponent: View {
 }
 
 struct SidebarContentView: View {
-    @State var width: CGFloat
-    let radius: CGFloat = 25
+    @State var activeMusic: Int = 0
+    let spacing: CGFloat = 10
     let colorgrad: Color
-    @State var index: Int = 1
-    var body: some View {
+    var musicCrate: [MusicModel] = [
+        MusicModel(name: "City", image: "CityImage"),
+        MusicModel(name: "Rain", image: "RainImage"),
+        MusicModel(name: "Beach", image: "BeachImage"),
+        MusicModel(name: "W. Noise", image: "WNoiseImage")
+    ]
+    var body: some View{
         VStack{
-            HStack(alignment: .center){
+            HStack(alignment: .center) {
                 Text("Sound")
                     .font(
                         .system(size: 30)
-                        .weight(.thin))
+                        .weight(.bold))
                     .frame(width: 100, height: 30)
+                    .foregroundColor(.black)
                 Spacer()
             }
-            HStack{}
-                .padding(.bottom,60)
-            HStack(alignment: .center){
-                Image("")
-                    .resizable()
-                    .background(.white.opacity(0.8))
-                    .frame(width: radius*2, height: radius*2)
-                    .cornerRadius(radius)
-                    .padding(.trailing,5)
-                Text("City")
-                    .padding(.trailing,radius*1.5)
-                    .frame(width: radius*3, height: radius)
-                    Spacer()
-                Image(systemName: "speaker.wave.3")
-                    .resizable()
-                    .frame(width: radius, height: radius-5)
-            }
-            .overlay{
-                if index == 1 {
-                    Rectangle()
-                        .fill(colorgrad.opacity(0.4))
-                        .cornerRadius(20)
-                        .frame(width: 280,height: 70)
+            .padding(.bottom,30)
+            ForEach(musicCrate) { music in
+                HStack{}
+                    .padding(.bottom,spacing)
+                ItemView(isActive: isActive(music),
+                         music: music)
+                .onTapGesture {
+                    activeMusic = getIndex(music)
                 }
-            }
-            .onTapGesture {
-                index = 1
-            }
-            HStack{}
-                .padding(.bottom,20)
-            HStack(alignment: .center){
-                Image("")
-                    .resizable()
-                    .background(.white.opacity(0.8))
-                    .frame(width: radius*2, height: radius*2)
-                    .cornerRadius(radius)
-                    .padding(.trailing,5)
-                Text("Rain")
-                    .padding(.trailing,radius*1.5)
-                    .frame(width: radius*3, height: radius)
-                    Spacer()
-                Image(systemName: "")
-                    .resizable()
-                    .frame(width: radius, height: radius-5)
-            }
-            .overlay{
-                if index == 2 {
-                    Rectangle()
-                        .fill(colorgrad.opacity(0.4))
-                        .cornerRadius(20)
-                        .frame(width: 280,
-                               height: 70)
-                        .animation(.linear, value: index)
-                }
-            }
-            .onTapGesture {
-                index = 2
-            }
-            HStack{}
-                .padding(.bottom,20)
-            HStack(alignment: .center){
-                Image("")
-                    .resizable()
-                    .background(.white.opacity(0.8))
-                    .frame(width: radius*2, height: radius*2)
-                    .cornerRadius(radius)
-                    .padding(.trailing,5)
-                Text("Beach")
-                    .padding(.trailing,radius)
-                    .frame(width: radius*3, height: radius)
-                    Spacer()
-                Image(systemName: "")
-                    .resizable()
-                    .frame(width: radius, height: radius-5)
-            }
-            .overlay{
-                if index == 3 {
-                    Rectangle()
-                        .fill(colorgrad.opacity(0.4))
-                        .cornerRadius(20)
-                        .frame(width: 280,
-                               height: 70)
-                }
-            }
-            .onTapGesture {
-                index = 3
-            }
-            HStack{}
-                .padding(.bottom,20)
-            HStack(alignment: .center){
-                Image("")
-                    .resizable()
-                    .background(.white.opacity(0.8))
-                    .frame(width: radius*2, height: radius*2)
-                    .cornerRadius(radius)
-                    .padding(.trailing,5)
-                Text("White Noise")
-                    .padding(.trailing,radius)
-                    .frame(width: radius*3, height: radius)
-                    Spacer()
-                Image(systemName: "")
-                    .resizable()
-                    .frame(width: radius, height: radius-5)
-            }
-            .overlay{
-                if index == 4 {
-                    Rectangle()
-                        .fill(colorgrad.opacity(0.4))
-                        .cornerRadius(20)
-                        .frame(width: 280,
-                               height: 70)
-                }
-            }
-            .onTapGesture {
-                index = 4
             }
         }
         .padding(.trailing,30)
+        
+    }
+    func getIndex(_ music: MusicModel) -> Int {
+        return musicCrate.firstIndex(where: {$0.name == music.name})!
+    }
+    func isActive(_ music: MusicModel) -> Bool {
+        return musicCrate[activeMusic].name == music.getName()
+    }
+}
+
+struct ItemView: View {
+    let isActive: Bool
+    let radius: CGFloat = 25
+    let music: MusicModel
+    var body: some View{
+        HStack(alignment: .center) {
+            Image(music.image)
+                .resizable()
+                .background(.white.opacity(0.8))
+                .frame(width: radius*2, height: radius*2)
+                .cornerRadius(radius)
+                .padding(.trailing,5)
+            Text(music.name)
+                .frame(width: radius*4.2, height: radius, alignment: .leading)
+                .foregroundColor(.black)
+                Spacer()
+            if isActive {
+                Image(systemName: Constant.IconStyle.Speaker)
+                    .resizable()
+                    .frame(width: radius, height: radius-5)
+                    .iconStyle()
+            }
+        }
+        .frame(width: 300, height: 70)
+        .padding(.horizontal, 20)
+        .background(isActive ? .gray.opacity(0.8) : .clear)
+        .cornerRadius(15)
+        .shadow(color: .white.opacity(0.5),
+                radius: isActive ? 8 : 0)
     }
 }
 
@@ -203,10 +142,14 @@ struct SidebarComponent_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
             SidebarComponent(toggle: .constant(true),
-                             bounds: CGPoint(x: UIScreen.main.bounds.width,
-                                             y: UIScreen.main.bounds.height),
-                             colorgrad: .teal)
+                             bounds: CGPoint(
+                                x: geometry.size.width,
+                                y: geometry.size.height),
+                             colorgrad: .white)
         }
         .previewInterfaceOrientation(.landscapeLeft)
+        .background(.black)
     }
 }
+
+

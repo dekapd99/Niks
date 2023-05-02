@@ -23,7 +23,7 @@ struct ButtonComponent: View {
     var colorSecondary: Color {return colorgrad}
     var body: some View {
         RoundedRectangle(cornerRadius: rounded ? 50 : 30)
-            .fill(colorgrad.opacity(opac))
+            .fill(colorgrad)
             .frame(width: diameter,
                    height: diameter)
             .shadow(color: .gray.opacity(shadowOpac),
@@ -32,10 +32,11 @@ struct ButtonComponent: View {
                     y: 0.5)
             .opacity(opac)
             .overlay{
-                Text("Press me!")
-                    .frame(width: diameter*0.8,
-                           height: diameter*0.8)
-                    .foregroundColor(.white.opacity(0.7))
+//                Text("Press me!")
+//                    .frame(width: diameter*0.8,
+//                           height: diameter*0.8)
+//                    .foregroundColor(.white.opacity(0.7))
+                
             }
             .scaleEffect(tap ? scaleActive : 1,
                          anchor: .center)
