@@ -32,6 +32,10 @@ struct ButtonComponent: View {
                     y: 0.5)
             .opacity(opac)
             .overlay{
+                Image(systemName: Constant.IconStyle.Pause)
+                    .resizable()
+                    .frame(width: diameter*0.35,
+                           height: diameter*0.35)
 //                Text("Press me!")
 //                    .frame(width: diameter*0.8,
 //                           height: diameter*0.8)
@@ -52,7 +56,7 @@ struct ButtonComponent: View {
                 doThis()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     tap = false
-                    opac = 0.9
+                    opac = 1
                 }
             }
     }

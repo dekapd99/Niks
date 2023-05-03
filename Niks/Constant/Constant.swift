@@ -27,7 +27,7 @@ struct Constant {
         static let Speaker: String = "speaker.wave.3"
         static let XMark: String = "xmark.circle"
         static let QMark: String = "questionmark.circle"
-        static let Pause: String = "pause.circle.fill"
-        static let Play: String = "play.circle.fill"
+        static let Pause: String = "pause.fill"
+        static let Play: String = "play.fill"
     }
 }

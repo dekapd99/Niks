@@ -28,8 +28,8 @@ struct BackgroundExampleView: View {
                         print("homepod tapped")
                     }
                 
-                BubbleDialogueComponent()
-                    .position(x: geometry.size.width / 2, y: geometry.size.height / 6)
+//                BubbleDialogueComponent()
+//                    .position(x: geometry.size.width / 2, y: geometry.size.height / 6)
                 
                 Image("Character")
                     .resizable()
