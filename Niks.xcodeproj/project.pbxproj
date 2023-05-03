@@ -23,6 +23,11 @@
 		2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
 		2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE502B129F945F9000D7C06 /* ExampleView.swift */; };
+		761AD2652A013C51004D9415 /* StrechPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2642A013C51004D9415 /* StrechPreview.swift */; };
+		761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */; };
+		761AD2692A013C79004D9415 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2682A013C79004D9415 /* DetailView.swift */; };
+		761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26A2A017975004D9415 /* AnimationModel.swift */; };
+		761AD26D2A017B32004D9415 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26C2A017B32004D9415 /* animationView.swift */; };
 		DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B502A00ADF2001A935A /* MusicModel.swift */; };
 		DD334B552A00B159001A935A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B542A00B159001A935A /* Constant.swift */; };
 		DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B5B2A00C91E001A935A /* Dialogues.swift */; };
@@ -50,6 +55,11 @@
 		2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
 		2AE502B129F945F9000D7C06 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		761AD2642A013C51004D9415 /* StrechPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrechPreview.swift; path = Niks/StrechPreview.swift; sourceTree = SOURCE_ROOT; };
+		761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarComponent.swift; path = Niks/ProgressBarComponent.swift; sourceTree = SOURCE_ROOT; };
+		761AD2682A013C79004D9415 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		761AD26A2A017975004D9415 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		761AD26C2A017B32004D9415 /* animationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
 		DD334B502A00ADF2001A935A /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		DD334B542A00B159001A935A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD334B5B2A00C91E001A935A /* Dialogues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogues.swift; sourceTree = "<group>"; };
@@ -115,10 +125,13 @@
 		2A097F2F29F7884C00ED9644 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				761AD2642A013C51004D9415 /* StrechPreview.swift */,
 				2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */,
 				2A0BABD22A000BE40040650C /* GetReadyView.swift */,
 				2A0BABD42A000DC40040650C /* TutorialView.swift */,
 				DD334B5D2A00D1A9001A935A /* StretchingView.swift */,
+				761AD2682A013C79004D9415 /* DetailView.swift */,
+				761AD26C2A017B32004D9415 /* animationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DD334B502A00ADF2001A935A /* MusicModel.swift */,
+				761AD26A2A017975004D9415 /* AnimationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +148,7 @@
 		2A097F3129F7885C00ED9644 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */,
 				DD96F93129FA19DB0053790D /* ButtonComponent.swift */,
 				DD93645629FA3370009BAFEE /* TimerComponent.swift */,
 				DD93645829FA345F009BAFEE /* SidebarComponent.swift */,
@@ -235,10 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A097F2429F785AF00ED9644 /* ContentView.swift in Sources */,
+				761AD2692A013C79004D9415 /* DetailView.swift in Sources */,
 				DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */,
 				2A1934AE29FFDC5500D6C5F5 /* ButtonStyle.swift in Sources */,
 				2A1934A829FFD5E000D6C5F5 /* FontStyle.swift in Sources */,
 				2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */,
+				761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */,
 				DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */,
 				DD334B5E2A00D1A9001A935A /* StretchingView.swift in Sources */,
 				DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */,
@@ -249,12 +266,15 @@
 				2A0BABD52A000DC40040650C /* TutorialView.swift in Sources */,
 				2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */,
 				2A097F2229F785AF00ED9644 /* NiksApp.swift in Sources */,
+				761AD26D2A017B32004D9415 /* animationView.swift in Sources */,
 				DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */,
 				2A1934B229FFF18400D6C5F5 /* LoadingComponent.swift in Sources */,
 				2A0BABDB2A00823B0040650C /* EffectStyle.swift in Sources */,
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
+				761AD2652A013C51004D9415 /* StrechPreview.swift in Sources */,
+				761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
