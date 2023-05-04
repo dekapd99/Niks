@@ -30,6 +30,7 @@
 		DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645629FA3370009BAFEE /* TimerComponent.swift */; };
 		DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645829FA345F009BAFEE /* SidebarComponent.swift */; };
 		DD96F93229FA19DB0053790D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F93129FA19DB0053790D /* ButtonComponent.swift */; };
+		DD9F7E6B2A02142C0080DEE1 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F7E6A2A02142C0080DEE1 /* HomePageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		DD93645629FA3370009BAFEE /* TimerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
 		DD93645829FA345F009BAFEE /* SidebarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarComponent.swift; sourceTree = "<group>"; };
 		DD96F93129FA19DB0053790D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		DD9F7E6A2A02142C0080DEE1 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				2A0BABD22A000BE40040650C /* GetReadyView.swift */,
 				2A0BABD42A000DC40040650C /* TutorialView.swift */,
 				DD334B5D2A00D1A9001A935A /* StretchingView.swift */,
+				DD9F7E6A2A02142C0080DEE1 /* HomePageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				2A0BABDB2A00823B0040650C /* EffectStyle.swift in Sources */,
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
+				DD9F7E6B2A02142C0080DEE1 /* HomePageView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Niks/Preview Content\"";
-				DEVELOPMENT_TEAM = BZ9S44ZL2V;
+				DEVELOPMENT_TEAM = K377W42M97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Niks/Info.plist;

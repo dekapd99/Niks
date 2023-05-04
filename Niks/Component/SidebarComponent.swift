@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SidebarComponent: View {
+    //MARK: - PROPERTIES
     @Binding var toggle: Bool
     let bounds: CGPoint
     let colorgrad: Color
     let animateSpeed: CGFloat = 2
     let springStiffness: CGFloat = 80
     let springDamp: CGFloat = 20
-    let opac: CGFloat = 0.8
+    let opac: CGFloat = 0.9
     let leftIndent: CGFloat = 50
     let verticalIndent: CGFloat = 40
     var colorPrimary: Color {return colorgrad.opacity(0.8)}
@@ -26,13 +27,22 @@ struct SidebarComponent: View {
         return bounds.x * 0.30
     }
     @State var opacView: CGFloat = 0
+    //MARK: - BODY
     var body: some View {
+        //MARK: - VSTACK (SIDEBAR & ITEMS)
         VStack(alignment: .leading) {
+            //MARK: - SIDEBAR CONTENTS
             SidebarContentView(colorgrad: colorgrad)
                 .padding(.leading, getLeftPadding())
                 .frame(width: getWidth(), height: bounds.y)
                 .opacity(getOpac())
                 .scaleEffect(toggle ? 1 : 0.5, anchor: .leading)
+                .animation(
+                    .interpolatingSpring(
+                        stiffness: springStiffness,
+                        damping: springDamp)
+                    .speed(animateSpeed),
+                    value: opac)
                 .position(x: pos.x, y:pos.y-200)
             Spacer()
         }
@@ -46,7 +56,8 @@ struct SidebarComponent: View {
                 damping: springDamp)
             .speed(animateSpeed),
             value: getWidth())
-    }
+    }//: - BODY
+    //MARK: - FUNCTIONS
     func getWidth() -> CGFloat {
         return toggle ? barExpandWidth : 0
     }
@@ -67,10 +78,12 @@ struct SidebarContentView: View {
     let spacing: CGFloat = 10
     let colorgrad: Color
     var musicCrate: [MusicModel] = [
-        MusicModel(name: "City", image: "CityImage"),
-        MusicModel(name: "Rain", image: "RainImage"),
-        MusicModel(name: "Beach", image: "BeachImage"),
-        MusicModel(name: "W. Noise", image: "WNoiseImage")
+        MusicModel(name: "Night", image: Constant.IconStyle.Piano),
+        MusicModel(name: "Jazz", image: Constant.IconStyle.Jazz),
+        MusicModel(name: "Rain", image: Constant.IconStyle.Rain),
+        MusicModel(name: "Beach", image: Constant.IconStyle.Beach),
+        MusicModel(name: "Nature", image: Constant.IconStyle.Nature),
+        MusicModel(name: "River", image: Constant.IconStyle.River)
     ]
     var body: some View{
         VStack{
@@ -91,11 +104,14 @@ struct SidebarContentView: View {
                          music: music)
                 .onTapGesture {
                     activeMusic = getIndex(music)
+                    
                 }
             }
         }
         .padding(.trailing,30)
-        
+        .onAppear{
+            
+        }
     }
     func getIndex(_ music: MusicModel) -> Int {
         return musicCrate.firstIndex(where: {$0.name == music.name})!
@@ -109,6 +125,7 @@ struct ItemView: View {
     let isActive: Bool
     let radius: CGFloat = 25
     let music: MusicModel
+    @State var mute: Bool = false
     var body: some View{
         HStack(alignment: .center) {
             Image(music.image)
@@ -122,15 +139,18 @@ struct ItemView: View {
                 .foregroundColor(.black)
                 Spacer()
             if isActive {
-                Image(systemName: Constant.IconStyle.Speaker)
+                Image(systemName: mute ? Constant.IconStyle.Speaker : Constant.IconStyle.Speaker)
                     .resizable()
                     .frame(width: radius, height: radius-5)
                     .iconStyle()
+                    .onTapGesture {
+                        mute.toggle()
+                    }
             }
         }
         .frame(width: 300, height: 70)
         .padding(.horizontal, 20)
-        .background(isActive ? .gray.opacity(0.8) : .clear)
+        .background(isActive ? Constant.ColorStyle.DarkPurple.opacity(0.9) : .clear)
         .cornerRadius(15)
         .shadow(color: .white.opacity(0.5),
                 radius: isActive ? 8 : 0)
