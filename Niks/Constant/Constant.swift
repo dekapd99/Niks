@@ -42,4 +42,5 @@ struct Constant {
         static let Homepod: String = "Homepod"
         static let Yogamat: String = "YogaMat"
     }
+    
 }

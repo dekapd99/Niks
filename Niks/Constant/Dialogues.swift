@@ -13,17 +13,29 @@ struct Dialogue {
             "Let's make a a habit out of this to make you sleep easier!"
         ]
     }
-    struct Ujjayi {
+    struct strech {
         static let Titles: [String] = [
             "Ujjayi Breath",
-            "Standing Half Forward Bend (Ardha Uttanasana) at the wall",
-            "Standing Forward Bend (Uttanasana)",
-            "Wide-Knee Child’s Pose (Balasana)",
-            "Reclining Bound Angle (Supta Baddha Konasana)",
-            "Legs Up The Wall Pose (Viparita Karani)",
-            "Legs on a Chair Pose (Viparita Karani)",
-            "Corpse Pose (Savasana)"
+            "Standing Half Forward Bend at the wall",
+            "Standing Forward Bend",
+            "Wide-Knee Child’s Pose",
+            "Reclining Bound Angle",
+            "Legs Up The Wall Pose",
+            "Legs on a Chair Pose",
+            "Corpse Pose"
         ]
+        
+        static let SubTitles: [String] = [
+            "",
+            "(Ardha Uttanasana)",
+            "(Uttanasana)",
+            "(Balasana)",
+            "(Supta Baddha Konasana)",
+            "(Viparita Karani)",
+            "(Viparita Karani)",
+            "(Savasana)"
+        ]
+        
         static let Prompts: [String] = [
             "Imagine fogging up a lgass with your breath but keep your mouth shut.",
             "Stand a foot away from a wall, pressing your palms against it at hip height, and lowering your torso to create a flat back position while pressing the wall away with your palms for a deeper stretch.",
