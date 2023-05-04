@@ -69,7 +69,12 @@ struct Dialogue {
         ]
         static let Prompt: [String] = [
             "Take a deep breath...\nExhale",
-            ""
+            "Take a deep breath...\nExhale",
+            "Take a deep breath...\nExhale",
+            "Take a deep breath...\nExhale",
+            "Take a deep breath...\nExhale",
+            "Take a deep breath...\nExhale",
+            "Take a deep breath...\nExhale"
         ]
     }
 }
