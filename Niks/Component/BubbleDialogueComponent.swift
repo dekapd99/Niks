@@ -10,6 +10,7 @@ import SwiftUI
 struct BubbleDialogueComponent: View {
     //MARK: - PROPERTIES
     @State var text: String
+    
     //MARK: - BODY
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct BubbleDialogueComponent: View {
             Text("\(text)")
                 .titleStyle()
                 .frame(width: 450, height: 150)
-        }
+        }//: - ZSTACK
             
     }//: - BODY
 }
