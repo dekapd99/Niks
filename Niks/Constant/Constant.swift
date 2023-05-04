@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 struct Constant {
     struct BackgroundImage {
         static let BackgroundHome: String = "BackgroundHome"
@@ -20,8 +19,10 @@ struct Constant {
         static let LightBlue: Color = Color("LightBlue")
         static let LightPink: Color = Color("LightPink")
         static let Purple: Color = Color("Purple")
+        static let Pink: Color = Color("Pink")
         static let SoftBlack: Color = Color("SoftBlack")
         static let SoftWhite: Color = Color("SoftWhite")
+        
     }
     struct IconStyle {
         //MARK: MISCELLANEOUS ICONS
@@ -41,6 +42,15 @@ struct Constant {
     struct Objects {
         static let Homepod: String = "Homepod"
         static let Yogamat: String = "YogaMat"
+    }
+    
+    struct Scenery {
+        static let Jazz: String = "Jazz"
+        static let Nature: String = "Nature"
+        static let Ocean: String = "Ocean"
+        static let Piano: String = "Piano"
+        static let Rain: String = "Rain"
+        static let River: String = "River"
     }
     
 }
