@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AVFoundation
+
 
 struct SidebarComponent: View {
     //MARK: - PROPERTIES
@@ -28,11 +30,13 @@ struct SidebarComponent: View {
     }
     @State var opacView: CGFloat = 0
     //MARK: - BODY
+    @State var audioPlayer = AudioPlayer()
+
     var body: some View {
         //MARK: - VSTACK (SIDEBAR & ITEMS)
         VStack(alignment: .leading) {
             //MARK: - SIDEBAR CONTENTS
-            SidebarContentView(colorgrad: colorgrad)
+            SidebarContentView(colorgrad: colorgrad, audioPlayer:audioPlayer)
                 .padding(.leading, getLeftPadding())
                 .frame(width: getWidth(), height: bounds.y)
                 .opacity(getOpac())
@@ -85,6 +89,13 @@ struct SidebarContentView: View {
         MusicModel(name: "Nature", image: Constant.IconStyle.Nature),
         MusicModel(name: "River", image: Constant.IconStyle.River)
     ]
+    
+    
+    var audioPlayer: AudioPlayer
+    init(colorgrad: Color, audioPlayer: AudioPlayer) {
+            self.colorgrad = colorgrad
+            self.audioPlayer = audioPlayer
+        }
     var body: some View{
         VStack{
             HStack(alignment: .center) {
@@ -104,14 +115,15 @@ struct SidebarContentView: View {
                          music: music)
                 .onTapGesture {
                     activeMusic = getIndex(music)
-                    
+//                    AudioPlayer().playSong(title: musicCrate[activeMusic].name)
+                    self.audioPlayer.playSound(sound:musicCrate[activeMusic].name)
                 }
             }
         }
         .padding(.trailing,30)
-        .onAppear{
-            
-        }
+//        .onAppear{
+//            AudioPlayer().playSong(title: musicCrate[activeMusic].name)
+//        }
     }
     func getIndex(_ music: MusicModel) -> Int {
         return musicCrate.firstIndex(where: {$0.name == music.name})!
@@ -119,9 +131,11 @@ struct SidebarContentView: View {
     func isActive(_ music: MusicModel) -> Bool {
         return musicCrate[activeMusic].name == music.getName()
     }
+
 }
 
 struct ItemView: View {
+
     let isActive: Bool
     let radius: CGFloat = 25
     let music: MusicModel
@@ -155,6 +169,8 @@ struct ItemView: View {
         .shadow(color: .white.opacity(0.5),
                 radius: isActive ? 8 : 0)
     }
+    
+    
 }
 
 struct SidebarComponent_Previews: PreviewProvider {
