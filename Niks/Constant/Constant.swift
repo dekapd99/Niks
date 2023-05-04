@@ -30,4 +30,5 @@ struct Constant {
         static let Pause: String = "pause.fill"
         static let Play: String = "play.fill"
     }
+    
 }
