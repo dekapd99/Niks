@@ -12,8 +12,13 @@ struct TimerComponent: View {
     let colorgrad: Color
     let diameter: CGFloat
     let wideness: CGFloat
+    @Binding var isActive: Bool
     var body: some View {
-        CircularProgressBar(diameter: diameter, wideness: wideness, timer: timer, colorgrad: colorgrad)
+        CircularProgressBar(diameter: diameter,
+                            wideness: wideness,
+                            timer: timer,
+                            colorgrad: colorgrad,
+                            isActive: $isActive)
     }
 }
 
@@ -31,6 +36,7 @@ struct CircularProgressBar: View {
     @State var timer: CGFloat
     @State var opacTimer: CGFloat = 5
     let colorgrad: Color
+    @Binding var isActive: Bool
     var body: some View {
         let TimerObj = Timer.publish(every: 1,
                                      on: .main,
@@ -41,22 +47,23 @@ struct CircularProgressBar: View {
                     colorPrimary,
                     lineWidth: wideness
                 )
+                .background(.white)
+                .cornerRadius(90)
             Circle()
                 .trim(from: 0, to: getProgress())
                 .stroke(
                     colorSecondary,
                     style: StrokeStyle(
                         lineWidth: wideness,
-                        lineCap: .round
+                        lineCap: .square
                     )
                 )
                 .opacity(getOpacTimer())
                 .rotationEffect(.degrees(-90))
                 .shadow(color: .gray.opacity(shadowOpac), radius: 30, x: 0, y: 0.5)
                 .animation(.easeInOut(duration: smoothness), value: currentTime)
-                
-            Text("\(getText())")
-                .font(.system(size: fontsize, weight: .light, design: .rounded))
+            Text("\(Int(currentTime))s")
+                .titleStyle()
                 .opacity(currentTime == 0 ? 0.3 : 0.8)
                 .foregroundColor(colorSecondary)
         }
@@ -70,10 +77,14 @@ struct CircularProgressBar: View {
         return currentTime/timer < 0 ? 0 : currentTime/timer
     }
     func decrementTime() -> () {
-        currentTime = currentTime <= 0 ? 0 : currentTime - 1
+        if isActive {
+            currentTime = currentTime <= 0 ? 0 : currentTime - 1
+        }
     }
     func incrementTime() -> () {
-        currentTime = currentTime >= timer ? timer : currentTime + 1
+        if isActive {
+            currentTime = currentTime >= timer ? timer : currentTime + 1
+        }
     }
     func getText() -> String {
         guard opt >= 0 || opt < 2 else { return "" }
@@ -105,8 +116,12 @@ struct CircularProgressBar: View {
 }
 
 //struct TimerComponent_Previews: PreviewProvider {
+//    @State var isA: Bool = false
 //    static var previews: some View {
 //        TimerComponent(timer: 30,
-//                       colorgrad: .teal)
+//                       colorgrad: .teal,
+//                       diameter: 150,
+//                       wideness: 30,
+//                       isActive: .constant(true))
 //    }
 //}
