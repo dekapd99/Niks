@@ -31,6 +31,13 @@
 		761AD2692A013C79004D9415 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2682A013C79004D9415 /* DetailView.swift */; };
 		761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26A2A017975004D9415 /* AnimationModel.swift */; };
 		761AD26D2A017B32004D9415 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26C2A017B32004D9415 /* animationView.swift */; };
+		7676A3AB2A03EED300254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
+		7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B22A03F3F000254520 /* NiksWatchApp.swift */; };
+		7676A3B52A03F3F000254520 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B42A03F3F000254520 /* ContentView.swift */; };
+		7676A3B72A03F3F100254520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7676A3B62A03F3F100254520 /* Assets.xcassets */; };
+		7676A3BA2A03F3F100254520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7676A3B92A03F3F100254520 /* Preview Assets.xcassets */; };
+		7676A3BD2A03F3F100254520 /* NiksWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7676A3C32A03F77500254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
 		DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B502A00ADF2001A935A /* MusicModel.swift */; };
 		DD334B552A00B159001A935A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B542A00B159001A935A /* Constant.swift */; };
 		DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B5B2A00C91E001A935A /* Dialogues.swift */; };
@@ -39,6 +46,30 @@
 		DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645829FA345F009BAFEE /* SidebarComponent.swift */; };
 		DD96F93229FA19DB0053790D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F93129FA19DB0053790D /* ButtonComponent.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7676A3BB2A03F3F100254520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A097F1629F785AF00ED9644 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7676A3AF2A03F3F000254520;
+			remoteInfo = "NiksWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7676A3C12A03F3F100254520 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7676A3BD2A03F3F100254520 /* NiksWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A097F1E29F785AF00ED9644 /* Niks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Niks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +97,12 @@
 		761AD2682A013C79004D9415 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		761AD26A2A017975004D9415 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 		761AD26C2A017B32004D9415 /* animationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
+		7676A3AA2A03EED300254520 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiksWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7676A3B22A03F3F000254520 /* NiksWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiksWatchApp.swift; sourceTree = "<group>"; };
+		7676A3B42A03F3F000254520 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7676A3B62A03F3F100254520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7676A3B92A03F3F100254520 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD334B502A00ADF2001A935A /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		DD334B542A00B159001A935A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD334B5B2A00C91E001A935A /* Dialogues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogues.swift; sourceTree = "<group>"; };
@@ -83,13 +120,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7676A3AD2A03F3F000254520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2A097F1529F785AF00ED9644 = {
 			isa = PBXGroup;
 			children = (
+				7676A3C22A03F40B00254520 /* Shared */,
 				2A097F2029F785AF00ED9644 /* Niks */,
+				7676A3B12A03F3F000254520 /* NiksWatch Watch App */,
 				2A097F1F29F785AF00ED9644 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				2A097F1E29F785AF00ED9644 /* Niks.app */,
+				7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +225,33 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		7676A3B12A03F3F000254520 /* NiksWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				7676A3B22A03F3F000254520 /* NiksWatchApp.swift */,
+				7676A3B42A03F3F000254520 /* ContentView.swift */,
+				7676A3B62A03F3F100254520 /* Assets.xcassets */,
+				7676A3B82A03F3F100254520 /* Preview Content */,
+			);
+			path = "NiksWatch Watch App";
+			sourceTree = "<group>";
+		};
+		7676A3B82A03F3F100254520 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7676A3B92A03F3F100254520 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7676A3C22A03F40B00254520 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7676A3AA2A03EED300254520 /* ConnectivityManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		DD334B532A00B135001A935A /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,14 +272,33 @@
 				2A097F1A29F785AF00ED9644 /* Sources */,
 				2A097F1B29F785AF00ED9644 /* Frameworks */,
 				2A097F1C29F785AF00ED9644 /* Resources */,
+				7676A3C12A03F3F100254520 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7676A3BC2A03F3F100254520 /* PBXTargetDependency */,
+			);
+			name = Niks;
+			productName = Niks;
+			productReference = 2A097F1E29F785AF00ED9644 /* Niks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7676A3AF2A03F3F000254520 /* NiksWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7676A3BE2A03F3F100254520 /* Build configuration list for PBXNativeTarget "NiksWatch Watch App" */;
+			buildPhases = (
+				7676A3AC2A03F3F000254520 /* Sources */,
+				7676A3AD2A03F3F000254520 /* Frameworks */,
+				7676A3AE2A03F3F000254520 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Niks;
-			productName = Niks;
-			productReference = 2A097F1E29F785AF00ED9644 /* Niks.app */;
+			name = "NiksWatch Watch App";
+			productName = "NiksWatch Watch App";
+			productReference = 7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,6 +312,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					2A097F1D29F785AF00ED9644 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					7676A3AF2A03F3F000254520 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -237,6 +333,7 @@
 			projectRoot = "";
 			targets = (
 				2A097F1D29F785AF00ED9644 /* Niks */,
+				7676A3AF2A03F3F000254520 /* NiksWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +348,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7676A3AE2A03F3F000254520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7676A3BA2A03F3F100254520 /* Preview Assets.xcassets in Resources */,
+				7676A3B72A03F3F100254520 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A097F2429F785AF00ED9644 /* ContentView.swift in Sources */,
+				7676A3AB2A03EED300254520 /* ConnectivityManager.swift in Sources */,
 				761AD2692A013C79004D9415 /* DetailView.swift in Sources */,
 				DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */,
 				2A1934AE29FFDC5500D6C5F5 /* ButtonStyle.swift in Sources */,
@@ -290,7 +397,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7676A3AC2A03F3F000254520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7676A3C32A03F77500254520 /* ConnectivityManager.swift in Sources */,
+				7676A3B52A03F3F000254520 /* ContentView.swift in Sources */,
+				7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7676A3BC2A03F3F100254520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7676A3AF2A03F3F000254520 /* NiksWatch Watch App */;
+			targetProxy = 7676A3BB2A03F3F100254520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2A097F2A29F785B000ED9644 /* Debug */ = {
@@ -410,6 +535,7 @@
 		2A097F2D29F785B000ED9644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +569,7 @@
 		2A097F2E29F785B000ED9644 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +600,68 @@
 			};
 			name = Release;
 		};
+		7676A3BF2A03F3F100254520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NiksWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = BZ9S44ZL2V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NiksWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.DekaPrimatio.Niks;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekaPrimatio.Niks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		7676A3C02A03F3F100254520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NiksWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = K377W42M97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NiksWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.DekaPrimatio.Niks;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekaPrimatio.Niks.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +679,15 @@
 			buildConfigurations = (
 				2A097F2D29F785B000ED9644 /* Debug */,
 				2A097F2E29F785B000ED9644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7676A3BE2A03F3F100254520 /* Build configuration list for PBXNativeTarget "NiksWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7676A3BF2A03F3F100254520 /* Debug */,
+				7676A3C02A03F3F100254520 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
