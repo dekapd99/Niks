@@ -10,6 +10,8 @@ import SwiftUI
 struct HomePageView: View {
     //MARK: - PROPERTIES
     @State var SideBar: Bool = false
+    @State private var isShrink = false
+    
     //MARK: - BODY
     var body: some View {
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
@@ -18,28 +20,35 @@ struct HomePageView: View {
                 .resizable()
                 .scaledToFill()
                 .foregroundColor(.white)
-            //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
+
             DimmerView()
                 .onTapGesture {
                     SideBar = false
                 }
+            
+            //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
             GeometryReader { geometry in
                 Image(Constant.Objects.Homepod)
+                    .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
                     .position(x: geometry.size.width / 20, y: geometry.size.height / 1.65)
                     .onTapGesture {
                         SideBar.toggle()
                     }
+                
                 Image("Character")
                     .resizable()
                     .frame(width: 167, height: 552)
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
+                
                 Image(Constant.Objects.Yogamat)
+                    .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
                     .position(x: geometry.size.width / 1.17, y: geometry.size.height / 1.38)
                     .onTapGesture {
                         print("yogamat tapped")
                     }
+                
                 SidebarComponent(toggle: $SideBar,
                                  bounds: CGPoint(
                                     x: geometry.size.width,

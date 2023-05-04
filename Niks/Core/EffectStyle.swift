@@ -7,6 +7,31 @@
 
 import SwiftUI
 
+//MARK: - PULSING ANIMATION CONTENT MODIFIER
+struct PulsingAnimationModifier: ViewModifier {
+    @State private var isPulsing = false
+    
+    let repeatForever: Bool
+    let autoreverses: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(isPulsing ? 0.8 : 1.0)
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: 1.0 ).repeatForever(autoreverses: autoreverses)) {
+                    isPulsing.toggle()
+                }
+            }
+    }
+}
+
+//MARK: - EXTENSION FOR PULSING ANIMATION
+extension View {
+    func pulsingAnimation(repeatForever: Bool = true, autoreverses: Bool = true) -> some View {
+        return self.modifier(PulsingAnimationModifier(repeatForever: repeatForever, autoreverses: autoreverses))
+    }
+}
+
 //MARK: - EXTENSION FOR SHIMMER WITH @VIEWBUILDER
 extension View {
     @ViewBuilder
@@ -79,7 +104,7 @@ struct ShimmerConfig {
 //MARK: - BACKGROUND EXAMPLE PREVIEW
 struct EffectStyle_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundExampleView()
+        HomePageView()
             .previewInterfaceOrientation(.landscapeLeft)
             .previewLayout(.sizeThatFits)
     }
