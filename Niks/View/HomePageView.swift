@@ -16,6 +16,9 @@ struct HomePageView: View {
     var body: some View {
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
         ZStack {
+            Image(Constant.Scenery.Piano)
+                .resizable()
+            
             Image(Constant.BackgroundImage.BackgroundHome)
                 .resizable()
                 .scaledToFill()
