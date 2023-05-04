@@ -12,17 +12,7 @@ struct ContentView: View {
     @State var toggle = true
     //MARK: - BODY
     var body: some View {
-        ZStack{
-            BackgroundExampleView()
-            GeometryReader { geometry in
-                SidebarComponent(
-                    toggle: $toggle,
-                    bounds: CGPoint(
-                        x: geometry.size.width,
-                        y: geometry.size.height),
-                    colorgrad: .white)
-            }
-        }
+        HomePageView()
     }//: - BODY
 }
 

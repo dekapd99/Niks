@@ -36,10 +36,10 @@ struct IconStyle: View {
             Image(systemName: "speaker.wave.2")
                 .iconStyle()
             
-            Image(systemName: "play.circle.fill")
+            Image(systemName: "play.fill")
                 .iconStyle()
             
-            Image(systemName: "pause.circle.fill")
+            Image(systemName: "pause.fill")
                 .iconStyle()
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ButtonComponent: View {
+    let image: String
     let rounded: Bool
     let diameter: CGFloat = 100
     let colorgrad: Color
@@ -32,6 +33,10 @@ struct ButtonComponent: View {
                     y: 0.5)
             .opacity(opac)
             .overlay{
+                Image(systemName: image)
+                    .resizable()
+                    .frame(width: diameter*0.30,
+                           height: diameter*0.35)
 //                Text("Press me!")
 //                    .frame(width: diameter*0.8,
 //                           height: diameter*0.8)
@@ -52,7 +57,7 @@ struct ButtonComponent: View {
                 doThis()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     tap = false
-                    opac = 0.9
+                    opac = 1
                 }
             }
     }
@@ -71,23 +76,26 @@ struct CircularButtonComponent: View {
     let colorgrad: Color
     
     var body: some View {
-        ButtonComponent(rounded: true,
-                   colorgrad: colorgrad,
-                   doThis: doButton1)
+        ButtonComponent(image: "",
+                        rounded: true,
+                        colorgrad: colorgrad,
+                        doThis: doButton1)
             .position(getPos(
                 degree: centerDeg + offsetDeg,
                 radius: radius,
                 offset: position))
-        ButtonComponent(rounded: false,
-                   colorgrad: colorgrad,
-                   doThis: doButton2)
+        ButtonComponent(image: "",
+                        rounded: false,
+                        colorgrad: colorgrad,
+                        doThis: doButton2)
             .position(getPos(
                 degree: centerDeg,
                 radius: radius,
                 offset: position))
-        ButtonComponent(rounded: true,
-                   colorgrad: colorgrad,
-                   doThis: doButton3)
+        ButtonComponent(image: "",
+                        rounded: true,
+                        colorgrad: colorgrad,
+                        doThis: doButton3)
             .position(getPos(
                 degree: centerDeg - offsetDeg,
                 radius: radius,
@@ -104,7 +112,8 @@ struct CircularButtonComponent: View {
 struct ButtonComponent_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
-            ButtonComponent(rounded: true,
+            ButtonComponent(image: Constant.IconStyle.Pause,
+                            rounded: true,
                             colorgrad: .teal,
                             doThis: {
                 //do something
