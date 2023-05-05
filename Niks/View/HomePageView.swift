@@ -49,7 +49,7 @@ struct HomePageView: View {
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
                     .position(x: geometry.size.width / 1.17, y: geometry.size.height / 1.38)
                     .onTapGesture {
-                        StrechPreview()
+                        previewStretch = true
                     }
                 
                 SidebarComponent(toggle: $SideBar,
