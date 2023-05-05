@@ -104,7 +104,7 @@ struct ShimmerConfig {
 //MARK: - BACKGROUND EXAMPLE PREVIEW
 struct EffectStyle_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView(previewStretch: .constant(false))
             .previewInterfaceOrientation(.landscapeLeft)
             .previewLayout(.sizeThatFits)
     }

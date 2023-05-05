@@ -30,7 +30,7 @@ struct IconStyle: View {
             Image(systemName: "xmark.circle")
                 .iconStyle()
             
-            Image(systemName: "questionmark.circle")
+            Image(systemName: "info.circle")
                 .iconStyle()
             
             Image(systemName: "speaker.wave.2")

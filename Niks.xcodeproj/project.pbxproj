@@ -21,6 +21,11 @@
 		2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1934AF29FFEC4A00D6C5F5 /* IconStyle.swift */; };
 		2A1934B229FFF18400D6C5F5 /* LoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1934B129FFF18400D6C5F5 /* LoadingComponent.swift */; };
 		2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */; };
+		2A3D173A2A045C1B001EC0C0 /* BackButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17392A045C1B001EC0C0 /* BackButtonStyle.swift */; };
+		2A3D17402A0462D8001EC0C0 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D173F2A0462D8001EC0C0 /* SleepView.swift */; };
+		2A3D17422A046763001EC0C0 /* TotallySleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17412A046763001EC0C0 /* TotallySleepView.swift */; };
+		2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
+		2A3D17472A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
 		2ADF327E2A03499000F39075 /* BubblePopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */; };
 		2ADF32822A034C7100F39075 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32812A034C7100F39075 /* Shapes.swift */; };
@@ -94,6 +99,10 @@
 		2A1934AF29FFEC4A00D6C5F5 /* IconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconStyle.swift; sourceTree = "<group>"; };
 		2A1934B129FFF18400D6C5F5 /* LoadingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponent.swift; sourceTree = "<group>"; };
 		2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2A3D17392A045C1B001EC0C0 /* BackButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonStyle.swift; sourceTree = "<group>"; };
+		2A3D173F2A0462D8001EC0C0 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		2A3D17412A046763001EC0C0 /* TotallySleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotallySleepView.swift; sourceTree = "<group>"; };
+		2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
 		2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupComponent.swift; sourceTree = "<group>"; };
 		2ADF32812A034C7100F39075 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
@@ -147,13 +156,10 @@
 		2A097F1529F785AF00ED9644 = {
 			isa = PBXGroup;
 			children = (
-				7676A3C22A03F40B00254520 /* Shared */,
 				2A097F2029F785AF00ED9644 /* Niks */,
-
 				DD9C17B02A0382A80062E051 /* Audio */,
-
+				7676A3C22A03F40B00254520 /* Shared */,
 				7676A3B12A03F3F000254520 /* NiksWatch Watch App */,
-
 				2A097F1F29F785AF00ED9644 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -204,6 +210,9 @@
 				761AD2682A013C79004D9415 /* DetailView.swift */,
 				761AD26C2A017B32004D9415 /* animationView.swift */,
 				2ADF32842A035AD300F39075 /* HomePageView.swift */,
+				2A3D173F2A0462D8001EC0C0 /* SleepView.swift */,
+				2A3D17412A046763001EC0C0 /* TotallySleepView.swift */,
+				2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 				2A1934AF29FFEC4A00D6C5F5 /* IconStyle.swift */,
 				2A0BABD82A007EDD0040650C /* ImageStyle.swift */,
 				2A0BABDA2A00823B0040650C /* EffectStyle.swift */,
+				2A3D17392A045C1B001EC0C0 /* BackButtonStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -409,13 +419,16 @@
 				2A1934AE29FFDC5500D6C5F5 /* ButtonStyle.swift in Sources */,
 				2ADF327E2A03499000F39075 /* BubblePopupComponent.swift in Sources */,
 				2A1934A829FFD5E000D6C5F5 /* FontStyle.swift in Sources */,
+				2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */,
 				2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */,
 				2ADF32822A034C7100F39075 /* Shapes.swift in Sources */,
 				761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */,
 				DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */,
+				2A3D17402A0462D8001EC0C0 /* SleepView.swift in Sources */,
 				DD334B5E2A00D1A9001A935A /* StretchingView.swift in Sources */,
 				DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */,
 				2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */,
+				2A3D173A2A045C1B001EC0C0 /* BackButtonStyle.swift in Sources */,
 				2A0BABD129FFFE450040650C /* BubbleDialogueComponent.swift in Sources */,
 				DD334B552A00B159001A935A /* Constant.swift in Sources */,
 				DD9C17DE2A03941A0062E051 /* AudioPlayerModel.swift in Sources */,
@@ -430,6 +443,7 @@
 				2A0BABDB2A00823B0040650C /* EffectStyle.swift in Sources */,
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
+				2A3D17422A046763001EC0C0 /* TotallySleepView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
 				761AD2652A013C51004D9415 /* StrechPreview.swift in Sources */,
 				761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */,
@@ -443,6 +457,7 @@
 				7676A3C32A03F77500254520 /* ConnectivityManager.swift in Sources */,
 				7676A3B52A03F3F000254520 /* ContentView.swift in Sources */,
 				7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */,
+				2A3D17472A046D9B001EC0C0 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

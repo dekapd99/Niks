@@ -14,10 +14,6 @@ struct BubbleDialogueComponent: View {
     //MARK: - BODY
     var body: some View {
         ZStack {
-            GeometryReader { geometry in
-                Image("BubbleTriangle")
-                    .position(x: geometry.size.width / 1.6, y: geometry.size.height / 1.66)
-            }
             RoundedRectangle(cornerRadius: 16.0, style: .continuous)
                 .frame(width: 660, height: 152)
                 .foregroundColor(Color("LightPink"))
@@ -25,6 +21,11 @@ struct BubbleDialogueComponent: View {
             Text("\(text)")
                 .titleStyle()
                 .frame(width: 450, height: 150)
+            
+            GeometryReader { geometry in
+                Image("BubbleTriangle")
+                    .position(x: geometry.size.width / 1.6, y: geometry.size.height / 1.66)
+            }
         }//: - ZSTACK
             
     }//: - BODY
