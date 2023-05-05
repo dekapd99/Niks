@@ -12,13 +12,15 @@ struct TimerComponent: View {
     let colorgrad: Color
     let diameter: CGFloat
     let wideness: CGFloat
+    let isFinish: () -> ()
     @Binding var isActive: Bool
     var body: some View {
         CircularProgressBar(diameter: diameter,
                             wideness: wideness,
                             timer: timer,
                             colorgrad: colorgrad,
-                            isActive: $isActive)
+                            isActive: $isActive,
+                            isFinish: isFinish)
     }
 }
 
@@ -37,6 +39,7 @@ struct CircularProgressBar: View {
     @State var opacTimer: CGFloat = 5
     let colorgrad: Color
     @Binding var isActive: Bool
+    let isFinish: () -> ()
     var body: some View {
         let TimerObj = Timer.publish(every: 1,
                                      on: .main,
@@ -78,6 +81,9 @@ struct CircularProgressBar: View {
     }
     func decrementTime() -> () {
         if isActive {
+            if currentTime == 0 {
+                isFinish()
+            }
             currentTime = currentTime <= 0 ? 0 : currentTime - 1
         }
     }
@@ -101,6 +107,7 @@ struct CircularProgressBar: View {
         }else {
             decrementTime()
         }
+        
     }
     func getInitialVal() -> CGFloat {
         guard opt >= 0 || opt < 2 else { return timer }
