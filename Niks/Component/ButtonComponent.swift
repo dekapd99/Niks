@@ -41,7 +41,59 @@ struct ButtonComponent: View {
 //                    .frame(width: diameter*0.8,
 //                           height: diameter*0.8)
 //                    .foregroundColor(.white.opacity(0.7))
-                
+            }
+            .scaleEffect(tap ? scaleActive : 1,
+                         anchor: .center)
+            .animation(
+                .interpolatingSpring(
+                    stiffness: springStiffness,
+                    damping: springDamp)
+                .speed(opac*2),
+                value: opac)
+            .onTapGesture {
+                tap = true
+                opac = 0.7
+                doThis()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    tap = false
+                    opac = 1
+                }
+            }
+    }
+}
+
+struct ButtonComponentText: View {
+    let text: String
+    let rounded: Bool
+    let diameter: CGFloat = 100
+    let colorgrad: Color
+    let animateSpeed: CGFloat = 3
+    let springDamp: CGFloat = 8
+    let springStiffness: CGFloat = 200
+    let scaleActive: CGFloat = 0.9
+    let shadowOpac: CGFloat = 0.4
+    let doThis: () -> ()
+    @State var opac: CGFloat = 0.9
+    @State var tap: Bool = false
+    var colorPrimary: Color {return colorgrad.opacity(0.3)}
+    var colorSecondary: Color {return colorgrad}
+    var body: some View {
+        RoundedRectangle(cornerRadius: rounded ? 50 : 30)
+            
+            .fill(colorgrad)
+            
+            .buttonStyle()
+            .shadow(color: .gray.opacity(shadowOpac),
+                    radius: 30,
+                    x: 0,
+                    y: 0.5)
+            .opacity(opac)
+            .overlay{
+                Text(text)
+                    .frame(width: diameter*0.8,
+                           height: diameter*0.8)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
             }
             .scaleEffect(tap ? scaleActive : 1,
                          anchor: .center)
