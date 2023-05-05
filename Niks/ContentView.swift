@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     //MARK: - PROPERTIES
-    @State var toggle = true
+    @State var previewStretch = false
     //MARK: - BODY
     var body: some View {
-        HomePageView()
+        if !previewStretch {
+            HomePageView(previewStretch: $previewStretch)
+        }else {
+            StrechPreview(previewStretch: $previewStretch)
+        }
+        
     }//: - BODY
 }
 
