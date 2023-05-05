@@ -1,12 +1,12 @@
 <!-- ABOUT THE PROJECT -->
 <h1 align="center">
   <br>
-    <a href="#" target="_blank"><img src="logo.svg" width="200"></a>
+    <a href="#" target="_blank"><img src="logo.png" width="200"></a>
   <br>
   <p>Niks</p>
 </h1>
 
-Niks adalah Aplikasi iOS ...
+Niks  is an app that we crafted to empower academy fellow learners to build a habit that will relax their minds and body to help them fall asleep faster. Many of them, just like Bobby, are overwhelmed by their daily activities, thus making them unable to easily fall asleep. Our app will show you a variety of animation and pleasing visuals, with seamless flow and easy control for the user to use. (Niar)
 
 ### Preview
 <p align="center">
