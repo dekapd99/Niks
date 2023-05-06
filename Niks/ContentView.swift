@@ -24,7 +24,7 @@ struct ContentView: View {
                     viewModel.frame = 0
                     viewModel.curIndex = 0
                     viewModel.stretchView = false
-                    AudioPlayer.shared.playpause()
+                    AudioPlayer.shared.playSound(sound: viewModel.musicCrate[viewModel.activeMusic].name)
                 }
         }else {
             if !viewModel.end {
@@ -52,7 +52,6 @@ struct ContentView: View {
                 SleepView()
             }
         }
-    
     }//: - BODY
 }
 
