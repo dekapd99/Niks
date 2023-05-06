@@ -9,6 +9,22 @@ import SwiftUI
 import WatchConnectivity
 
 struct HomePageView: View {
+    
+    func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Niks"
+        content.body = "Body"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 24 * 60 * 60, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "it's almost your sleeping time, relax your mind and body with yoga and listening to music from Niks tonight", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error.localizedDescription)")
+            }
+        }
+    }
     //MARK: - PROPERTIES
     @State var SideBar: Bool = false
     @State private var isShrink = false
@@ -59,6 +75,9 @@ struct HomePageView: View {
                                  colorgrad:Constant.ColorStyle.SoftWhite)
             }//: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
         }//: - ZSTACK (BACKGROUND & OBJECTS)
+        .onAppear{
+            scheduleNotification()
+        }
         
     }//: - BODY
 }
