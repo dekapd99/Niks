@@ -28,6 +28,7 @@ class AnimatorViewModel: ObservableObject {
     @Published var curIndex: Int = 0
     @Published var stretchView: Bool = false
     @Published var changed: Bool = true
+    @Published var end: Bool = false
     @Published var data: [AnimationModel] = [
         AnimationModel(animation: "UjayiBreath", length: 32),
         AnimationModel(animation: "StandingHalfForwardBend", length: 15),
@@ -77,7 +78,10 @@ class AnimatorViewModel: ObservableObject {
         }
     }
     func incrementCurIndex() -> () {
-        guard curIndex < Dialogue.strech.SubTitles.count-1 else { return }
         curIndex += 1
+        if curIndex > 7 {
+            curIndex = 7
+            end = true
+        }
     }
 }
