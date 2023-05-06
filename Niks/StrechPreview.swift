@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+
 struct StrechPreview: View {
     //MARK: - PROPERTIES
     @ObservedObject var viewModel: AnimatorViewModel
     @Binding var previewStretch: Bool
+  
     //MARK: - BODY
     var body: some View {
         GeometryReader{ geometry in
@@ -26,6 +28,7 @@ struct StrechPreview: View {
                 
                 DescriptionView(geometry: geometry,
                                 prompt: getCurrentDialog())
+                
                 if !viewModel.stretchView{
                     ModelAnimationView(geometry: geometry,
                                        viewModel: viewModel)
@@ -35,6 +38,7 @@ struct StrechPreview: View {
                     ProgressBarView(geometry: geometry,
                                     viewModel: viewModel)
                 }
+                
                 ButtonComponentText(text: getButtonText(),
                                     rounded: false,
                                     colorgrad: Constant.ColorStyle.Purple,
@@ -50,8 +54,13 @@ struct StrechPreview: View {
                                    viewModel: viewModel)
                     .onAppear{
                         viewModel.changed = false
+                       
                     }
                 }
+            }
+            
+            .onAppear{
+                AudioPlayer.shared.playpause()
             }
             .ignoresSafeArea()
             .background(Color("LightBlue"))

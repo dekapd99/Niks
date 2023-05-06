@@ -37,6 +37,9 @@ struct StretchingView: View {
                 ModelAnimationView(geometry: geometry,
                                    viewModel: viewModel)
             }//: - ZSTACK (BACKGROUND & OBJECTS)
+            .onAppear{
+                AudioPlayer.shared.playpause()
+            }
             .ignoresSafeArea()
             .position(x: geometry.size.width/2,
                       y: geometry.size.height/2)
