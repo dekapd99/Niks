@@ -25,17 +25,20 @@ struct ContentView: View {
                     viewModel.stretchView = false
                 }
         }else {
-            StrechPreview(viewModel: viewModel,
-                          previewStretch: $previewStretch)
-            .onReceive(TimerObj){ _ in
-                if viewModel.currentTime == 0 && viewModel.delay == 10 && !viewModel.changed{
-                    viewModel.changed = true
-                    viewModel.stretchView = false
-                    viewModel.incrementCurIndex()
+            if !viewModel.end {
+                StrechPreview(viewModel: viewModel,
+                              previewStretch: $previewStretch)
+                .onReceive(TimerObj){ _ in
+                    if viewModel.currentTime == 0 && viewModel.delay == 10 && !viewModel.changed{
+                        viewModel.changed = true
+                        viewModel.stretchView = false
+                        viewModel.incrementCurIndex()
+                    }
+                    viewModel.getOperation()
+                    viewModel.playAnimation()
                 }
-                viewModel.getOperation()
-                viewModel.playAnimation()
-                
+            } else {
+                SleepView()
             }
         }
     
