@@ -23,13 +23,13 @@
 		2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */; };
 		2A3D173A2A045C1B001EC0C0 /* BackButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17392A045C1B001EC0C0 /* BackButtonStyle.swift */; };
 		2A3D17402A0462D8001EC0C0 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D173F2A0462D8001EC0C0 /* SleepView.swift */; };
-		2A3D17422A046763001EC0C0 /* TotallySleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17412A046763001EC0C0 /* TotallySleepView.swift */; };
 		2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2A3D17472A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
 		2ADF327E2A03499000F39075 /* BubblePopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */; };
 		2ADF32822A034C7100F39075 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32812A034C7100F39075 /* Shapes.swift */; };
 		2ADF32852A035AD300F39075 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32842A035AD300F39075 /* HomePageView.swift */; };
+		2AE2B4522A06163A00496394 /* TotallySleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2B4512A06163A00496394 /* TotallySleepView.swift */; };
 		2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE502B129F945F9000D7C06 /* ExampleView.swift */; };
 		761AD2652A013C51004D9415 /* StrechPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2642A013C51004D9415 /* StrechPreview.swift */; };
 		761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */; };
@@ -101,12 +101,12 @@
 		2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2A3D17392A045C1B001EC0C0 /* BackButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonStyle.swift; sourceTree = "<group>"; };
 		2A3D173F2A0462D8001EC0C0 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
-		2A3D17412A046763001EC0C0 /* TotallySleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotallySleepView.swift; sourceTree = "<group>"; };
 		2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
 		2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupComponent.swift; sourceTree = "<group>"; };
 		2ADF32812A034C7100F39075 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		2ADF32842A035AD300F39075 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		2AE2B4512A06163A00496394 /* TotallySleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotallySleepView.swift; sourceTree = "<group>"; };
 		2AE502B129F945F9000D7C06 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		761AD2642A013C51004D9415 /* StrechPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrechPreview.swift; path = Niks/StrechPreview.swift; sourceTree = SOURCE_ROOT; };
 		761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarComponent.swift; path = Niks/ProgressBarComponent.swift; sourceTree = SOURCE_ROOT; };
@@ -211,8 +211,8 @@
 				761AD26C2A017B32004D9415 /* animationView.swift */,
 				2ADF32842A035AD300F39075 /* HomePageView.swift */,
 				2A3D173F2A0462D8001EC0C0 /* SleepView.swift */,
-				2A3D17412A046763001EC0C0 /* TotallySleepView.swift */,
 				2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */,
+				2AE2B4512A06163A00496394 /* TotallySleepView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +418,7 @@
 				DD93645729FA3370009BAFEE /* TimerComponent.swift in Sources */,
 				2A1934AE29FFDC5500D6C5F5 /* ButtonStyle.swift in Sources */,
 				2ADF327E2A03499000F39075 /* BubblePopupComponent.swift in Sources */,
+				2AE2B4522A06163A00496394 /* TotallySleepView.swift in Sources */,
 				2A1934A829FFD5E000D6C5F5 /* FontStyle.swift in Sources */,
 				2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */,
 				2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */,
@@ -443,7 +444,6 @@
 				2A0BABDB2A00823B0040650C /* EffectStyle.swift in Sources */,
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
-				2A3D17422A046763001EC0C0 /* TotallySleepView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
 				761AD2652A013C51004D9415 /* StrechPreview.swift in Sources */,
 				761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */,
