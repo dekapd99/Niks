@@ -49,8 +49,8 @@ struct Constant {
     struct Scenery {
         static let Jazz: String = "Jazz"
         static let Nature: String = "Nature"
-        static let Ocean: String = "Ocean"
-        static let Piano: String = "Piano"
+        static let Beach: String = "Beach"
+        static let Night: String = "Night"
         static let Rain: String = "Rain"
         static let River: String = "River"
     }

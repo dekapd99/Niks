@@ -12,6 +12,7 @@ import AVFoundation
 struct SidebarComponent: View {
     //MARK: - PROPERTIES
     @Binding var toggle: Bool
+    @ObservedObject var viewModel: AnimatorViewModel
     let bounds: CGPoint
     let colorgrad: Color
     let animateSpeed: CGFloat = 2
@@ -30,13 +31,12 @@ struct SidebarComponent: View {
     }
     @State var opacView: CGFloat = 0
     //MARK: - BODY
-    @State var audioPlayer = AudioPlayer()
-
     var body: some View {
         //MARK: - VSTACK (SIDEBAR & ITEMS)
         VStack(alignment: .leading) {
             //MARK: - SIDEBAR CONTENTS
-            SidebarContentView(colorgrad: colorgrad, audioPlayer:audioPlayer)
+            SidebarContentView(viewModel: viewModel,
+                               colorgrad: colorgrad)
                 .padding(.leading, getLeftPadding())
                 .frame(width: getWidth(), height: bounds.y)
                 .opacity(getOpac())
@@ -78,24 +78,9 @@ struct SidebarComponent: View {
 }
 
 struct SidebarContentView: View {
-    @State var activeMusic: Int = 0
+    @ObservedObject var viewModel: AnimatorViewModel
     let spacing: CGFloat = 10
     let colorgrad: Color
-    var musicCrate: [MusicModel] = [
-        MusicModel(name: "Night", image: Constant.IconStyle.Piano),
-        MusicModel(name: "Jazz", image: Constant.IconStyle.Jazz),
-        MusicModel(name: "Rain", image: Constant.IconStyle.Rain),
-        MusicModel(name: "Beach", image: Constant.IconStyle.Beach),
-        MusicModel(name: "Nature", image: Constant.IconStyle.Nature),
-        MusicModel(name: "River", image: Constant.IconStyle.River)
-    ]
-    
-    
-    var audioPlayer: AudioPlayer
-    init(colorgrad: Color, audioPlayer: AudioPlayer) {
-            self.colorgrad = colorgrad
-            self.audioPlayer = audioPlayer
-        }
     var body: some View{
         VStack{
             HStack(alignment: .center) {
@@ -108,34 +93,29 @@ struct SidebarContentView: View {
                 Spacer()
             }
             .padding(.bottom,30)
-            ForEach(musicCrate) { music in
+            ForEach(viewModel.musicCrate) { music in
                 HStack{}
                     .padding(.bottom,spacing)
                 ItemView(isActive: isActive(music),
                          music: music)
                 .onTapGesture {
-                    activeMusic = getIndex(music)
-//                    AudioPlayer().playSong(title: musicCrate[activeMusic].name)
-                    AudioPlayer.shared.playSound(sound:musicCrate[activeMusic].name)
+                    viewModel.activeMusic = getIndex(music)
+                    AudioPlayer.shared.playSound(sound:viewModel.musicCrate[viewModel.activeMusic].name)
                 }
             }
         }
         .padding(.trailing,30)
-//        .onAppear{
-//            AudioPlayer().playSong(title: musicCrate[activeMusic].name)
-//        }
     }
     func getIndex(_ music: MusicModel) -> Int {
-        return musicCrate.firstIndex(where: {$0.name == music.name})!
+        return viewModel.musicCrate.firstIndex(where: {$0.name == music.name})!
     }
     func isActive(_ music: MusicModel) -> Bool {
-        return musicCrate[activeMusic].name == music.getName()
+        return viewModel.musicCrate[viewModel.activeMusic].name == music.getName()
     }
 
 }
 
 struct ItemView: View {
-
     let isActive: Bool
     let radius: CGFloat = 25
     let music: MusicModel
@@ -169,23 +149,21 @@ struct ItemView: View {
         .shadow(color: .white.opacity(0.5),
                 radius: isActive ? 8 : 0)
     }
-    
-    
 }
 
-struct SidebarComponent_Previews: PreviewProvider {
-    @State var toggle: Bool = false
-    static var previews: some View {
-        GeometryReader { geometry in
-            SidebarComponent(toggle: .constant(true),
-                             bounds: CGPoint(
-                                x: geometry.size.width,
-                                y: geometry.size.height),
-                             colorgrad: .white)
-        }
-        .previewInterfaceOrientation(.landscapeLeft)
-        .background(.black)
-    }
-}
+//struct SidebarComponent_Previews: PreviewProvider {
+//    @State var toggle: Bool = false
+//    static var previews: some View {
+//        GeometryReader { geometry in
+//            SidebarComponent(toggle: .constant(true),
+//                             bounds: CGPoint(
+//                                x: geometry.size.width,
+//                                y: geometry.size.height),
+//                             colorgrad: .white)
+//        }
+//        .previewInterfaceOrientation(.landscapeLeft)
+//        .background(.black)
+//    }
+//}
 
 

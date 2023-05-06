@@ -12,7 +12,6 @@ struct StrechPreview: View {
     //MARK: - PROPERTIES
     @ObservedObject var viewModel: AnimatorViewModel
     @Binding var previewStretch: Bool
-  
     //MARK: - BODY
     var body: some View {
         GeometryReader{ geometry in
@@ -21,7 +20,13 @@ struct StrechPreview: View {
                 ExitButtonView(geometry: geometry,
                                previewStretch: $previewStretch)
                 
-                InfoButtonView(geometry: geometry)
+                InfoButtonView(geometry: geometry,
+                               viewModel: viewModel)
+                
+                
+                if viewModel.showInfo {
+                    BubblePopupComponent(text:viewModel.data[viewModel.curIndex].info)
+                }
                 
                 TitleView(geometry: geometry,
                           viewModel: viewModel)
@@ -45,6 +50,7 @@ struct StrechPreview: View {
                                     doThis: {
                     if viewModel.curIndex > 0 {viewModel.stretchView = true}
                     else {viewModel.curIndex += 1}
+                    viewModel.showInfo = false
                 })
                 .position(x: geometry.size.width / 2 ,
                           y: geometry.size.height * 0.84)
@@ -53,12 +59,11 @@ struct StrechPreview: View {
                     StretchingView(previewStretch: $previewStretch,
                                    viewModel: viewModel)
                     .onAppear{
+                        AudioPlayer.shared.playSound(sound: viewModel.musicCrate[viewModel.activeMusic].name)
                         viewModel.changed = false
-                       
                     }
                 }
             }
-            
             .onAppear{
                 AudioPlayer.shared.playpause()
             }
@@ -94,12 +99,19 @@ struct ExitButtonView: View {
 
 struct InfoButtonView: View {
     var geometry: GeometryProxy
+    @ObservedObject var viewModel: AnimatorViewModel
     var body: some View {
         HStack{
             Image(systemName: "questionmark.circle")
                 .iconStyle()
-        }.position(x: geometry.size.width * 0.95,
+                .onTapGesture {
+                    viewModel.showInfo.toggle()
+                }
+        }
+        .position(x: geometry.size.width * 0.95,
                    y: geometry.size.height * 0.08)
+        .opacity(viewModel.showInfo ? 0.5 : 1)
+        .animation(.easeInOut(duration: 0.15), value: viewModel.showInfo)
     }
 }
 

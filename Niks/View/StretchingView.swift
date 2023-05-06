@@ -79,7 +79,7 @@ struct StretchTimerView: View {
         HStack { //MARK: - HSTACK (BACKGROUND)
             Spacer()
             TimerComponent(
-                timer: 5,
+                timer: 60,
                 colorgrad: Constant.ColorStyle.Purple,
                 diameter: geometry.size.width * 0.1,
                 wideness: geometry.size.width * 0.015,
