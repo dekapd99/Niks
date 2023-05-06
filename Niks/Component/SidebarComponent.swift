@@ -116,7 +116,7 @@ struct SidebarContentView: View {
                 .onTapGesture {
                     activeMusic = getIndex(music)
 //                    AudioPlayer().playSong(title: musicCrate[activeMusic].name)
-                    self.audioPlayer.playSound(sound:musicCrate[activeMusic].name)
+                    AudioPlayer.shared.playSound(sound:musicCrate[activeMusic].name)
                 }
             }
         }
