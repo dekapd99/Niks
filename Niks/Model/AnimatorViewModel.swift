@@ -10,12 +10,14 @@ import Foundation
 struct AnimationModel: Hashable, Equatable {
     let animation: String
     let length: Int
+    let music: String
     let animationImageNames: [String]
     
-    init(animation: String, length: Int) {
+    init(animation: String, length: Int, music: String) {
         self.animation = animation
         self.length = length
         self.animationImageNames = (0...length).map({"\(animation)-\($0)"})
+        self.music = music
     }
 }
 
@@ -30,14 +32,14 @@ class AnimatorViewModel: ObservableObject {
     @Published var changed: Bool = true
     @Published var end: Bool = false
     @Published var data: [AnimationModel] = [
-        AnimationModel(animation: "UjayiBreath", length: 32),
-        AnimationModel(animation: "StandingHalfForwardBend", length: 15),
-        AnimationModel(animation: "StandingForwardBend", length: 21),
-        AnimationModel(animation: "WideKneeChildRose", length: 1),
-        AnimationModel(animation: "RecliningBoundAngle", length: 1),
-        AnimationModel(animation: "LegsUpTheWall", length: 1),
-        AnimationModel(animation: "LegsOnChair", length: 1),
-        AnimationModel(animation: "CorpsePose", length: 18)
+        AnimationModel(animation: "UjayiBreath", length: 32, music: "VO_UjayyiBreath"),
+        AnimationModel(animation: "StandingHalfForwardBend", length: 15, music: "VO_StandingHalf"),
+        AnimationModel(animation: "StandingForwardBend", length: 21, music: "VO_Standing"),
+        AnimationModel(animation: "WideKneeChildRose", length: 1, music: "VO_WideKneePose"),
+        AnimationModel(animation: "RecliningBoundAngle", length: 1, music: "VO_RelicingBound"),
+        AnimationModel(animation: "LegsUpTheWall", length: 1, music: "VO_LegsUp"),
+        AnimationModel(animation: "LegsOnChair", length: 1, music: "VO_LegsChair"),
+        AnimationModel(animation: "CorpsePose", length: 18, music: "VO_CorpsePose")
     ]
     @Published var modelPos: [CGPoint] = [CGPoint(x: 0.65, y: 0.55),
                                           CGPoint(x: 0.66, y: 0.55),

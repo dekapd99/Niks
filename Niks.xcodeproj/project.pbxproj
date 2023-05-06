@@ -43,6 +43,14 @@
 		7676A3BA2A03F3F100254520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7676A3B92A03F3F100254520 /* Preview Assets.xcassets */; };
 		7676A3BD2A03F3F100254520 /* NiksWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7676A3C32A03F77500254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
+		DD0C01FC2A0636FD005E4184 /* VO_CorpsePose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C01FB2A0636FD005E4184 /* VO_CorpsePose.mp3 */; };
+		DD0C01FE2A063742005E4184 /* VO_WideKneePose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C01FD2A063742005E4184 /* VO_WideKneePose.mp3 */; };
+		DD0C02002A063762005E4184 /* VO_UjayyiBreath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C01FF2A063762005E4184 /* VO_UjayyiBreath.mp3 */; };
+		DD0C02022A063778005E4184 /* VO_StandingHalf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C02012A063778005E4184 /* VO_StandingHalf.mp3 */; };
+		DD0C02042A06378B005E4184 /* VO_Standing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C02032A06378B005E4184 /* VO_Standing.mp3 */; };
+		DD0C02062A0637A6005E4184 /* VO_RecliningBound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C02052A0637A6005E4184 /* VO_RecliningBound.mp3 */; };
+		DD0C02082A0638C2005E4184 /* VO_LegsUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C02072A0638C2005E4184 /* VO_LegsUp.mp3 */; };
+		DD0C020A2A0638D4005E4184 /* VO_LegsChair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0C02092A0638D4005E4184 /* VO_LegsChair.mp3 */; };
 		DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B502A00ADF2001A935A /* MusicModel.swift */; };
 		DD334B552A00B159001A935A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B542A00B159001A935A /* Constant.swift */; };
 		DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD334B5B2A00C91E001A935A /* Dialogues.swift */; };
@@ -120,6 +128,14 @@
 		7676A3B42A03F3F000254520 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7676A3B62A03F3F100254520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7676A3B92A03F3F100254520 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD0C01FB2A0636FD005E4184 /* VO_CorpsePose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_CorpsePose.mp3; path = ../../../Downloads/VO_CorpsePose.mp3; sourceTree = "<group>"; };
+		DD0C01FD2A063742005E4184 /* VO_WideKneePose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_WideKneePose.mp3; path = ../../../Downloads/VO_WideKneePose.mp3; sourceTree = "<group>"; };
+		DD0C01FF2A063762005E4184 /* VO_UjayyiBreath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_UjayyiBreath.mp3; path = ../../../Downloads/VO_UjayyiBreath.mp3; sourceTree = "<group>"; };
+		DD0C02012A063778005E4184 /* VO_StandingHalf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_StandingHalf.mp3; path = ../../../Downloads/VO_StandingHalf.mp3; sourceTree = "<group>"; };
+		DD0C02032A06378B005E4184 /* VO_Standing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_Standing.mp3; path = ../../../Downloads/VO_Standing.mp3; sourceTree = "<group>"; };
+		DD0C02052A0637A6005E4184 /* VO_RecliningBound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_RecliningBound.mp3; path = ../../../Downloads/VO_RecliningBound.mp3; sourceTree = "<group>"; };
+		DD0C02072A0638C2005E4184 /* VO_LegsUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_LegsUp.mp3; path = ../../../Downloads/VO_LegsUp.mp3; sourceTree = "<group>"; };
+		DD0C02092A0638D4005E4184 /* VO_LegsChair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VO_LegsChair.mp3; path = ../../../Downloads/VO_LegsChair.mp3; sourceTree = "<group>"; };
 		DD334B502A00ADF2001A935A /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		DD334B542A00B159001A935A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD334B5B2A00C91E001A935A /* Dialogues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogues.swift; sourceTree = "<group>"; };
@@ -297,6 +313,14 @@
 		DD9C17B02A0382A80062E051 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				DD0C02092A0638D4005E4184 /* VO_LegsChair.mp3 */,
+				DD0C02072A0638C2005E4184 /* VO_LegsUp.mp3 */,
+				DD0C02052A0637A6005E4184 /* VO_RecliningBound.mp3 */,
+				DD0C02032A06378B005E4184 /* VO_Standing.mp3 */,
+				DD0C02012A063778005E4184 /* VO_StandingHalf.mp3 */,
+				DD0C01FF2A063762005E4184 /* VO_UjayyiBreath.mp3 */,
+				DD0C01FD2A063742005E4184 /* VO_WideKneePose.mp3 */,
+				DD0C01FB2A0636FD005E4184 /* VO_CorpsePose.mp3 */,
 				DD9C17B12A0382A80062E051 /* Rain.mp3 */,
 				DD9C17B22A0382A80062E051 /* Night.mp3 */,
 				DD9C17B32A0382A80062E051 /* Beach.mp3 */,
@@ -390,8 +414,16 @@
 			files = (
 				DD69A6D42A03FA7D00E573A0 /* Rain.mp3 in Resources */,
 				DD69A6D52A03FA8000E573A0 /* Night.mp3 in Resources */,
+				DD0C02082A0638C2005E4184 /* VO_LegsUp.mp3 in Resources */,
 				DD69A6D82A03FA8700E573A0 /* Jazz.mp3 in Resources */,
+				DD0C020A2A0638D4005E4184 /* VO_LegsChair.mp3 in Resources */,
 				2A097F2929F785B000ED9644 /* Preview Assets.xcassets in Resources */,
+				DD0C02022A063778005E4184 /* VO_StandingHalf.mp3 in Resources */,
+				DD0C02002A063762005E4184 /* VO_UjayyiBreath.mp3 in Resources */,
+				DD0C01FE2A063742005E4184 /* VO_WideKneePose.mp3 in Resources */,
+				DD0C01FC2A0636FD005E4184 /* VO_CorpsePose.mp3 in Resources */,
+				DD0C02062A0637A6005E4184 /* VO_RecliningBound.mp3 in Resources */,
+				DD0C02042A06378B005E4184 /* VO_Standing.mp3 in Resources */,
 				DD69A6D62A03FA8200E573A0 /* Beach.mp3 in Resources */,
 				2A097F2629F785B000ED9644 /* Assets.xcassets in Resources */,
 				DD69A6D72A03FA8400E573A0 /* Nature.mp3 in Resources */,
