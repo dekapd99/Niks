@@ -79,9 +79,7 @@ struct ButtonComponentText: View {
     var colorSecondary: Color {return colorgrad}
     var body: some View {
         RoundedRectangle(cornerRadius: rounded ? 50 : 30)
-            
             .fill(colorgrad)
-            
             .buttonStyle()
             .shadow(color: .gray.opacity(shadowOpac),
                     radius: 30,
