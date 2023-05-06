@@ -36,6 +36,8 @@
 		761AD2692A013C79004D9415 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2682A013C79004D9415 /* DetailView.swift */; };
 		761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26A2A017975004D9415 /* AnimationModel.swift */; };
 		761AD26D2A017B32004D9415 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26C2A017B32004D9415 /* animationView.swift */; };
+		763E30052A0637B8008A9245 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E30042A0637B8008A9245 /* NotificationViewModel.swift */; };
+		764105302A063D3D00B97086 /* AudioPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */; };
 		7676A3AB2A03EED300254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
 		7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B22A03F3F000254520 /* NiksWatchApp.swift */; };
 		7676A3B52A03F3F000254520 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B42A03F3F000254520 /* ContentView.swift */; };
@@ -122,6 +124,7 @@
 		761AD2682A013C79004D9415 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		761AD26A2A017975004D9415 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 		761AD26C2A017B32004D9415 /* animationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
+		763E30042A0637B8008A9245 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		7676A3AA2A03EED300254520 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiksWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7676A3B22A03F3F000254520 /* NiksWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiksWatchApp.swift; sourceTree = "<group>"; };
@@ -242,6 +245,7 @@
 				761AD26A2A017975004D9415 /* AnimationModel.swift */,
 				DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */,
 				DDAD8C622A05DB6E000CDD42 /* AnimatorViewModel.swift */,
+				763E30042A0637B8008A9245 /* NotificationViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -456,6 +460,7 @@
 				2AE2B4522A06163A00496394 /* TotallySleepView.swift in Sources */,
 				2A1934A829FFD5E000D6C5F5 /* FontStyle.swift in Sources */,
 				2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */,
+				763E30052A0637B8008A9245 /* NotificationViewModel.swift in Sources */,
 				2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */,
 				2ADF32822A034C7100F39075 /* Shapes.swift in Sources */,
 				761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */,
@@ -490,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764105302A063D3D00B97086 /* AudioPlayerModel.swift in Sources */,
 				7676A3C32A03F77500254520 /* ConnectivityManager.swift in Sources */,
 				7676A3B52A03F3F000254520 /* ContentView.swift in Sources */,
 				7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */,
