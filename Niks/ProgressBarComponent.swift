@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ProgressBarComponent: View {
     let totalSteps: Int = 7
-    @Binding var currentSteps: Int
+    @ObservedObject var viewModel: AnimatorViewModel
+    var currentSteps: Int {
+        return viewModel.curIndex
+    }
     var body: some View {
         ZStack(alignment: .leading){
                 HStack(spacing: 0){
@@ -29,7 +32,7 @@ struct ProgressBarComponent: View {
                         .frame(width: UIScreen.main.bounds.width * 0.04,
                                height: UIScreen.main.bounds.height * 0.04)
                         .onTapGesture{
-                            currentSteps = index + 1
+                            viewModel.curIndex = index + 1
                         }
                 }
             }
@@ -39,8 +42,8 @@ struct ProgressBarComponent: View {
     }
 }
 
-struct ProgressBarComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgressBarComponent(currentSteps: .constant(3))
-    }
-}
+//struct ProgressBarComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProgressBarComponent()
+//    }
+//}

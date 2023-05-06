@@ -10,8 +10,8 @@ import SwiftUI
 struct animationView: View {
     @EnvironmentObject var viewModel: AnimationViewModel
     
-    @State var index:Int = 0
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var index: Int = 0
+    let date: Date
     
     var body: some View {
         Image(uiImage: UIImage(named: viewModel.data[viewModel.index].animationImageNames[self.index])!)
@@ -21,7 +21,7 @@ struct animationView: View {
             .onAppear {
                 playAnimation()
             }
-            .onReceive(timer){ _ in
+            .onChange(of: self.date) { _ in
                 playAnimation()
             }
     }
@@ -31,6 +31,7 @@ struct animationView: View {
             self.index += 1
         } else {
             self.index = 0
+            
         }
     }
 }
@@ -39,7 +40,7 @@ struct animationView: View {
 
 struct animationView_Previews: PreviewProvider {
     static var previews: some View {
-        animationView()
+        animationView(date: Date())
             .environmentObject(AnimationViewModel())
     }
 }

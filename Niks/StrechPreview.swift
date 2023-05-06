@@ -9,46 +9,48 @@ import SwiftUI
 
 struct StrechPreview: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var viewModel: AnimationViewModel
-    @State var curIndex: Int = 0
-    @State var stretchView: Bool = false
+    @ObservedObject var viewModel: AnimatorViewModel
     @Binding var previewStretch: Bool
     //MARK: - BODY
     var body: some View {
         GeometryReader{ geometry in
             ZStack{
                 
-                ExitButtonView(geometry: geometry)
+                ExitButtonView(geometry: geometry,
+                               previewStretch: $previewStretch)
                 
                 InfoButtonView(geometry: geometry)
                 
                 TitleView(geometry: geometry,
-                          currentindex: $curIndex)
+                          viewModel: viewModel)
                 
                 DescriptionView(geometry: geometry,
                                 prompt: getCurrentDialog())
-                
-//                ModelAnimationView(geometry: geometry,
-//                                   viewModel: viewModel)
-                
-                if curIndex > 0 {
-                    ProgressBarView(geometry: geometry,
-                                    curIndex: $curIndex)
+                if !viewModel.stretchView{
+                    ModelAnimationView(geometry: geometry,
+                                       viewModel: viewModel)
                 }
-                
+
+                if viewModel.curIndex > 0 {
+                    ProgressBarView(geometry: geometry,
+                                    viewModel: viewModel)
+                }
                 ButtonComponentText(text: getButtonText(),
                                     rounded: false,
                                     colorgrad: Constant.ColorStyle.Purple,
                                     doThis: {
-                    if curIndex > 0 {stretchView = true}
-                    else {curIndex += 1}
+                    if viewModel.curIndex > 0 {viewModel.stretchView = true}
+                    else {viewModel.curIndex += 1}
                 })
                 .position(x: geometry.size.width / 2 ,
                           y: geometry.size.height * 0.84)
                 
-                if stretchView && curIndex > 0 {
-                    StretchingView(curIndex: $curIndex,
-                                   stretchView: $stretchView)
+                if viewModel.stretchView && viewModel.curIndex > 0 {
+                    StretchingView(previewStretch: $previewStretch,
+                                   viewModel: viewModel)
+                    .onAppear{
+                        viewModel.changed = false
+                    }
                 }
             }
             .ignoresSafeArea()
@@ -58,21 +60,26 @@ struct StrechPreview: View {
         }
     }
     func getCurrentDialog() -> String {
-        return Dialogue.strech.Prompts[curIndex]
+        return Dialogue.strech.Prompts[viewModel.curIndex]
     }
     func getButtonText() -> String {
-        return curIndex < 1 ? "Continue" : "Start"
+        return viewModel.curIndex < 1 ? "Continue" : "Start"
     }
 }
 
 struct ExitButtonView: View {
     var geometry: GeometryProxy
+    @Binding var previewStretch: Bool
     var body: some View {
         HStack{
             Image(systemName: "xmark.circle")
                 .iconStyle()
-        }.position(x: geometry.size.width * 0.05,
-                   y: geometry.size.height * 0.08)
+        }
+        .position(x: geometry.size.width * 0.05,
+                  y: geometry.size.height * 0.085)
+        .onTapGesture {
+            previewStretch = false
+        }
     }
 }
 
@@ -89,12 +96,12 @@ struct InfoButtonView: View {
 
 struct TitleView: View {
     var geometry: GeometryProxy
-    @Binding var currentindex: Int
+    @ObservedObject var viewModel: AnimatorViewModel
     var body: some View {
         VStack{
-            Text(Dialogue.strech.Titles[currentindex])
+            Text(Dialogue.strech.Titles[viewModel.curIndex])
                 .titleStyle()
-            Text(Dialogue.strech.SubTitles[currentindex])
+            Text(Dialogue.strech.SubTitles[viewModel.curIndex])
                 .titleStyle()
                 .padding(.top, -40)
         }
@@ -105,9 +112,9 @@ struct TitleView: View {
 
 struct ProgressBarView: View {
     var geometry: GeometryProxy
-    @Binding var curIndex: Int
+    @ObservedObject var viewModel: AnimatorViewModel
     var body: some View {
-        ProgressBarComponent(currentSteps: $curIndex)
+        ProgressBarComponent(viewModel: viewModel)
             .position(x: geometry.size.width / 2,
                       y: geometry.size.height * 0.97)
     }
@@ -115,21 +122,23 @@ struct ProgressBarView: View {
 
 struct ModelAnimationView: View {
     var geometry: GeometryProxy
-    @ObservedObject var viewModel: AnimationViewModel
+    @ObservedObject var viewModel: AnimatorViewModel
     var body: some View {
         HStack{
-            TimelineView(.periodic(from: .now, by: 0.1)){
-                timeline in
-                animationView()
-                    .environmentObject(viewModel)
-                    .frame(width: geometry.size.width * 0.35,
-                           height: geometry.size.width * 0.35)
-            }
+            Image(viewModel.data[viewModel.curIndex].animationImageNames[viewModel.frame > viewModel.data[viewModel.curIndex].animationImageNames.count-1 ? 0 : viewModel.frame])
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+                .frame(width: geometry.size.width * (!viewModel.stretchView ? 0.35 : 0.6),
+                       height: geometry.size.width * (!viewModel.stretchView ? 0.35 : 0.6))
         }
-        .position(x: geometry.size.width * 0.5 ,
-                  y: geometry.size.height * 0.35)
+        .position(x: geometry.size.width * (!viewModel.stretchView ? 0.5 : viewModel.modelPos[viewModel.curIndex].x),
+                  y: geometry.size.height * (!viewModel.stretchView ? 0.35 : viewModel.modelPos[viewModel.curIndex].y))
     }
+    
 }
+
+
 
 struct DescriptionView: View {
     var geometry: GeometryProxy
@@ -143,14 +152,14 @@ struct DescriptionView: View {
     }
 }
 
-struct StrechPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        StrechPreview(curIndex: 0, previewStretch: .constant(true))
-            .environmentObject(AnimationViewModel())
-            .previewInterfaceOrientation(.landscapeLeft)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct StrechPreview_Previews: PreviewProvider {
+//    @ObservedObject var viewModel: AnimatorViewModel
+//    static var previews: some View {
+//        StrechPreview(viewModel: viewModel, curIndex: 0, previewStretch: .constant(true))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
 
 
 
