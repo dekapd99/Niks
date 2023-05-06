@@ -19,21 +19,31 @@ struct ContentView: View {
     //MARK: - BODY
     var body: some View {
         if !previewStretch {
-            HomePageView(previewStretch: $previewStretch)
+            HomePageView(previewStretch: $previewStretch, viewModel: viewModel)
                 .onAppear{
                     viewModel.frame = 0
                     viewModel.curIndex = 0
                     viewModel.stretchView = false
+                    AudioPlayer.shared.playpause()
                 }
         }else {
             if !viewModel.end {
                 StrechPreview(viewModel: viewModel,
                               previewStretch: $previewStretch)
+                .onAppear{
+                    viewModel.prevPage = 10
+                }
                 .onReceive(TimerObj){ _ in
                     if viewModel.currentTime == 0 && viewModel.delay == 10 && !viewModel.changed{
                         viewModel.changed = true
                         viewModel.stretchView = false
                         viewModel.incrementCurIndex()
+                    }
+                    if viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView && previewStretch{
+                        print("\(String(viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView))")
+                        viewModel.prevPage = viewModel.curIndex
+                        AudioPlayer.shared.playSound(sound: viewModel.data[viewModel.curIndex].music)
+                        
                     }
                     viewModel.getOperation()
                     viewModel.playAnimation()
