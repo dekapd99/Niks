@@ -26,6 +26,8 @@ class AnimatorViewModel: ObservableObject {
     @Published var frame: Int = 0
     @Published var currentTime: CGFloat = 0
     @Published var delay: Int = 0
+    @Published var buffer: Int = 0
+    @Published var prevPage: Int = 10
     @Published var isActive: Bool = true
     @Published var curIndex: Int = 0
     @Published var stretchView: Bool = false
@@ -36,7 +38,7 @@ class AnimatorViewModel: ObservableObject {
         AnimationModel(animation: "StandingHalfForwardBend", length: 15, music: "VO_StandingHalf"),
         AnimationModel(animation: "StandingForwardBend", length: 21, music: "VO_Standing"),
         AnimationModel(animation: "WideKneeChildRose", length: 1, music: "VO_WideKneePose"),
-        AnimationModel(animation: "RecliningBoundAngle", length: 1, music: "VO_RelicingBound"),
+        AnimationModel(animation: "RecliningBoundAngle", length: 1, music: "VO_RecliningBound"),
         AnimationModel(animation: "LegsUpTheWall", length: 1, music: "VO_LegsUp"),
         AnimationModel(animation: "LegsOnChair", length: 1, music: "VO_LegsChair"),
         AnimationModel(animation: "CorpsePose", length: 18, music: "VO_CorpsePose")

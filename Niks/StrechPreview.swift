@@ -12,7 +12,7 @@ struct StrechPreview: View {
     //MARK: - PROPERTIES
     @ObservedObject var viewModel: AnimatorViewModel
     @Binding var previewStretch: Bool
-  
+    
     //MARK: - BODY
     var body: some View {
         GeometryReader{ geometry in
@@ -54,11 +54,9 @@ struct StrechPreview: View {
                                    viewModel: viewModel)
                     .onAppear{
                         viewModel.changed = false
-                       
                     }
                 }
             }
-            
             .onAppear{
                 AudioPlayer.shared.playpause()
             }
