@@ -16,22 +16,24 @@ struct AnimationModel: Hashable, Equatable {
         self.animation = animation
         self.length = length
         self.animationImageNames = (0...length).map({"\(animation)-\($0)"})
-        
-        
     }
 }
 class AnimationViewModel: ObservableObject {
-    @Published var index: Int = 1
+    @Published var index: Int = 3
     @Published var data: [AnimationModel] = [
+        AnimationModel(animation: "UjayiBreath", length: 32),
         AnimationModel(animation: "StandingHalfForwardBend", length: 15),
         AnimationModel(animation: "StandingForwardBend", length: 21),
-        AnimationModel(animation: "CorpsePose", length: 18),
-        AnimationModel(animation: "LegsOnChair", length: 1),
-        AnimationModel(animation: "UjayiBreath", length: 32),
-        AnimationModel(animation: "WildKneeChildRose", length: 1),
-        AnimationModel(animation: "LegsUpTheWall", length: 1),
-        AnimationModel(animation: "RecliningBoundAngle", length: 1)
-        
-        
+        AnimationModel(animation: "WideKneeChildRose", length: 2),
+        AnimationModel(animation: "RecliningBoundAngle", length: 2),
+        AnimationModel(animation: "LegsUpTheWall", length: 2),
+        AnimationModel(animation: "LegsOnChair", length: 2),
+        AnimationModel(animation: "CorpsePose", length: 18)
     ]
+    func changeIndex(with: Int) -> () {
+        index = with
+    }
+    func incrementIndex() -> () {
+        index += 1
+    }
 }

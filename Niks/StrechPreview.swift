@@ -12,6 +12,7 @@ struct StrechPreview: View {
     @EnvironmentObject var viewModel: AnimationViewModel
     @State var curIndex: Int = 0
     @State var stretchView: Bool = false
+    @Binding var previewStretch: Bool
     //MARK: - BODY
     var body: some View {
         GeometryReader{ geometry in
@@ -24,12 +25,12 @@ struct StrechPreview: View {
                 TitleView(geometry: geometry,
                           currentindex: $curIndex)
                 
-                ModelAnimationView(geometry: geometry,
-                                   viewModel: viewModel)
-                
                 DescriptionView(geometry: geometry,
                                 prompt: getCurrentDialog())
-                 
+                
+//                ModelAnimationView(geometry: geometry,
+//                                   viewModel: viewModel)
+                
                 if curIndex > 0 {
                     ProgressBarView(geometry: geometry,
                                     curIndex: $curIndex)
@@ -38,7 +39,10 @@ struct StrechPreview: View {
                 ButtonComponentText(text: getButtonText(),
                                     rounded: false,
                                     colorgrad: Constant.ColorStyle.Purple,
-                                    doThis: {if curIndex > 0 {stretchView = true} else {curIndex += 1}})
+                                    doThis: {
+                    if curIndex > 0 {stretchView = true}
+                    else {curIndex += 1}
+                })
                 .position(x: geometry.size.width / 2 ,
                           y: geometry.size.height * 0.84)
                 
@@ -116,7 +120,7 @@ struct ModelAnimationView: View {
         HStack{
             TimelineView(.periodic(from: .now, by: 0.1)){
                 timeline in
-                animationView(date: timeline.date)
+                animationView()
                     .environmentObject(viewModel)
                     .frame(width: geometry.size.width * 0.35,
                            height: geometry.size.width * 0.35)
@@ -141,7 +145,7 @@ struct DescriptionView: View {
 
 struct StrechPreview_Previews: PreviewProvider {
     static var previews: some View {
-        StrechPreview(curIndex: 0)
+        StrechPreview(curIndex: 0, previewStretch: .constant(true))
             .environmentObject(AnimationViewModel())
             .previewInterfaceOrientation(.landscapeLeft)
             .previewLayout(.sizeThatFits)
