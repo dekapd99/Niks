@@ -57,6 +57,7 @@
 		DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93645829FA345F009BAFEE /* SidebarComponent.swift */; };
 		DD96F93229FA19DB0053790D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F93129FA19DB0053790D /* ButtonComponent.swift */; };
 		DD9C17DE2A03941A0062E051 /* AudioPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */; };
+		DDAD8C632A05DB6E000CDD42 /* AnimatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAD8C622A05DB6E000CDD42 /* AnimatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		DD9C17B52A0382A80062E051 /* Jazz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jazz.mp3; sourceTree = "<group>"; };
 		DD9C17B62A0382A80062E051 /* River.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = River.mp3; sourceTree = "<group>"; };
 		DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerModel.swift; sourceTree = "<group>"; };
+		DDAD8C622A05DB6E000CDD42 /* AnimatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				DD334B502A00ADF2001A935A /* MusicModel.swift */,
 				761AD26A2A017975004D9415 /* AnimationModel.swift */,
 				DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */,
+				DDAD8C622A05DB6E000CDD42 /* AnimatorViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */,
 				2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */,
 				2A3D173A2A045C1B001EC0C0 /* BackButtonStyle.swift in Sources */,
+				DDAD8C632A05DB6E000CDD42 /* AnimatorViewModel.swift in Sources */,
 				2A0BABD129FFFE450040650C /* BubbleDialogueComponent.swift in Sources */,
 				DD334B552A00B159001A935A /* Constant.swift in Sources */,
 				DD9C17DE2A03941A0062E051 /* AudioPlayerModel.swift in Sources */,

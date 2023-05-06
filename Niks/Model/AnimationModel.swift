@@ -7,19 +7,20 @@
 
 import Foundation
 
-struct AnimationModel: Hashable, Equatable {
-    let animation: String
-    let length: Int
-    let animationImageNames: [String]
-    
-    init(animation: String, length: Int) {
-        self.animation = animation
-        self.length = length
-        self.animationImageNames = (0...length).map({"\(animation)-\($0)"})
-    }
-}
+//struct AnimationModel: Hashable, Equatable {
+//    let animation: String
+//    let length: Int
+//    let animationImageNames: [String]
+//    
+//    init(animation: String, length: Int) {
+//        self.animation = animation
+//        self.length = length
+//        self.animationImageNames = (0...length).map({"\(animation)-\($0)"})
+//    }
+//}
 class AnimationViewModel: ObservableObject {
-    @Published var index: Int = 3
+    @Published var index: Int = 0
+    
     @Published var data: [AnimationModel] = [
         AnimationModel(animation: "UjayiBreath", length: 32),
         AnimationModel(animation: "StandingHalfForwardBend", length: 15),
