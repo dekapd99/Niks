@@ -31,6 +31,11 @@ struct LoadingView: View {
             }//: - VSTACK LOADING & TIPS
         }//: - ZSTACK COLOR
         .ignoresSafeArea()
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                // Navigate to another page here
+            }
+        }
     }//: - BODY
 }
 
