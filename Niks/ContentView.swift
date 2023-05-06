@@ -9,7 +9,6 @@ import SwiftUI
 import UserNotifications
 
 struct ContentView: View {
-    
     //MARK: - PROPERTIES
     @State var previewStretch = false
     @ObservedObject var viewModel: AnimatorViewModel = AnimatorViewModel()
@@ -19,7 +18,6 @@ struct ContentView: View {
     
     //MARK: - BODY
     var body: some View {
-
         if !previewStretch {
             HomePageView(previewStretch: $previewStretch)
                 .onAppear{
@@ -29,17 +27,6 @@ struct ContentView: View {
                 }
         }else {
             if !viewModel.end {
-
-        
-            if !previewStretch {
-                HomePageView(previewStretch: $previewStretch)
-                    .onAppear{
-                        viewModel.frame = 0
-                        viewModel.curIndex = 0
-                        viewModel.stretchView = false
-                    }
-            }else {
-
                 StrechPreview(viewModel: viewModel,
                               previewStretch: $previewStretch)
                 .onReceive(TimerObj){ _ in
@@ -50,17 +37,12 @@ struct ContentView: View {
                     }
                     viewModel.getOperation()
                     viewModel.playAnimation()
-
                 }
             } else {
                 SleepView()
-
-                    
-                }
-
             }
-        
-        
+        }
+    
     }//: - BODY
 }
 
