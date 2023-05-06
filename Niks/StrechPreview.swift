@@ -28,6 +28,7 @@ struct StrechPreview: View {
                 
                 DescriptionView(geometry: geometry,
                                 prompt: getCurrentDialog())
+                
                 if !viewModel.stretchView{
                     ModelAnimationView(geometry: geometry,
                                        viewModel: viewModel)
@@ -37,6 +38,7 @@ struct StrechPreview: View {
                     ProgressBarView(geometry: geometry,
                                     viewModel: viewModel)
                 }
+                
                 ButtonComponentText(text: getButtonText(),
                                     rounded: false,
                                     colorgrad: Constant.ColorStyle.Purple,
