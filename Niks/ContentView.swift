@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var toggle = true
     //MARK: - BODY
     var body: some View {
-        HomePageView()
+        SleepView()
     }//: - BODY
 }
 

@@ -13,7 +13,9 @@ struct Constant {
         static let BackgroundHome: String = "BackgroundHome"
         static let BackgroundSleep: String = "BackgroundSleep"
         static let BackgroundStretch: String = "BackgroundStretch"
+        static let BackgroundTotallySleep: String = "BackgroundTotallySleep"
     }
+    
     struct ColorStyle {
         static let DarkPurple: Color = Color("DarkPurple")
         static let LightBlue: Color = Color("LightBlue")
