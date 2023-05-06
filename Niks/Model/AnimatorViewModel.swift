@@ -11,13 +11,15 @@ struct AnimationModel: Hashable, Equatable {
     let animation: String
     let length: Int
     let music: String
+    let info: String
     let animationImageNames: [String]
     
-    init(animation: String, length: Int, music: String) {
+    init(animation: String, length: Int, music: String, info: String) {
         self.animation = animation
         self.length = length
         self.animationImageNames = (0...length).map({"\(animation)-\($0)"})
         self.music = music
+        self.info = info
     }
 }
 
@@ -26,22 +28,46 @@ class AnimatorViewModel: ObservableObject {
     @Published var frame: Int = 0
     @Published var currentTime: CGFloat = 0
     @Published var delay: Int = 0
-    @Published var buffer: Int = 0
     @Published var prevPage: Int = 10
     @Published var isActive: Bool = true
     @Published var curIndex: Int = 0
     @Published var stretchView: Bool = false
     @Published var changed: Bool = true
     @Published var end: Bool = false
+    @Published var showInfo: Bool = false
     @Published var data: [AnimationModel] = [
-        AnimationModel(animation: "UjayiBreath", length: 32, music: "VO_UjayyiBreath"),
-        AnimationModel(animation: "StandingHalfForwardBend", length: 15, music: "VO_StandingHalf"),
-        AnimationModel(animation: "StandingForwardBend", length: 21, music: "VO_Standing"),
-        AnimationModel(animation: "WideKneeChildRose", length: 1, music: "VO_WideKneePose"),
-        AnimationModel(animation: "RecliningBoundAngle", length: 1, music: "VO_RecliningBound"),
-        AnimationModel(animation: "LegsUpTheWall", length: 1, music: "VO_LegsUp"),
-        AnimationModel(animation: "LegsOnChair", length: 1, music: "VO_LegsChair"),
-        AnimationModel(animation: "CorpsePose", length: 18, music: "VO_CorpsePose")
+        AnimationModel(animation: "UjayiBreath",
+                       length: 32,
+                       music: "VO_UjayyiBreath",
+                       info: "Ujjayi Breath relieves sleeping difficulties, slows down the heart rate and lowers blood pressure."),
+        AnimationModel(animation: "StandingHalfForwardBend",
+                       length: 15,
+                       music: "VO_StandingHalf",
+                       info:"This exercise strengthens the back, lowers hypertension, increases blood circulation towards the head, replenishes the brain cells."),
+        AnimationModel(animation: "StandingForwardBend",
+                       length: 21,
+                       music: "VO_Standing",
+                       info:"Reduces stress, anxiety, depression and fatigue. Calms the mind and soothes the nerves. Relieves tension in the neck and back."),
+        AnimationModel(animation: "WideKneeChildRose",
+                       length: 1,
+                       music: "VO_WideKneePose",
+                       info:"Helps lower your blood pressure, enhances the quality of breathing, thus soothes the body as well as the mind."),
+        AnimationModel(animation: "RecliningBoundAngle",
+                       length: 1,
+                       music: "VO_RecliningBound",
+                       info:"Any type of mild depression, anxieties, tensions in the muscles are alleviated. This exercise also induces sleep."),
+        AnimationModel(animation: "LegsUpTheWall",
+                       length: 1,
+                       music: "VO_LegsUp",
+                       info:"This exercise with deep breathing can improve blood circulation, relax muscles, and reduce stress, tension, anxiety, and insomnia."),
+        AnimationModel(animation: "LegsOnChair",
+                       length: 1,
+                       music: "VO_LegsChair",
+                       info:"This exercise with deep breathing can improve blood circulation, relax muscles, and reduce stress, tension, anxiety, and insomnia."),
+        AnimationModel(animation: "CorpsePose",
+                       length: 18,
+                       music: "VO_CorpsePose",
+                       info:"Helps manage stress by activating the relaxation response and deactivating the stress response to the body and mind.")
     ]
     @Published var modelPos: [CGPoint] = [CGPoint(x: 0.65, y: 0.55),
                                           CGPoint(x: 0.66, y: 0.55),

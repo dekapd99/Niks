@@ -39,7 +39,7 @@ struct ContentView: View {
                         viewModel.stretchView = false
                         viewModel.incrementCurIndex()
                     }
-                    if viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView{
+                    if viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView && !previewStretch{
                         print("\(String(viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView))")
                         viewModel.prevPage = viewModel.curIndex
                         AudioPlayer.shared.playSound(sound: viewModel.data[viewModel.curIndex].music)
