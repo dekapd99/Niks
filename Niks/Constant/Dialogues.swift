@@ -77,4 +77,12 @@ struct Dialogue {
             "Take a deep breath...\nExhale"
         ]
     }
+    
+    struct Sleep {
+        static let SleepDialogue: [String] = [
+            "*Yawn* \nNow it’s time to sleep~",
+            "You can leave Niks open and have the \nbackground music accompany you to sleep.",
+            "Let’s set a reminder for your \nsession tomorrow~"
+        ]
+    }
 }
