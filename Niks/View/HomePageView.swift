@@ -29,11 +29,12 @@ struct HomePageView: View {
     @State var SideBar: Bool = false
     @State private var isShrink = false
     @Binding var previewStretch: Bool
+    @ObservedObject var viewModel: AnimatorViewModel
     //MARK: - BODY
     var body: some View {
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
         ZStack {
-            Image(Constant.Scenery.Piano)
+            Image(viewModel.musicCrate[viewModel.activeMusic].name)
                 .resizable()
             
             Image(Constant.BackgroundImage.BackgroundHome)
@@ -69,6 +70,7 @@ struct HomePageView: View {
                     }
                 
                 SidebarComponent(toggle: $SideBar,
+                                 viewModel: viewModel,
                                  bounds: CGPoint(
                                     x: geometry.size.width,
                                     y:geometry.size.height),
@@ -82,10 +84,10 @@ struct HomePageView: View {
     }//: - BODY
 }
 
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView(previewStretch: .constant(false))
-            .previewInterfaceOrientation(.landscapeLeft)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct HomePageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomePageView(previewStretch: .constant(false))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

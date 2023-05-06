@@ -59,6 +59,7 @@ struct StrechPreview: View {
                     StretchingView(previewStretch: $previewStretch,
                                    viewModel: viewModel)
                     .onAppear{
+                        AudioPlayer.shared.playSound(sound: viewModel.musicCrate[viewModel.activeMusic].name)
                         viewModel.changed = false
                     }
                 }

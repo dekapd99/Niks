@@ -19,7 +19,7 @@ struct ContentView: View {
     //MARK: - BODY
     var body: some View {
         if !previewStretch {
-            HomePageView(previewStretch: $previewStretch)
+            HomePageView(previewStretch: $previewStretch, viewModel: viewModel)
                 .onAppear{
                     viewModel.frame = 0
                     viewModel.curIndex = 0
@@ -39,7 +39,7 @@ struct ContentView: View {
                         viewModel.stretchView = false
                         viewModel.incrementCurIndex()
                     }
-                    if viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView && !previewStretch{
+                    if viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView && previewStretch{
                         print("\(String(viewModel.prevPage != viewModel.curIndex && !viewModel.stretchView))")
                         viewModel.prevPage = viewModel.curIndex
                         AudioPlayer.shared.playSound(sound: viewModel.data[viewModel.curIndex].music)

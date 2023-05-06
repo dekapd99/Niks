@@ -35,6 +35,21 @@ class AnimatorViewModel: ObservableObject {
     @Published var changed: Bool = true
     @Published var end: Bool = false
     @Published var showInfo: Bool = false
+    @Published var activeMusic: Int = 0
+    @Published var musicCrate: [MusicModel] = [
+        MusicModel(name: Constant.Scenery.Night,
+                   image: Constant.IconStyle.Piano),
+        MusicModel(name: Constant.Scenery.Jazz,
+                   image: Constant.IconStyle.Jazz),
+        MusicModel(name: Constant.Scenery.Rain,
+                   image: Constant.IconStyle.Rain),
+        MusicModel(name: Constant.Scenery.Beach,
+                   image: Constant.IconStyle.Beach),
+        MusicModel(name: Constant.Scenery.Nature,
+                   image: Constant.IconStyle.Nature),
+        MusicModel(name: Constant.Scenery.River,
+                   image: Constant.IconStyle.River)
+    ]
     @Published var data: [AnimationModel] = [
         AnimationModel(animation: "UjayiBreath",
                        length: 32,
