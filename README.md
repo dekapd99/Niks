@@ -6,7 +6,7 @@
   <p>Niks</p>
 </h1>
 
-<h4 align="center">Redesign Website Ittama menggunakan <a href="https://getbootstrap.com" target="_blank">Bootstrap5</a>.</h4>
+<h4 align="center">Niks are made with <a href="https://developer.apple.com/swift/" target="_blank">Swift 5</a> & <a href="https://figma.com" target="_blank">Figma</a>.</h4>
 
 <p align="center">
   <a href="#about">About</a> •
