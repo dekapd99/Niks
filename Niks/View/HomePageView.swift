@@ -19,11 +19,12 @@ struct HomePageView: View {
     @State var showSpotlight: Bool = false
     @State var currentSpotlight: Int = 0
     
+    @State private var textIndex = 0
     private let texts = [
-        "You can start stretching by \ntapping on the Yoga Mat.",
-        "You can also change the background \nmusic by tapping on the Speaker.",
-        "When you change the background music, \nthe scenery outside the window will \nalso change accordingly.",
-        "Let’s set you up to sleep *yawn*"
+        "You can start stretching by tapping on the Yoga Mat.",
+        "You can also change the background music by tapping on the Speaker.",
+        "When you change the background music, the scenery outside the window will also change accordingly.",
+        "*yawn* Let’s set you up to sleep by tapping on the Yoga Mat."
     ]
     
     //MARK: - BODY
@@ -54,11 +55,19 @@ struct HomePageView: View {
                         SideBar.toggle()
                     }
                 
+                GeometryReader { geometry in
+                    BubbleDialogueComponent(text: texts[textIndex])
+                        .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
+                }
+                
                 Image("Character")
                     .resizable()
                     .frame(width: 167, height: 552)
                     .addSpotlight(1, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
+                    .onTapGesture {
+                        textIndex = (textIndex + 1) % texts.count
+                    }
                 
                 Image(Constant.Objects.Yogamat)
                     .pulsingAnimation()
