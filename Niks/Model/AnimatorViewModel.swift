@@ -36,6 +36,7 @@ class AnimatorViewModel: ObservableObject {
     @Published var end: Bool = false
     @Published var showInfo: Bool = false
     @Published var activeMusic: Int = 0
+    @Published var mute: Bool = false
     @Published var musicCrate: [MusicModel] = [
         MusicModel(name: Constant.Scenery.Night,
                    image: Constant.IconStyle.Piano),
