@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SplashScreenView: View {
     //MARK: - PREVIEW
@@ -47,14 +48,37 @@ struct SplashScreenView: View {
             }
             .ignoresSafeArea()
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline:  .now() + 1.5) {
+                // Request permission for user notifications
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
+                    if granted {
+                        // Create a user notification content
+                        let content = UNMutableNotificationContent()
+                        content.title = "Niks"
+                        content.body = "It's almost your sleeping time, relax your mind an body with yoga and listening to music from Niks tonight"
+                        
+                        // Create a trigger for daily notifications at 10 pm
+                        var dateComponents = DateComponents()
+                        dateComponents.hour = 13
+                        dateComponents.minute = 44
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                        
+                        // Create a notification request
+                        let request =    UNNotificationRequest(identifier: "goToSleep", content: content, trigger: trigger)
+                        
+                        // Schedule the notification
+                        UNUserNotificationCenter.current().add(request)
+                    } else {
+                        print("User notification permission not granted: \(error?.localizedDescription ?? "unknown error")")
+                    }
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     withAnimation {
                         self.isActive = true
                     }
                 }
             }
         }
-        
     }//: - BODY
 }
 

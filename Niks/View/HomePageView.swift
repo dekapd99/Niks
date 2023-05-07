@@ -9,27 +9,23 @@ import SwiftUI
 import WatchConnectivity
 
 struct HomePageView: View {
-    
-    func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Niks"
-        content.body = "Body"
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 24 * 60 * 60, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: "it's almost your sleeping time, relax your mind and body with yoga and listening to music from Niks tonight", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Error scheduling notification: \(error.localizedDescription)")
-            }
-        }
-    }
     //MARK: - PROPERTIES
     @State var SideBar: Bool = false
     @State private var isShrink = false
     @Binding var previewStretch: Bool
     @ObservedObject var viewModel: AnimatorViewModel
+    
+    @AppStorage("showSpotlightOnce") var showSpotlightOnce: Bool = true
+    @State var showSpotlight: Bool = false
+    @State var currentSpotlight: Int = 0
+    
+    private let texts = [
+        "You can start stretching by \ntapping on the Yoga Mat.",
+        "You can also change the background \nmusic by tapping on the Speaker.",
+        "When you change the background music, \nthe scenery outside the window will \nalso change accordingly.",
+        "Let’s set you up to sleep *yawn*"
+    ]
+    
     //MARK: - BODY
     var body: some View {
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
@@ -52,6 +48,7 @@ struct HomePageView: View {
                 Image(Constant.Objects.Homepod)
                     .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
+                    .addSpotlight(0, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 20, y: geometry.size.height / 1.65)
                     .onTapGesture {
                         SideBar.toggle()
@@ -60,11 +57,13 @@ struct HomePageView: View {
                 Image("Character")
                     .resizable()
                     .frame(width: 167, height: 552)
+                    .addSpotlight(1, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
                 
                 Image(Constant.Objects.Yogamat)
                     .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
+                    .addSpotlight(2, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 1.17, y: geometry.size.height / 1.38)
                     .onTapGesture {
                         previewStretch = true
@@ -78,8 +77,12 @@ struct HomePageView: View {
                                  colorgrad:Constant.ColorStyle.SoftWhite)
             }//: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
         }//: - ZSTACK (BACKGROUND & OBJECTS)
-        .onAppear{
-            scheduleNotification()
+        .addSpotlightOverlay(show: $showSpotlight, currentSpot: $currentSpotlight)
+        .onAppear {    
+            if showSpotlightOnce {
+                showSpotlight = true
+                showSpotlightOnce = false
+            }
         }
         
     }//: - BODY

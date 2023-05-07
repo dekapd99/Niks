@@ -11,13 +11,13 @@ import SwiftUI
 extension View {
     @ViewBuilder
     
-    //MARK: - by using Anchor Preference for Retreiving View's Bounds Region
+    //MARK: - by using ANCHOR PREFERENCE FOR RETREIVING VIEW'S BOUNDS REGION
     func addSpotlight(_ id: Int, shape: SpotlightShape = .rectangle, roundedRadius: CGFloat = 0, text: String = "") -> some View {
         self
             .anchorPreference(key: BoundsKey.self, value: .bounds) {[id: BoundsKeyProperties(shape: shape, anchor: $0, text: text, radius: roundedRadius)]}
     }
     
-    //MARK: - Modifier to Display Spotlight that Overlay the Content (Add to Root View)
+    //MARK: - MODIFIER TO DISPLAY SPOTLIGHT THAT OVERLAY THE CONTENT (ADD TO ROOT VIEW)
     @ViewBuilder
     func addSpotlightOverlay(show: Binding<Bool>, currentSpot: Binding<Int>) -> some View {
         self
@@ -28,8 +28,8 @@ extension View {
                     }) {
                         let screenSize = proxy.size
                         let anchor = proxy[preference.value.anchor]
-
-                        //MARK: - Spotlight View
+                        
+                        //MARK: - Call Spotlight View
                         SpotlightHelperView(screenSize: screenSize, rect: anchor, show: show, currentSpot: currentSpot, properties: preference.value) {
                             
                             if currentSpot.wrappedValue <= (values.count) {
@@ -45,12 +45,12 @@ extension View {
                 .animation(.easeInOut, value: currentSpot.wrappedValue)
             }
     }
-    //MARK: - Helper View
+    //MARK: - SPOTLIGHT HELPER VIEW
     @ViewBuilder
     func SpotlightHelperView(screenSize: CGSize, rect: CGRect, show: Binding<Bool>, currentSpot: Binding<Int>, properties: BoundsKeyProperties, onTap: @escaping() -> ()) -> some View {
         Rectangle()
-            .fill(.ultraThinMaterial)
-            .opacity(show.wrappedValue ? 1 : 0)
+            .fill(Color("SoftBlack"))
+            .opacity(show.wrappedValue ? 0.8 : 0)
         
             //MARK: - SPOTLIGHT TEXT DESCRIPTION
             .overlay(alignment: .topLeading) {
@@ -65,15 +65,14 @@ extension View {
                             
                             Text(properties.text)
                                 .titleStyle()
-                                //MARK: - DYNAMIC TEXT ALIGNMENT
-                                // HORIZONTAL CHECKING
+                            //MARK: - DYNAMIC TEXT ALIGNMENT
+                            // HORIZONTAL CHECKING
                                 .offset(x: (rect.minX + textSize.width) > (screenSize.width - 15) ? -((rect.minX + textSize.width) - (screenSize.width - 15) ) : 0)
-                                // VERTICAL CHECKING
+                            // VERTICAL CHECKING
                                 .offset(y: (rect.maxY + textSize.height) > (screenSize.height - 50) ? -(textSize.height - (rect.maxY - rect.minY) + 30) : 0)
                         }
                         .offset(x: rect.minX, y: rect.maxY)
                     }
-                    
             }
         
             //MARK: - REVERSE MASKING THE CURRENT SPOTLIGHT CONTENT
@@ -93,7 +92,7 @@ extension View {
                 // If Available
                 onTap()
             }
-
+        
     }
 }
 
@@ -120,6 +119,7 @@ struct BoundsKeyProperties {
     var text: String = ""
     var radius: CGFloat = 0
 }
+
 
 //MARK: - PULSING ANIMATION CONTENT MODIFIER
 struct PulsingAnimationModifier: ViewModifier {
