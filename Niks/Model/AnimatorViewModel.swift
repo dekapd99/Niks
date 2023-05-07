@@ -36,6 +36,7 @@ class AnimatorViewModel: ObservableObject {
     @Published var end: Bool = false
     @Published var showInfo: Bool = false
     @Published var activeMusic: Int = 0
+    @Published var mute: Bool = false
     @Published var musicCrate: [MusicModel] = [
         MusicModel(name: Constant.Scenery.Night,
                    image: Constant.IconStyle.Piano),
@@ -90,7 +91,7 @@ class AnimatorViewModel: ObservableObject {
                                           CGPoint(x: 0.5, y: 0.70),
                                           CGPoint(x: 0.5, y: 0.72),
                                           CGPoint(x: 0.565, y: 0.67),
-                                          CGPoint(x: 0.65, y: 0.75),
+                                          CGPoint(x: 0.55, y: 0.75),
                                           CGPoint(x: 0.50, y: 0.7)]
     func decrementTime() -> () {
         if isActive {
