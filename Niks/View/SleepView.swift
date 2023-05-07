@@ -10,6 +10,7 @@ import SwiftUI
 struct SleepView: View {
     //MARK: - PROPERTIES
     @State private var textIndex = 0
+    @State private var showBubble = true
     @State private var isPresentingTotallySleepView = false
     
     private let texts = [
@@ -27,8 +28,13 @@ struct SleepView: View {
                 .ignoresSafeArea()
             
             GeometryReader { geometry in
-                BubbleDialogueComponent(text: texts[textIndex])
-                    .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
+                if showBubble {
+                    BubbleDialogueComponent(text: texts[textIndex])
+                        .transition(.scale)
+                        .animation(.easeInOut(duration: 0.5))
+                        .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
+                        .opacity(textIndex < texts.count ? 1 : 0)
+                }
                 
                 Image("Character")
                     .resizable()
@@ -40,7 +46,7 @@ struct SleepView: View {
                     .titleStyle()
                     .position(x: geometry.size.width / 2, y: geometry.size.height - 70)
             }
-                
+            
         }//: - ZSTACK WRAPPER
         .onTapGesture {
             if textIndex == texts.count - 1 {

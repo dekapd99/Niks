@@ -22,11 +22,10 @@ struct HomePageView: View {
     @State private var textIndex = 0
     @State private var showBubble = false
     @State private var hasShownAnimation = false
-    @State private var showBubbleComponent = true
     
     private let texts = [
         "",
-        "You can start stretching by tapping on the Yoga Mat.",
+        "You can start stretching by tapping on the Yoga Mat",
         "You can also change the background music by tapping on the Speaker.",
         "When you change the background music, the scenery outside the window will also change accordingly.",
         "*yawn* Let’s set you up to sleep by tapping on the Yoga Mat."
