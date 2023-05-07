@@ -86,6 +86,12 @@ struct HomePageView: View {
                             textIndex = (textIndex + 1) % texts.count
                         }
                     }
+                
+                Text("Tap on the Character")
+                    .foregroundColor(Color("SoftWhite"))
+                    .pulsingAnimation()
+                    .titleStyle()
+                    .position(x: geometry.size.width / 2, y: geometry.size.height - 70)
 
                 Image(Constant.Objects.Yogamat)
                     .pulsingAnimation()
