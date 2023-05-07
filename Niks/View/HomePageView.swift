@@ -37,6 +37,7 @@ struct HomePageView: View {
         ZStack {
             Image(viewModel.musicCrate[viewModel.activeMusic].name)
                 .resizable()
+                .animation(.easeInOut(duration: 1.0))
                 .ignoresSafeArea()
             
             Image(Constant.BackgroundImage.BackgroundHome)
