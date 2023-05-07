@@ -131,6 +131,7 @@ struct StretchPauseView: View {
                 colorgrad: Constant.ColorStyle.DarkPurple,
                 doThis: {
                     viewModel.isActive.toggle()
+                    AudioPlayer.shared.playpause()
                 })
         }
         .padding(.trailing, geometry.size.width * 0.025)
