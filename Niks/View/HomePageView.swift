@@ -35,9 +35,9 @@ struct HomePageView: View {
     var body: some View {
         //MARK: - ZSTACK (BACKGROUND & OBJECTS)
         ZStack {
-            Image(viewModel.musicCrate[viewModel.activeMusic].name)
+            Image(viewModel.musicCrate[viewModel.activeMusic].name == "Rain" ? Constant.Scenery.RainSeq.Rains[viewModel.backgroundI] : viewModel.musicCrate[viewModel.activeMusic].name)
                 .resizable()
-                .animation(.easeInOut(duration: 1.0))
+                .animation(.easeInOut(duration: 0.5))
                 .ignoresSafeArea()
             
             Image(Constant.BackgroundImage.BackgroundHome)
@@ -68,13 +68,14 @@ struct HomePageView: View {
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
                         .opacity(textIndex < texts.count ? 1 : 0)
                 }
-                
-                Image("Character")
+
+                Image(Constant.AnimationModel.Idle[viewModel.charI])
                     .resizable()
-                    .frame(width: 167, height: 552)
+                    .frame(width: 650, height: 650)
                     .addSpotlight(1, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
                     .onTapGesture {
+                        SideBar = false
                         withAnimation {
                             if !hasShownAnimation {
                                 showBubble = true

@@ -21,10 +21,21 @@ struct ContentView: View {
         if !previewStretch {
             HomePageView(previewStretch: $previewStretch, viewModel: viewModel)
                 .onAppear{
-                    viewModel.frame = 0
-                    viewModel.curIndex = 0
-                    viewModel.stretchView = false
+                    resetVar()
                     AudioPlayer.shared.playSound(sound: viewModel.musicCrate[viewModel.activeMusic].name)
+                }
+                .onReceive(TimerObj){ _ in
+                    viewModel.buffer += 1
+                    viewModel.counter += 1
+                    if viewModel.buffer >= 2 {
+                        viewModel.buffer = 0
+                        viewModel.backgroundI = viewModel.backgroundI >= Constant.Scenery.RainSeq.Rains.count-1 ? 0 : viewModel.backgroundI + 1
+                    }
+                    if viewModel.counter >= 2 {
+                        viewModel.counter = 0
+                        
+                    }
+                    viewModel.charI = viewModel.charI >= Constant.AnimationModel.Idle.count-1 ? 0 : viewModel.charI + 1
                 }
         }else {
             if !viewModel.end {
@@ -53,6 +64,13 @@ struct ContentView: View {
             }
         }
     }//: - BODY
+    func resetVar() -> (){
+        viewModel.frame = 0
+        viewModel.curIndex = 0
+        viewModel.stretchView = false
+        viewModel.backgroundI = 0
+        viewModel.buffer = 0
+    }
 }
 
 //MARK: - PREVIEW

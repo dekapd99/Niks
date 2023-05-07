@@ -21,7 +21,7 @@ struct ProgressBarComponent: View {
                 ForEach(0..<7){ index in
                     Rectangle()
                         .foregroundColor(index < currentSteps ? Constant.ColorStyle.Purple : .gray)
-                        .frame(width: UIScreen.main.bounds.width * 0.73 / CGFloat(totalSteps),
+                        .frame(width: UIScreen.main.bounds.width * 0.72 / CGFloat(totalSteps),
                                height: UIScreen.main.bounds.height * 0.01)
                         .animation(.easeIn, value: currentSteps)
                 }

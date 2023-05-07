@@ -28,6 +28,8 @@ class AnimatorViewModel: ObservableObject {
     @Published var frame: Int = 0
     @Published var currentTime: CGFloat = 0
     @Published var delay: Int = 0
+    @Published var buffer: Int = 0
+    @Published var counter: Int = 0
     @Published var prevPage: Int = 10
     @Published var isActive: Bool = true
     @Published var curIndex: Int = 0
@@ -37,6 +39,8 @@ class AnimatorViewModel: ObservableObject {
     @Published var showInfo: Bool = false
     @Published var activeMusic: Int = 0
     @Published var mute: Bool = false
+    @Published var backgroundI: Int = 0
+    @Published var charI: Int = 0
     @Published var musicCrate: [MusicModel] = [
         MusicModel(name: Constant.Scenery.Night,
                    image: Constant.IconStyle.Piano),

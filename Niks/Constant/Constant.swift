@@ -54,6 +54,32 @@ struct Constant {
         static let Night: String = "Night"
         static let Rain: String = "Rain"
         static let River: String = "River"
+        struct RainSeq {
+            static let Rains: [String] = ["Rain1","Rain2","Rain3"]
+        }
+    }
+    
+    struct AnimationModel {
+        static let Idle: [String] = ["Idle_Home_Screen-1",
+                                     "Idle_Home_Screen-2",
+                                     "Idle_Home_Screen-3",
+                                     "Idle_Home_Screen-4",
+                                     "Idle_Home_Screen-5",
+                                     "Idle_Home_Screen-6",
+                                     "Idle_Home_Screen-7",
+                                     "Idle_Home_Screen-8",
+                                     "Idle_Home_Screen-9",
+                                     "Idle_Home_Screen-10",
+                                     "Idle_Home_Screen-11",
+                                     "Idle_Home_Screen-12",
+                                     "Idle_Home_Screen-13",
+                                     "Idle_Home_Screen-14",
+                                     "Idle_Home_Screen-15",
+                                     "Idle_Home_Screen-16",
+                                     "Idle_Home_Screen-17",
+                                     "Idle_Home_Screen-18",
+                                     "Idle_Home_Screen-19",
+        ]
     }
     
 }
