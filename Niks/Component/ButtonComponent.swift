@@ -13,7 +13,7 @@ struct ButtonComponent: View {
     let diameter: CGFloat = 100
     let colorgrad: Color
     let animateSpeed: CGFloat = 3
-    let springDamp: CGFloat = 8
+    let springDamp: CGFloat = 14
     let springStiffness: CGFloat = 200
     let scaleActive: CGFloat = 0.9
     let shadowOpac: CGFloat = 0.4
@@ -37,10 +37,6 @@ struct ButtonComponent: View {
                     .resizable()
                     .frame(width: diameter*0.30,
                            height: diameter*0.35)
-//                Text("Press me!")
-//                    .frame(width: diameter*0.8,
-//                           height: diameter*0.8)
-//                    .foregroundColor(.white.opacity(0.7))
             }
             .scaleEffect(tap ? scaleActive : 1,
                          anchor: .center)
@@ -68,7 +64,7 @@ struct ButtonComponentText: View {
     let diameter: CGFloat = 100
     let colorgrad: Color
     let animateSpeed: CGFloat = 3
-    let springDamp: CGFloat = 8
+    let springDamp: CGFloat = 12
     let springStiffness: CGFloat = 200
     let scaleActive: CGFloat = 0.9
     let shadowOpac: CGFloat = 0.4

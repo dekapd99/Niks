@@ -29,6 +29,7 @@ struct Constant {
     struct IconStyle {
         //MARK: MISCELLANEOUS ICONS
         static let Speaker: String = "speaker.wave.3"
+        static let SpeakerMute: String = "speaker.slash"
         static let XMark: String = "xmark.circle"
         static let IMark: String = "info.circle"
         static let Pause: String = "pause.fill"

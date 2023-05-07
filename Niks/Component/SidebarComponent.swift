@@ -97,10 +97,12 @@ struct SidebarContentView: View {
                 HStack{}
                     .padding(.bottom,spacing)
                 ItemView(isActive: isActive(music),
-                         music: music)
+                         music: music,
+                         viewModel: viewModel)
                 .onTapGesture {
                     viewModel.activeMusic = getIndex(music)
                     AudioPlayer.shared.playSound(sound:viewModel.musicCrate[viewModel.activeMusic].name)
+                    viewModel.mute = false
                 }
             }
         }
@@ -119,7 +121,7 @@ struct ItemView: View {
     let isActive: Bool
     let radius: CGFloat = 25
     let music: MusicModel
-    @State var mute: Bool = false
+    @ObservedObject var viewModel: AnimatorViewModel
     var body: some View{
         HStack(alignment: .center) {
             Image(music.image)
@@ -131,20 +133,22 @@ struct ItemView: View {
             Text(music.name)
                 .frame(width: radius*4.2, height: radius, alignment: .leading)
                 .foregroundColor(.black)
+                .background(.clear)
                 Spacer()
             if isActive {
-                Image(systemName: mute ? Constant.IconStyle.Speaker : Constant.IconStyle.Speaker)
+                Image(systemName: viewModel.mute ? Constant.IconStyle.SpeakerMute : Constant.IconStyle.Speaker)
                     .resizable()
                     .frame(width: radius, height: radius-5)
                     .iconStyle()
                     .onTapGesture {
-                        mute.toggle()
+                        viewModel.mute.toggle()
+                        AudioPlayer.shared.playpause()
                     }
             }
         }
         .frame(width: 300, height: 70)
         .padding(.horizontal, 20)
-        .background(isActive ? Constant.ColorStyle.DarkPurple.opacity(0.9) : .clear)
+        .background(isActive ? Constant.ColorStyle.DarkPurple.opacity(0.9) : .white.opacity(0.01))
         .cornerRadius(15)
         .shadow(color: .white.opacity(0.5),
                 radius: isActive ? 8 : 0)

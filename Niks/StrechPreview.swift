@@ -150,7 +150,7 @@ struct ModelAnimationView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
-                .frame(width: geometry.size.width * (!viewModel.stretchView ? 0.35 : 0.6),
+                .frame(width: geometry.size.width * (!viewModel.stretchView ? (viewModel.curIndex == 6 ? 0.25 : 0.35) : (viewModel.curIndex == 6 ? 0.4 : 0.6)),
                        height: geometry.size.width * (!viewModel.stretchView ? 0.35 : 0.6))
         }
         .position(x: geometry.size.width * (!viewModel.stretchView ? 0.5 : viewModel.modelPos[viewModel.curIndex].x),
