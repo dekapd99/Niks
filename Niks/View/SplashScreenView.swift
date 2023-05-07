@@ -24,15 +24,7 @@ struct SplashScreenView: View {
                     .ignoresSafeArea()
                 
                 ZStack {
-                    Image("NiksShape")
-                        .resizable()
-                        .scaledToFit()
-                    
-                    Image("NiksOrnament")
-                        .resizable()
-                        .scaledToFit()
-                    
-                    Image("NiksFont")
+                    Image("NiksIcon")
                         .resizable()
                         .scaledToFit()
                 }
