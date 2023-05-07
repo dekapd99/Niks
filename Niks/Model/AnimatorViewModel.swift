@@ -90,7 +90,7 @@ class AnimatorViewModel: ObservableObject {
                                           CGPoint(x: 0.5, y: 0.70),
                                           CGPoint(x: 0.5, y: 0.72),
                                           CGPoint(x: 0.565, y: 0.67),
-                                          CGPoint(x: 0.65, y: 0.75),
+                                          CGPoint(x: 0.55, y: 0.75),
                                           CGPoint(x: 0.50, y: 0.7)]
     func decrementTime() -> () {
         if isActive {

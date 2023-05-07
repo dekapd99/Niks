@@ -39,6 +39,30 @@ struct StretchingView: View {
                                previewStretch: $previewStretch)
                 ModelAnimationView(geometry: geometry,
                                    viewModel: viewModel)
+                if viewModel.curIndex == 5 {
+                    Rectangle()
+                        .fill(.white)
+                        .opacity(0.9)
+                        .overlay{
+                            Text("Tembok")
+                                .descriptionStyle()
+                        }
+                        .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
+                                  y: viewModel.modelPos[viewModel.curIndex].y+360)
+                        .frame(width: 250 , height: 500)
+                        
+                }else if viewModel.curIndex == 6 {
+                    Rectangle()
+                        .fill(.white)
+                        .opacity(0.9)
+                        .overlay{
+                            Text("Kursi/\nganjelan")
+                                .descriptionStyle()
+                        }
+                        .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
+                                  y: viewModel.modelPos[viewModel.curIndex].y+378)
+                        .frame(width: 150 , height: 150)
+                }
             }//: - ZSTACK (BACKGROUND & OBJECTS)
             .onAppear{
                 AudioPlayer.shared.playpause()
