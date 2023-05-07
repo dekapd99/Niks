@@ -65,7 +65,7 @@ Berikut struktur file dan folder pada Niks:
 * ScrollView (Vertical)
 
 <!-- Used Tools -->
-## Build With:
+## Build With
 
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
@@ -75,7 +75,6 @@ Berikut struktur file dan folder pada Niks:
 <!-- Contributors -->
 ## Contributors
 
-Anggota Kelompok 14 yang berkontribusi dalam pengerjaan proyek terdiri dari :
 * [Adriel](https://github.com/Adrielrusli)
 * [Abner Edgar](https://github.com/AbnerEdgar)
 * [Bobby Sugiharto](https://github.com/bobbysaa)
