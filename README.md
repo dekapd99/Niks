@@ -1,11 +1,23 @@
 <!-- ABOUT THE PROJECT -->
 <h1 align="center">
   <br>
-    <a href="#" target="_blank"><img src="logo.png" width="200"></a>
+    <a href="#" target="_blank"><img src="logo.png" width="400"></a>
   <br>
   <p>Niks</p>
 </h1>
 
+<h4 align="center">Niks are made with <a href="https://developer.apple.com/swift/" target="_blank">Swift 5</a> & <a href="https://figma.com" target="_blank">Figma</a>.</h4>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#preview">Preview</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#features">Installation</a> •
+  <a href="#contributors">Contributors</a> •
+  <a href="#license">License</a>
+</p>
+
+# About
 Niks  is an app that we crafted to empower academy fellow learners to build a habit that will relax their minds and body to help them fall asleep faster. Many of them, just like Bobby, are overwhelmed by their daily activities, thus making them unable to easily fall asleep. Our app will show you a variety of animation and pleasing visuals, with seamless flow and easy control for the user to use.
 
 ### Preview
@@ -46,23 +58,32 @@ Berikut struktur file dan folder pada Niks:
         └── SettingsView.swift              # Tampilan Halaman Setting
 
 <!-- List of Features -->
-## Features:
+# Features:
 
 * Reusable Components
 * All Stacks (HStack, VStack, ZStack)
 * ScrollView (Vertical)
 
-
 <!-- Used Tools -->
-## Build With:
+## Build With
 
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
 * [Xcode](https://developer.apple.com/xcode/)
+* [Figma](https://developer.apple.com/xcode/)
 
+<!-- Contributors -->
+## Contributors
+
+* [Adriel](https://github.com/Adrielrusli)
+* [Abner Edgar](https://github.com/AbnerEdgar)
+* [Bobby Sugiharto](https://github.com/bobbysaa)
+* [Deka Primatio Deandra](https://www.github.com/dekapd99)
+* [Millennian Ibnu Adriansyah Karinda](https://github.com/Adriankrnd)
+* [Rachmaniar Larasati](https://github.com/niarlaras10)
 
 <!-- How to Install -->
-## Installation
+# Installation
 Untuk menggunakan repositori ini, ikutilah petunjuk penggunaan berikut dan pastikan git sudah terinstall pada komputer (semua perintah dilaksanakan pada `cmd.exe` atau `terminal`):
 
 1. Lakukan download .zip atau `clone` repositori dengan cara:
@@ -75,12 +96,11 @@ git clone https://github.com/dekapd99/Niks.git
 4. Build & Run
 
 <!-- What Kind of License? -->
-## License
-MIT License: Copyright (c) 2022 
-Deka
+# License
+MIT License: Copyright (c) 2022
 
 DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPOSES
 
-Assets Source: [Image](google.com) & [SF SYMBOLS 4 ICON](https://developer.apple.com/sf-symbols/)
+Assets Source: [SF Symbols 4 Icon](https://developer.apple.com/sf-symbols/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
