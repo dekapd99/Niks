@@ -7,6 +7,69 @@
 
 import SwiftUI
 
+//MARK: - EXTENSION SPOTLIGHT TUTORIAL WITH VIEWBUILDER
+extension View {
+    @ViewBuilder
+    
+    //MARK: - by using Anchor Preference for Retreiving View's Bounds Region
+    func addSpotlight(_ id: Int, shape: SpotlightShape = .rectangle, roundedRadius: CGFloat = 0, text: String = "") -> some View {
+        self
+            .anchorPreference(key: BoundsKey.self, value: .bounds) {[id: BoundsKeyProperties(shape: shape, anchor: $0, text: text, radius: roundedRadius)]}
+    }
+    
+    //MARK: - Modifier to Display Spotlight that Overlay the Content (Add to Root View)
+//    @ViewBuilder
+//    func addSpotlightOverlay(show: Binding<Bool>, currentSpot: Binding<Int>) -> some View {
+//        self
+//            .overlayPreferenceValue(BoundsKey.self) { value in
+//                GeometryReader { proxy in
+//                    if let preference = values.first(where: { item in
+//                        item.key == currentSpot.wrappedValue
+//                    }) {
+//                        let screenSize = proxy.size
+//                        let anchor = proxy[preference.value.anchor]
+//
+//                        //MARK: - Spotlight View
+//                        SpotlightHelperView(screenSize: screenSize, rect: anchor)
+//                    }
+//                }
+//                .ignoresSafeArea()
+//                .animation(.easeInOut, value: show.wrappedValue)
+//                .animation(.easeInOut, value: currentSpot.wrappedValue)
+//            }
+//    }
+    //MARK: - Helper View
+    @ViewBuilder
+    func SpotlightHelperView(screenSize: CGSize, rect: CGRect) -> some View {
+        Rectangle()
+            .fill(.ultraThinMaterial)
+    }
+}
+
+//MARK: - SPOTLIGHT SHAPE
+enum SpotlightShape {
+    case circle
+    case rectangle
+    case rounded
+}
+
+//MARK: - BOUND PREFERENCE KEY
+struct BoundsKey: PreferenceKey {
+    static var defaultValue: [Int: BoundsKeyProperties] = [:]
+    
+    static func reduce(value: inout [Int : BoundsKeyProperties], nextValue: () -> [Int : BoundsKeyProperties]) {
+        value.merge(nextValue()){$1}
+    }
+}
+
+//MARK: - BOUND PREFERENCE KEY PROPERTIES
+struct BoundsKeyProperties {
+    var shape: SpotlightShape
+    var anchor: Anchor<CGRect>
+    var text: String = ""
+    var radius: CGFloat = 0
+}
+
 //MARK: - PULSING ANIMATION CONTENT MODIFIER
 struct PulsingAnimationModifier: ViewModifier {
     @State private var isPulsing = false
@@ -104,9 +167,8 @@ struct ShimmerConfig {
 //MARK: - BACKGROUND EXAMPLE PREVIEW
 struct EffectStyle_Previews: PreviewProvider {
     static var previews: some View {
-//        HomePageView(previewStretch: .constant(false))
-//            .previewInterfaceOrientation(.landscapeLeft)
-//            .previewLayout(.sizeThatFits)
-        HStack{}
+        BackgroundExampleView()
+            .previewInterfaceOrientation(.landscapeLeft)
+            .previewLayout(.sizeThatFits)
     }
 }

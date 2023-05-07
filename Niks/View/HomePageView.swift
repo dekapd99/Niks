@@ -40,6 +40,7 @@ struct HomePageView: View {
             Image(Constant.BackgroundImage.BackgroundHome)
                 .resizable()
                 .scaledToFill()
+                .ignoresSafeArea()
 
             DimmerView()
                 .onTapGesture {

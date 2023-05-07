@@ -16,6 +16,7 @@ struct LoadingView: View {
         
         ZStack {
             Color("LightBlue")
+                .ignoresSafeArea()
             
             VStack(spacing: 124) {
                 LoadingComponent()

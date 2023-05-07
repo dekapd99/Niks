@@ -22,6 +22,7 @@ struct BackgroundExampleView: View {
             //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
             GeometryReader { geometry in
                 Image("Homepod")
+                    .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
                     .position(x: geometry.size.width / 20, y: geometry.size.height / 1.65)
                     .onTapGesture {
@@ -37,6 +38,7 @@ struct BackgroundExampleView: View {
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
                 
                 Image("YogaMat")
+                    .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
                     .position(x: geometry.size.width / 1.17, y: geometry.size.height / 1.38)
                     .onTapGesture {

@@ -19,6 +19,9 @@ struct StretchingView: View {
             ZStack{
                 Image(Constant.BackgroundImage.BackgroundStretch)
                     .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                
                 DimmerView()
                 VStack {
                     StretchTitleView(geometry: geometry,
