@@ -38,6 +38,9 @@ struct ProgressBarComponent: View {
                             .foregroundColor(Color("SoftWhite"))
                             .tutorialNumberStyle()
                     }
+                    .onTapGesture{
+                        viewModel.curIndex = index + 1
+                    }
                 }
             }
             .frame(width: UIScreen.main.bounds.width * 0.75,
