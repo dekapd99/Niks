@@ -20,7 +20,12 @@ struct HomePageView: View {
     @State var currentSpotlight: Int = 0
     
     @State private var textIndex = 0
+    @State private var showBubble = false
+    @State private var hasShownAnimation = false
+    @State private var showBubbleComponent = true
+    
     private let texts = [
+        "",
         "You can start stretching by tapping on the Yoga Mat.",
         "You can also change the background music by tapping on the Speaker.",
         "When you change the background music, the scenery outside the window will also change accordingly.",
@@ -33,6 +38,7 @@ struct HomePageView: View {
         ZStack {
             Image(viewModel.musicCrate[viewModel.activeMusic].name)
                 .resizable()
+                .ignoresSafeArea()
             
             Image(Constant.BackgroundImage.BackgroundHome)
                 .resizable()
@@ -55,9 +61,12 @@ struct HomePageView: View {
                         SideBar.toggle()
                     }
                 
-                GeometryReader { geometry in
+                if showBubble {
                     BubbleDialogueComponent(text: texts[textIndex])
+                        .transition(.scale)
+                        .animation(.easeInOut(duration: 0.5))
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
+                        .opacity(textIndex < texts.count ? 1 : 0)
                 }
                 
                 Image("Character")
@@ -66,9 +75,18 @@ struct HomePageView: View {
                     .addSpotlight(1, shape: .rectangle, roundedRadius: 10, text: "")
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.7)
                     .onTapGesture {
-                        textIndex = (textIndex + 1) % texts.count
+                        withAnimation {
+                            if !hasShownAnimation {
+                                showBubble = true
+                                hasShownAnimation = true
+                            } else if textIndex == texts.count - 1 {
+                                showBubble = false
+                                hasShownAnimation = false
+                            }
+                            textIndex = (textIndex + 1) % texts.count
+                        }
                     }
-                
+
                 Image(Constant.Objects.Yogamat)
                     .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))
