@@ -28,7 +28,7 @@ struct HomePageView: View {
         "You can start stretching by tapping on the Yoga Mat",
         "You can also change the background music by tapping on the Speaker.",
         "When you change the background music, the scenery outside the window will also change accordingly.",
-        "*yawn* Let’s set you up to sleep by tapping on the Yoga Mat."
+        "*Yawn* \nLet’s set you up to sleep by tapping on the Yoga Mat."
     ]
     
     //MARK: - BODY
