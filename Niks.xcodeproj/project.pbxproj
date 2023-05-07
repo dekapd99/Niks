@@ -26,6 +26,15 @@
 		2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2A3D17472A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
+		2AC5A1E62A0726FE00B9FF65 /* VO_CorpsePose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1DD2A0726FD00B9FF65 /* VO_CorpsePose.mp3 */; };
+		2AC5A1E72A0726FE00B9FF65 /* VO_LegsChair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1DE2A0726FD00B9FF65 /* VO_LegsChair.mp3 */; };
+		2AC5A1E82A0726FE00B9FF65 /* VO_UjayyiSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1DF2A0726FD00B9FF65 /* VO_UjayyiSound.mp3 */; };
+		2AC5A1E92A0726FE00B9FF65 /* VO_Standing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E02A0726FD00B9FF65 /* VO_Standing.mp3 */; };
+		2AC5A1EA2A0726FE00B9FF65 /* VO_WideKneePose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E12A0726FD00B9FF65 /* VO_WideKneePose.mp3 */; };
+		2AC5A1EB2A0726FE00B9FF65 /* VO_RecliningBound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E22A0726FD00B9FF65 /* VO_RecliningBound.mp3 */; };
+		2AC5A1EC2A0726FE00B9FF65 /* VO_LegsUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E32A0726FD00B9FF65 /* VO_LegsUp.mp3 */; };
+		2AC5A1ED2A0726FE00B9FF65 /* VO_UjayyiBreath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E42A0726FD00B9FF65 /* VO_UjayyiBreath.mp3 */; };
+		2AC5A1EE2A0726FE00B9FF65 /* VO_StandingHalf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1E52A0726FE00B9FF65 /* VO_StandingHalf.mp3 */; };
 		2ADF327E2A03499000F39075 /* BubblePopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */; };
 		2ADF32822A034C7100F39075 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32812A034C7100F39075 /* Shapes.swift */; };
 		2ADF32852A035AD300F39075 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32842A035AD300F39075 /* HomePageView.swift */; };
@@ -106,6 +115,15 @@
 		2A3D173F2A0462D8001EC0C0 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
+		2AC5A1DD2A0726FD00B9FF65 /* VO_CorpsePose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_CorpsePose.mp3; sourceTree = "<group>"; };
+		2AC5A1DE2A0726FD00B9FF65 /* VO_LegsChair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_LegsChair.mp3; sourceTree = "<group>"; };
+		2AC5A1DF2A0726FD00B9FF65 /* VO_UjayyiSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_UjayyiSound.mp3; sourceTree = "<group>"; };
+		2AC5A1E02A0726FD00B9FF65 /* VO_Standing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_Standing.mp3; sourceTree = "<group>"; };
+		2AC5A1E12A0726FD00B9FF65 /* VO_WideKneePose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_WideKneePose.mp3; sourceTree = "<group>"; };
+		2AC5A1E22A0726FD00B9FF65 /* VO_RecliningBound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_RecliningBound.mp3; sourceTree = "<group>"; };
+		2AC5A1E32A0726FD00B9FF65 /* VO_LegsUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_LegsUp.mp3; sourceTree = "<group>"; };
+		2AC5A1E42A0726FD00B9FF65 /* VO_UjayyiBreath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_UjayyiBreath.mp3; sourceTree = "<group>"; };
+		2AC5A1E52A0726FE00B9FF65 /* VO_StandingHalf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_StandingHalf.mp3; sourceTree = "<group>"; };
 		2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePopupComponent.swift; sourceTree = "<group>"; };
 		2ADF32812A034C7100F39075 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		2ADF32842A035AD300F39075 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
@@ -301,6 +319,15 @@
 		DD9C17B02A0382A80062E051 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				2AC5A1E32A0726FD00B9FF65 /* VO_LegsUp.mp3 */,
+				2AC5A1E22A0726FD00B9FF65 /* VO_RecliningBound.mp3 */,
+				2AC5A1E52A0726FE00B9FF65 /* VO_StandingHalf.mp3 */,
+				2AC5A1DD2A0726FD00B9FF65 /* VO_CorpsePose.mp3 */,
+				2AC5A1DE2A0726FD00B9FF65 /* VO_LegsChair.mp3 */,
+				2AC5A1E02A0726FD00B9FF65 /* VO_Standing.mp3 */,
+				2AC5A1E42A0726FD00B9FF65 /* VO_UjayyiBreath.mp3 */,
+				2AC5A1DF2A0726FD00B9FF65 /* VO_UjayyiSound.mp3 */,
+				2AC5A1E12A0726FD00B9FF65 /* VO_WideKneePose.mp3 */,
 				DD9C17B12A0382A80062E051 /* Rain.mp3 */,
 				DD9C17B22A0382A80062E051 /* Night.mp3 */,
 				DD9C17B32A0382A80062E051 /* Beach.mp3 */,
@@ -392,14 +419,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC5A1E62A0726FE00B9FF65 /* VO_CorpsePose.mp3 in Resources */,
+				2AC5A1E92A0726FE00B9FF65 /* VO_Standing.mp3 in Resources */,
 				DD69A6D42A03FA7D00E573A0 /* Rain.mp3 in Resources */,
+				2AC5A1EE2A0726FE00B9FF65 /* VO_StandingHalf.mp3 in Resources */,
+				2AC5A1E82A0726FE00B9FF65 /* VO_UjayyiSound.mp3 in Resources */,
 				DD69A6D52A03FA8000E573A0 /* Night.mp3 in Resources */,
 				DD69A6D82A03FA8700E573A0 /* Jazz.mp3 in Resources */,
+				2AC5A1EB2A0726FE00B9FF65 /* VO_RecliningBound.mp3 in Resources */,
 				2A097F2929F785B000ED9644 /* Preview Assets.xcassets in Resources */,
+				2AC5A1ED2A0726FE00B9FF65 /* VO_UjayyiBreath.mp3 in Resources */,
 				DD69A6D62A03FA8200E573A0 /* Beach.mp3 in Resources */,
+				2AC5A1E72A0726FE00B9FF65 /* VO_LegsChair.mp3 in Resources */,
 				2A097F2629F785B000ED9644 /* Assets.xcassets in Resources */,
+				2AC5A1EC2A0726FE00B9FF65 /* VO_LegsUp.mp3 in Resources */,
 				DD69A6D72A03FA8400E573A0 /* Nature.mp3 in Resources */,
 				DD69A6D92A03FA8900E573A0 /* River.mp3 in Resources */,
+				2AC5A1EA2A0726FE00B9FF65 /* VO_WideKneePose.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

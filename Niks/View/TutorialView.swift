@@ -14,6 +14,7 @@ struct TutorialView: View {
     var body: some View {
         ZStack {
             Color("LightBlue")
+                .ignoresSafeArea()
             
             VStack(alignment: .center) {
                 HStack {

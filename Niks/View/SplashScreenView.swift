@@ -20,6 +20,7 @@ struct SplashScreenView: View {
         } else {
             ZStack {
                 Color("Pink")
+                    .ignoresSafeArea()
                 
                 ZStack {
                     Image("NiksShape")
@@ -46,7 +47,7 @@ struct SplashScreenView: View {
             }
             .ignoresSafeArea()
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline:  .now() + 1.5) {
                     withAnimation {
                         self.isActive = true
                     }

@@ -37,7 +37,7 @@ struct Dialogue {
         ]
         
         static let Prompts: [String] = [
-            "Imagine fogging up a lgass with your breath but keep your mouth shut.",
+            "Imagine fogging up a glass with your breath but keep your mouth shut.",
             "Stand a foot away from a wall, pressing your palms against it at hip height, and lowering your torso to create a flat back position while pressing the wall away with your palms for a deeper stretch.",
             "Stand with feet hips width apart, inhale deeply and exhale to extend your torso forward over your legs, holding onto your elbows or resting your hands on your shins or floor for a forward bend that elongates the spine and relaxes the neck and shoulders.",
             "Bring your big toes together and separate your knees hips width apart, then exhale and sink your torso onto your thighs with your arms relaxed alongside your torso or reaching forward, keeping your forehead on the ground and taking slow and steady breaths for a relaxing pose.",
@@ -69,11 +69,11 @@ struct Dialogue {
         ]
         static let Prompt: [String] = [
             "Take a deep breath...\nExhale",
-            "Take a deep breath...\nExhale",
-            "Take a deep breath...\nExhale",
-            "Take a deep breath...\nExhale",
-            "Take a deep breath...\nExhale",
-            "Take a deep breath...\nExhale",
+            "Just a little bit more...",
+            "Hang in there...",
+            "Take a nice stretch...",
+            "Feel the stretch...",
+            "Just a little bit more...",
             "Take a deep breath...\nExhale"
         ]
     }

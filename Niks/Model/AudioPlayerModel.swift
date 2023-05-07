@@ -27,7 +27,7 @@ class AudioPlayer: ObservableObject  {
 
     func playpause(){
         guard let player = audioPlayer else{
-            print("Instance of audi player no found")
+            print("Instance of audio player no found")
             return
         }
 
