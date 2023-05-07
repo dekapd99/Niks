@@ -102,7 +102,7 @@ struct InfoButtonView: View {
     @ObservedObject var viewModel: AnimatorViewModel
     var body: some View {
         HStack{
-            Image(systemName: "questionmark.circle")
+            Image(systemName: "info.circle")
                 .iconStyle()
                 .onTapGesture {
                     viewModel.showInfo.toggle()
