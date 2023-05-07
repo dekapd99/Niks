@@ -18,31 +18,82 @@ extension View {
     }
     
     //MARK: - Modifier to Display Spotlight that Overlay the Content (Add to Root View)
-//    @ViewBuilder
-//    func addSpotlightOverlay(show: Binding<Bool>, currentSpot: Binding<Int>) -> some View {
-//        self
-//            .overlayPreferenceValue(BoundsKey.self) { value in
-//                GeometryReader { proxy in
-//                    if let preference = values.first(where: { item in
-//                        item.key == currentSpot.wrappedValue
-//                    }) {
-//                        let screenSize = proxy.size
-//                        let anchor = proxy[preference.value.anchor]
-//
-//                        //MARK: - Spotlight View
-//                        SpotlightHelperView(screenSize: screenSize, rect: anchor)
-//                    }
-//                }
-//                .ignoresSafeArea()
-//                .animation(.easeInOut, value: show.wrappedValue)
-//                .animation(.easeInOut, value: currentSpot.wrappedValue)
-//            }
-//    }
+    @ViewBuilder
+    func addSpotlightOverlay(show: Binding<Bool>, currentSpot: Binding<Int>) -> some View {
+        self
+            .overlayPreferenceValue(BoundsKey.self) { values in
+                GeometryReader { proxy in
+                    if let preference = values.first(where: { item in
+                        item.key == currentSpot.wrappedValue
+                    }) {
+                        let screenSize = proxy.size
+                        let anchor = proxy[preference.value.anchor]
+
+                        //MARK: - Spotlight View
+                        SpotlightHelperView(screenSize: screenSize, rect: anchor, show: show, currentSpot: currentSpot, properties: preference.value) {
+                            
+                            if currentSpot.wrappedValue <= (values.count) {
+                                currentSpot.wrappedValue += 1
+                            } else {
+                                show.wrappedValue = false
+                            }
+                        }
+                    }
+                }
+                .ignoresSafeArea()
+                .animation(.easeInOut, value: show.wrappedValue)
+                .animation(.easeInOut, value: currentSpot.wrappedValue)
+            }
+    }
     //MARK: - Helper View
     @ViewBuilder
-    func SpotlightHelperView(screenSize: CGSize, rect: CGRect) -> some View {
+    func SpotlightHelperView(screenSize: CGSize, rect: CGRect, show: Binding<Bool>, currentSpot: Binding<Int>, properties: BoundsKeyProperties, onTap: @escaping() -> ()) -> some View {
         Rectangle()
             .fill(.ultraThinMaterial)
+            .opacity(show.wrappedValue ? 1 : 0)
+        
+            //MARK: - SPOTLIGHT TEXT DESCRIPTION
+            .overlay(alignment: .topLeading) {
+                Text(properties.text)
+                    .titleStyle()
+                
+                //MARK: - EXTRACTING TEXT SIZE
+                    .opacity(0)
+                    .overlay {
+                        GeometryReader { proxy in
+                            let textSize = proxy.size
+                            
+                            Text(properties.text)
+                                .titleStyle()
+                                //MARK: - DYNAMIC TEXT ALIGNMENT
+                                // HORIZONTAL CHECKING
+                                .offset(x: (rect.minX + textSize.width) > (screenSize.width - 15) ? -((rect.minX + textSize.width) - (screenSize.width - 15) ) : 0)
+                                // VERTICAL CHECKING
+                                .offset(y: (rect.maxY + textSize.height) > (screenSize.height - 50) ? -(textSize.height - (rect.maxY - rect.minY) + 30) : 0)
+                        }
+                        .offset(x: rect.minX, y: rect.maxY)
+                    }
+                    
+            }
+        
+            //MARK: - REVERSE MASKING THE CURRENT SPOTLIGHT CONTENT
+            //The Currently Spotlighted View will be Looking like Highlighted
+            .mask {
+                Rectangle()
+                    .overlay(alignment: .topLeading) {
+                        let radius = properties.shape == .circle ? (rect.width / 2) : (properties.shape == .rectangle ? 0 : properties.radius)
+                        RoundedRectangle(cornerRadius: radius, style: .continuous)
+                            .frame(width: rect.width, height: rect.height)
+                            .offset(x: rect.minX, y: rect.minY)
+                            .blendMode(.destinationOut)
+                    }
+            }
+            .onTapGesture {
+                //MARK: - UPDATING SPOTLIGHT TO THE NEXT SPOTLIGHT CONTENT
+                // If Available
+                onTap()
+            }
+
     }
 }
 
