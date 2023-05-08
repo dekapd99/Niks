@@ -75,7 +75,7 @@ Berikut struktur file dan folder pada Niks:
 <!-- Contributors -->
 ## Contributors
 
-* [Adriel](https://github.com/Adrielrusli)
+* [Adriel Bernard Rusli](https://github.com/Adrielrusli)
 * [Abner Edgar](https://github.com/AbnerEdgar)
 * [Bobby Sugiharto](https://github.com/bobbysaa)
 * [Deka Primatio Deandra](https://www.github.com/dekapd99)

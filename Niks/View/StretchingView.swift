@@ -44,10 +44,10 @@ struct StretchingView: View {
                         .fill(.white)
                         .opacity(0.9)
                         .overlay{
-                            Text("Tembok")
+                            Text("Wall")
                                 .descriptionStyle()
                         }
-                        .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
+                        .position(x: viewModel.modelPos[viewModel.curIndex].x+382,
                                   y: viewModel.modelPos[viewModel.curIndex].y+360)
                         .frame(width: 250 , height: 500)
                     
@@ -56,12 +56,13 @@ struct StretchingView: View {
                         .fill(.white)
                         .opacity(0.9)
                         .overlay{
-                            Text("Kursi/\nganjelan")
+                            Text("Chair")
                                 .descriptionStyle()
                         }
                         .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
-                                  y: viewModel.modelPos[viewModel.curIndex].y+378)
-                        .frame(width: 150 , height: 150)
+                                  y: viewModel.modelPos[viewModel.curIndex].y+340)
+                        .frame(width: 150,
+                               height: 120)
                 }
             }//: - ZSTACK (BACKGROUND & OBJECTS)
             .onAppear{
