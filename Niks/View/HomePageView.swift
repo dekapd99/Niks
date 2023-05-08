@@ -44,7 +44,7 @@ struct HomePageView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-
+            
             DimmerView()
                 .onTapGesture {
                     SideBar = false
@@ -68,7 +68,7 @@ struct HomePageView: View {
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 6.5)
                         .opacity(textIndex < texts.count ? 1 : 0)
                 }
-
+                
                 Image(Constant.AnimationModel.Idle[viewModel.charI])
                     .resizable()
                     .frame(width: 650, height: 650)
@@ -93,7 +93,7 @@ struct HomePageView: View {
                     .pulsingAnimation()
                     .titleStyle()
                     .position(x: geometry.size.width / 2, y: geometry.size.height - 70)
-
+                
                 Image(Constant.Objects.Yogamat)
                     .pulsingAnimation()
                     .shimmer(.init(tint: .white.opacity(0.1), highlight: .white.opacity(0.6), blur: 5))

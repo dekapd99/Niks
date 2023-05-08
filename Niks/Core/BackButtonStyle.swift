@@ -15,7 +15,7 @@ extension View {
 
 struct CustomBackButtonModifier: ViewModifier {
     let presentationMode: Binding<PresentationMode>
-
+    
     func body(content: Content) -> some View {
         content
             .navigationBarTitle("")

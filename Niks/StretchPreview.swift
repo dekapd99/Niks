@@ -37,7 +37,7 @@ struct StretchPreview: View {
                     ModelAnimationView(geometry: geometry,
                                        viewModel: viewModel)
                 }
-
+                
                 if viewModel.curIndex > 0 {
                     ProgressBarView(geometry: geometry,
                                     viewModel: viewModel)
@@ -118,7 +118,7 @@ struct InfoButtonView: View {
                 }
         }
         .position(x: geometry.size.width * 0.95,
-                   y: geometry.size.height * 0.08)
+                  y: geometry.size.height * 0.08)
         .opacity(viewModel.showInfo ? 0.5 : 1)
         .animation(.easeInOut(duration: 0.15), value: viewModel.showInfo)
     }//: - BODY (INFO BUTTON VIEW)

@@ -38,7 +38,7 @@ struct GetReadyView: View {
                     Text("Continue")
                         .buttonStyle()
                 }
-
+                
                 
                 Spacer()
             }

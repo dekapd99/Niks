@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct NiksApp: App {    
+struct NiksApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()

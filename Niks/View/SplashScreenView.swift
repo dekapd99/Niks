@@ -36,7 +36,7 @@ struct SplashScreenView: View {
                         self.opacity = 1.0
                     }
                 }
-
+                
             }
             .ignoresSafeArea()
             .onAppear {

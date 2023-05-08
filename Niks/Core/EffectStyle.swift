@@ -52,7 +52,7 @@ extension View {
             .fill(Color("SoftBlack"))
             .opacity(show.wrappedValue ? 0.8 : 0)
         
-            //MARK: - SPOTLIGHT TEXT DESCRIPTION
+        //MARK: - SPOTLIGHT TEXT DESCRIPTION
             .overlay(alignment: .topLeading) {
                 Text(properties.text)
                     .titleStyle()
@@ -75,8 +75,8 @@ extension View {
                     }
             }
         
-            //MARK: - REVERSE MASKING THE CURRENT SPOTLIGHT CONTENT
-            //The Currently Spotlighted View will be Looking like Highlighted
+        //MARK: - REVERSE MASKING THE CURRENT SPOTLIGHT CONTENT
+        //The Currently Spotlighted View will be Looking like Highlighted
             .mask {
                 Rectangle()
                     .overlay(alignment: .topLeading) {
@@ -195,7 +195,7 @@ fileprivate struct ShimmerEffect: ViewModifier {
                             content
                         }
                     }
-                    //Dispatch Queue with DispatchQueue to Avoid Animation Glitch
+                //Dispatch Queue with DispatchQueue to Avoid Animation Glitch
                     .onAppear{
                         DispatchQueue.main.async {
                             moveTo = 0.7

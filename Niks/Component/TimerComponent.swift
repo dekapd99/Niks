@@ -65,12 +65,12 @@ struct CircularProgressBar: View {
                 .foregroundColor(colorSecondary)
         }
         .onAppear(perform: {viewModel.currentTime = getInitialVal()})
-//        .onReceive(TimerObj, perform: { _ in
-//            if currentTime == 0 && !done{
-//                isFinish()
-//                done = true
-//            }
-//        })
+        //        .onReceive(TimerObj, perform: { _ in
+        //            if currentTime == 0 && !done{
+        //                isFinish()
+        //                done = true
+        //            }
+        //        })
         .frame(width: diameter,
                height: diameter,
                alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

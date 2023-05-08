@@ -14,33 +14,28 @@ class AudioPlayer: ObservableObject  {
     static let shared = AudioPlayer()
     
     func playSound(sound: String) {
-    if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            audioPlayer?.numberOfLoops = -1
-            audioPlayer?.play()
-        } catch {
-            print("ERROR")
+        if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.numberOfLoops = -1
+                audioPlayer?.play()
+            } catch {
+                print("ERROR")
+            }
         }
     }
-}
-
+    
     func playpause(){
         guard let player = audioPlayer else{
             print("Instance of audio player no found")
             return
         }
-
+        
         if player.isPlaying{
             player.pause()
-          
-        }else{
+            
+        } else{
             player.play()
-           
-
         }
     }
-    
-    
-
 }

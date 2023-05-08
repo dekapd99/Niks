@@ -37,17 +37,17 @@ struct SidebarComponent: View {
             //MARK: - SIDEBAR CONTENTS
             SidebarContentView(viewModel: viewModel,
                                colorgrad: colorgrad)
-                .padding(.leading, getLeftPadding())
-                .frame(width: getWidth(), height: bounds.y)
-                .opacity(getOpac())
-                .scaleEffect(toggle ? 1 : 0.5, anchor: .leading)
-                .animation(
-                    .interpolatingSpring(
-                        stiffness: springStiffness,
-                        damping: springDamp)
-                    .speed(animateSpeed),
-                    value: opac)
-                .position(x: pos.x, y:pos.y-200)
+            .padding(.leading, getLeftPadding())
+            .frame(width: getWidth(), height: bounds.y)
+            .opacity(getOpac())
+            .scaleEffect(toggle ? 1 : 0.5, anchor: .leading)
+            .animation(
+                .interpolatingSpring(
+                    stiffness: springStiffness,
+                    damping: springDamp)
+                .speed(animateSpeed),
+                value: opac)
+            .position(x: pos.x, y:pos.y-200)
             Spacer()
         }
         .padding(.vertical, verticalIndent)
@@ -114,7 +114,7 @@ struct SidebarContentView: View {
     func isActive(_ music: MusicModel) -> Bool {
         return viewModel.musicCrate[viewModel.activeMusic].name == music.getName()
     }
-
+    
 }
 
 struct ItemView: View {
@@ -134,7 +134,7 @@ struct ItemView: View {
                 .frame(width: radius*4.2, height: radius, alignment: .leading)
                 .foregroundColor(.black)
                 .background(.clear)
-                Spacer()
+            Spacer()
             if isActive {
                 Image(systemName: viewModel.mute ? Constant.IconStyle.SpeakerMute : Constant.IconStyle.Speaker)
                     .resizable()

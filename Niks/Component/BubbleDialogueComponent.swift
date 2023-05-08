@@ -27,7 +27,7 @@ struct BubbleDialogueComponent: View {
                 .titleStyle()
                 .frame(width: 550, height: 150)
         }//: - ZSTACK
-            
+        
     }//: - BODY
 }
 

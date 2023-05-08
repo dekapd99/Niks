@@ -126,26 +126,26 @@ struct CircularButtonComponent: View {
                         rounded: true,
                         colorgrad: colorgrad,
                         doThis: doButton1)
-            .position(getPos(
-                degree: centerDeg + offsetDeg,
-                radius: radius,
-                offset: position))
+        .position(getPos(
+            degree: centerDeg + offsetDeg,
+            radius: radius,
+            offset: position))
         ButtonComponent(image: "",
                         rounded: false,
                         colorgrad: colorgrad,
                         doThis: doButton2)
-            .position(getPos(
-                degree: centerDeg,
-                radius: radius,
-                offset: position))
+        .position(getPos(
+            degree: centerDeg,
+            radius: radius,
+            offset: position))
         ButtonComponent(image: "",
                         rounded: true,
                         colorgrad: colorgrad,
                         doThis: doButton3)
-            .position(getPos(
-                degree: centerDeg - offsetDeg,
-                radius: radius,
-                offset: position))
+        .position(getPos(
+            degree: centerDeg - offsetDeg,
+            radius: radius,
+            offset: position))
     }
     func getPos(degree: CGFloat, radius: CGFloat, offset: CGPoint) -> CGPoint {
         let calcX: CGFloat = radius * cos(degree * .pi/180) + offset.x

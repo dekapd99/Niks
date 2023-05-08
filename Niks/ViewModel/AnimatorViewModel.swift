@@ -93,7 +93,7 @@ class AnimatorViewModel: ObservableObject {
     }
     func incrementTime() -> () {
         if isActive {
-//            currentTime = currentTime >= timer ? timer : currentTime + 1
+            //            currentTime = currentTime >= timer ? timer : currentTime + 1
         }
     }
     func getOperation() -> () {

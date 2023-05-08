@@ -44,7 +44,7 @@ struct ExampleView: View {
                     Text("Tips & Description")
                         .font(.system(size: 22))
                 }
-
+                
                 HStack {
                     Text("Timer 15s")
                         .font(.largeTitle)

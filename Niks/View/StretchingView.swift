@@ -50,7 +50,7 @@ struct StretchingView: View {
                         .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
                                   y: viewModel.modelPos[viewModel.curIndex].y+360)
                         .frame(width: 250 , height: 500)
-                        
+                    
                 }else if viewModel.curIndex == 6 {
                     Rectangle()
                         .fill(.white)

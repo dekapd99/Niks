@@ -42,7 +42,7 @@ struct TutorialView: View {
                     Text("Start")
                         .buttonStyle()
                 }
-
+                
                 
                 Spacer()
             }
