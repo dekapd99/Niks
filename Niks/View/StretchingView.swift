@@ -44,7 +44,7 @@ struct StretchingView: View {
                         .fill(.white)
                         .opacity(0.9)
                         .overlay{
-                            Text("Tembok")
+                            Text("Wall")
                                 .descriptionStyle()
                         }
                         .position(x: viewModel.modelPos[viewModel.curIndex].x+382,
@@ -56,7 +56,7 @@ struct StretchingView: View {
                         .fill(.white)
                         .opacity(0.9)
                         .overlay{
-                            Text("Kursi/\nganjelan")
+                            Text("Chair")
                                 .descriptionStyle()
                         }
                         .position(x: viewModel.modelPos[viewModel.curIndex].x+280,

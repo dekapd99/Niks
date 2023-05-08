@@ -50,8 +50,8 @@ struct SplashScreenView: View {
                         
                         // Create a trigger for daily notifications at 10 pm
                         var dateComponents = DateComponents()
-                        dateComponents.hour = 13
-                        dateComponents.minute = 44
+                        dateComponents.hour = 22
+                        dateComponents.minute = 00
                         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
                         
                         // Create a notification request
