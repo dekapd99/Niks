@@ -47,10 +47,10 @@ struct StretchingView: View {
                             Text("Tembok")
                                 .descriptionStyle()
                         }
-                        .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
+                        .position(x: viewModel.modelPos[viewModel.curIndex].x+382,
                                   y: viewModel.modelPos[viewModel.curIndex].y+360)
-                        .frame(width: 250 , height: 500)
-                        
+                        .frame(width: 250,
+                               height: 500)
                 }else if viewModel.curIndex == 6 {
                     Rectangle()
                         .fill(.white)
@@ -60,8 +60,9 @@ struct StretchingView: View {
                                 .descriptionStyle()
                         }
                         .position(x: viewModel.modelPos[viewModel.curIndex].x+280,
-                                  y: viewModel.modelPos[viewModel.curIndex].y+378)
-                        .frame(width: 150 , height: 150)
+                                  y: viewModel.modelPos[viewModel.curIndex].y+340)
+                        .frame(width: 150,
+                               height: 120)
                 }
             }//: - ZSTACK (BACKGROUND & OBJECTS)
             .onAppear{
