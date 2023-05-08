@@ -37,6 +37,31 @@ struct StrechPreview: View {
                 if !viewModel.stretchView{
                     ModelAnimationView(geometry: geometry,
                                        viewModel: viewModel)
+                    if viewModel.curIndex == 5 {
+                        Rectangle()
+                            .fill(.white)
+                            .opacity(0.9)
+                            .overlay{
+                                Text("Tembok")
+                                    .descriptionStyle()
+                            }
+                            .position(x: viewModel.modelPos[viewModel.curIndex].x+182,
+                                      y: viewModel.modelPos[viewModel.curIndex].y-50)
+                            .frame(width: 150,
+                                   height: 300)
+                    }else if viewModel.curIndex == 6 {
+                        Rectangle()
+                            .fill(.white)
+                            .opacity(0.9)
+                            .overlay{
+                                Text("Kursi")
+                                    .descriptionStyle()
+                            }
+                            .position(x: viewModel.modelPos[viewModel.curIndex].x+167,
+                                      y: viewModel.modelPos[viewModel.curIndex].y-115)
+                            .frame(width: 120,
+                                   height: 80)
+                    }
                 }
 
                 if viewModel.curIndex > 0 {
