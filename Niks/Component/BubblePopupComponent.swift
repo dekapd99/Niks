@@ -27,7 +27,7 @@ struct BubblePopupComponent: View {
                         .listRowSeparator(.hidden)
                     
                     Text(text)
-                        .frame(width: 321, height: 112)
+                        .frame(width: 300, height: 112)
                         .popupTextStyle()
                 }
             }

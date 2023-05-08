@@ -41,7 +41,7 @@ struct StretchPreview: View {
                             .fill(.white)
                             .opacity(0.9)
                             .overlay{
-                                Text("Tembok")
+                                Text("Wall")
                                     .descriptionStyle()
                             }
                             .position(x: viewModel.modelPos[viewModel.curIndex].x+182,
@@ -53,7 +53,7 @@ struct StretchPreview: View {
                             .fill(.white)
                             .opacity(0.9)
                             .overlay{
-                                Text("Kursi")
+                                Text("Chair")
                                     .descriptionStyle()
                             }
                             .position(x: viewModel.modelPos[viewModel.curIndex].x+167,
