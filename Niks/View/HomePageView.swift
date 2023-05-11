@@ -118,14 +118,5 @@ struct HomePageView: View {
                 showSpotlightOnce = false
             }
         }
-        
     }//: - BODY
 }
-
-//struct HomePageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomePageView(previewStretch: .constant(false))
-//            .previewInterfaceOrientation(.landscapeLeft)
-//            .previewLayout(.sizeThatFits)
-//    }
-//}

@@ -154,20 +154,3 @@ struct ItemView: View {
                 radius: isActive ? 8 : 0)
     }
 }
-
-//struct SidebarComponent_Previews: PreviewProvider {
-//    @State var toggle: Bool = false
-//    static var previews: some View {
-//        GeometryReader { geometry in
-//            SidebarComponent(toggle: .constant(true),
-//                             bounds: CGPoint(
-//                                x: geometry.size.width,
-//                                y: geometry.size.height),
-//                             colorgrad: .white)
-//        }
-//        .previewInterfaceOrientation(.landscapeLeft)
-//        .background(.black)
-//    }
-//}
-
-

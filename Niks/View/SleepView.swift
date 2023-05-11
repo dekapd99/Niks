@@ -46,7 +46,6 @@ struct SleepView: View {
                     .titleStyle()
                     .position(x: geometry.size.width / 2, y: geometry.size.height - 70)
             }
-            
         }//: - ZSTACK WRAPPER
         .onTapGesture {
             if textIndex == texts.count - 1 {
@@ -61,7 +60,6 @@ struct SleepView: View {
         }
     }//: - BODY
 }
-
 
 //MARK: - PREVIEW
 struct SleepView_Previews: PreviewProvider {

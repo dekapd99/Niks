@@ -10,6 +10,7 @@ import SwiftUI
 struct BubblePopupComponent: View {
     //MARK: - PROPERTIES
     let text: String
+    
     //MARK: - BODY
     var body: some View {
         VStack{
@@ -38,7 +39,7 @@ struct BubblePopupComponent: View {
     }//: - BODY
 }
 
-//MAKR: - PREVIEW
+//MARK: - PREVIEW
 struct BubblePopupComponent_Previews: PreviewProvider {
     static var previews: some View {
         BubblePopupComponent(text: "")

@@ -56,9 +56,3 @@ struct ProgressBarComponent: View {
         }
     }
 }
-
-//struct ProgressBarComponent_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProgressBarComponent()
-//    }
-//}

@@ -43,8 +43,6 @@
 		2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE502B129F945F9000D7C06 /* ExampleView.swift */; };
 		761AD2652A013C51004D9415 /* StretchPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2642A013C51004D9415 /* StretchPreview.swift */; };
 		761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */; };
-		761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26A2A017975004D9415 /* AnimationModel.swift */; };
-		761AD26D2A017B32004D9415 /* animationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD26C2A017B32004D9415 /* animationView.swift */; };
 		764105302A063D3D00B97086 /* AudioPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */; };
 		7676A3AB2A03EED300254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
 		7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B22A03F3F000254520 /* NiksWatchApp.swift */; };
@@ -131,8 +129,6 @@
 		2AE502B129F945F9000D7C06 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		761AD2642A013C51004D9415 /* StretchPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StretchPreview.swift; path = Niks/StretchPreview.swift; sourceTree = SOURCE_ROOT; };
 		761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarComponent.swift; path = Niks/ProgressBarComponent.swift; sourceTree = SOURCE_ROOT; };
-		761AD26A2A017975004D9415 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
-		761AD26C2A017B32004D9415 /* animationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationView.swift; sourceTree = "<group>"; };
 		7676A3AA2A03EED300254520 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiksWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7676A3B22A03F3F000254520 /* NiksWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiksWatchApp.swift; sourceTree = "<group>"; };
@@ -228,7 +224,6 @@
 				2A0BABD22A000BE40040650C /* GetReadyView.swift */,
 				2A0BABD42A000DC40040650C /* TutorialView.swift */,
 				DD334B5D2A00D1A9001A935A /* StretchingView.swift */,
-				761AD26C2A017B32004D9415 /* animationView.swift */,
 				2ADF32842A035AD300F39075 /* HomePageView.swift */,
 				2A3D173F2A0462D8001EC0C0 /* SleepView.swift */,
 				2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */,
@@ -241,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				DD334B502A00ADF2001A935A /* MusicModel.swift */,
-				761AD26A2A017975004D9415 /* AnimationModel.swift */,
 				DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */,
 				DDAD8C622A05DB6E000CDD42 /* AnimatorModel.swift */,
 			);
@@ -486,7 +480,6 @@
 				2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */,
 				2A097F2229F785AF00ED9644 /* NiksApp.swift in Sources */,
 				2ADF32852A035AD300F39075 /* HomePageView.swift in Sources */,
-				761AD26D2A017B32004D9415 /* animationView.swift in Sources */,
 				DD93645929FA345F009BAFEE /* SidebarComponent.swift in Sources */,
 				2A5D9B6B2A08736100E5E569 /* AnimatorViewModel.swift in Sources */,
 				2A1934B229FFF18400D6C5F5 /* LoadingComponent.swift in Sources */,
@@ -495,7 +488,6 @@
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
 				761AD2652A013C51004D9415 /* StretchPreview.swift in Sources */,
-				761AD26B2A017975004D9415 /* AnimationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ struct StretchingView: View {
     //MARK: - PROPERTIES
     @Binding var previewStretch: Bool
     @ObservedObject var viewModel: AnimatorViewModel
+    
     //MARK: - BODY
     var body: some View {
         //MARK: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
@@ -73,16 +74,17 @@ struct StretchingView: View {
                       y: geometry.size.height/2)
         }//: - GEOMETRY READER (RESPONSIVE OBJECT PLACEMENT)
     }//: - BODY
-    
 }
 
 struct StretchTitleView: View {
     //MARK: - PROPERTIES
     var geometry: GeometryProxy
     @ObservedObject var viewModel: AnimatorViewModel
+    
     //MARK: - BODY
     var body: some View {
-        HStack { //MARK: - HSTACK (BACKGROUND)
+        //MARK: - HSTACK (BACKGROUND)
+        HStack {
             Spacer()
             Image("StretchTitle")
                 .resizable()
@@ -93,7 +95,7 @@ struct StretchTitleView: View {
                         .frame(width: geometry.size.width * 0.22,
                                height: geometry.size.height * 0.15)
                 }
-        }
+        }//: - HSTACK (BACKGROUND)
         .padding(.bottom, geometry.size.height * 0.05)
     }//: - BODY
 }
@@ -102,6 +104,7 @@ struct StretchTimerView: View {
     //MARK: - PROPERTIES
     var geometry: GeometryProxy
     @ObservedObject var viewModel: AnimatorViewModel
+    
     //MARK: - BODY
     var body: some View {
         HStack { //MARK: - HSTACK (BACKGROUND)
@@ -122,6 +125,7 @@ struct StretchPauseView: View {
     //MARK: - PROPERTIES
     var geometry: GeometryProxy
     @ObservedObject var viewModel: AnimatorViewModel
+    
     //MARK: - BODY
     var body: some View {
         HStack{ //MARK: - HSTACK (BACKGROUND)
@@ -143,26 +147,17 @@ struct StretchPauseView: View {
 struct DimmerView: View {
     //MARK: - PROPERTIES
     let dimVal: CGFloat = 0.2
+    
     //MARK: - BODY
     var body: some View {
-        VStack{ //MARK: - VSTACK (BACKGROUND)
+        VStack{
             Spacer()
-            HStack{ //MARK: - HSTACK (BACKGROUND)
+            
+            //MARK: - HSTACK (BACKGROUND)
+            HStack{
                 Spacer()
             }
         }
         .background(Constant.ColorStyle.SoftBlack.opacity(dimVal))
     }//: - BODY
 }
-
-//struct StretchingView_Previews: PreviewProvider {
-//    //MARK: - PROPERTIES
-//    //MARK: - BODY
-//    static var previews: some View {
-//        StretchingView(curIndex: .constant(0),
-//                       stretchView: .constant(false),
-//                       previewStretch: .constant(true))
-//            .previewInterfaceOrientation(.landscapeLeft)
-//            .previewLayout(.sizeThatFits)
-//    }//: - BODY
-//}

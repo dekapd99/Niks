@@ -50,7 +50,6 @@ struct TotallySleepView: View {
     }
 }
 
-
 //MARK: - PREVIEW
 struct TotallySleepView_Previews: PreviewProvider {
     static var previews: some View {
