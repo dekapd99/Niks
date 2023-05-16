@@ -62,7 +62,11 @@ Berikut struktur file dan folder pada Niks:
 
 * Reusable Components
 * All Stacks (HStack, VStack, ZStack)
-* ScrollView (Vertical)
+* Custom Modifier
+* User Notifications (Daily Notification every 10.00 pm)
+* Watch Connectivity
+* AVKit for Music
+* Animation Sequence
 
 <!-- Used Tools -->
 ## Build With
