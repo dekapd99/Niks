@@ -30,7 +30,7 @@ Niks  is an app that we crafted to empower academy fellow learners to build a ha
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
 ## Folder & File Structure
-Berikut struktur file dan folder pada Niks:
+Beriut struktur file dan folder pada Niks:
 
     .
     ├── Assets                              # Aset Warna, Logo & Gambar
