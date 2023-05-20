@@ -95,7 +95,9 @@ git clone https://github.com/dekapd99/Niks.git
 ```
 
 2. Jika sudah Download / Clone Project, silahkan buka Project di Xcode dengan Klik Open a Project or File.
+
 3. Pastikan untuk memilih iPhone 14 pada Target Simulator (Kolom Device dibagian atas XCode). 
+
 4. Build & Run
 
 <!-- What Kind of License? -->
