@@ -78,12 +78,14 @@ Beriut strukur fle dan folder pada Niks:
 <!-- Contributors -->
 ## Contributors
 
-* [Adriel Bernard Rusli](https://github.com/Adrielrusli)
-* [Abner Edgar](https://github.com/AbnerEdgar)
-* [Bobby Sugiharto](https://github.com/bobbysaa)
-* [Deka Primatio Deandra](https://www.github.com/dekapd99)
-* [Millennian Ibnu Adriansyah Karinda](https://github.com/Adriankrnd)
-* [Rachmaniar Larasati](https://github.com/niarlaras10)
+| Name | Roles |
+| --- | --- |
+| [Adriel Bernard Rusli](https://github.com/Adrielrusli) | Fullstack Developer |
+| [Abner Edgar](https://github.com/AbnerEdgar) | Fullstack Developer |
+| [Bobby Sugiharto](https://github.com/bobbysaa) | Animator & Designer |
+| [Deka Primatio Deandra](https://www.github.com/dekapd99) | Fullstack Developer |
+| [Millennian Ibnu Adriansyah Karinda](https://github.com/Adriankrnd) | Animator & Designer |
+| [Rachmaniar Larasati](https://github.com/niarlaras10) | Project Manager |
 
 <!-- How to Install -->
 # Installation
