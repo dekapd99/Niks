@@ -24,7 +24,6 @@ Niks is an app that we crafted to empower academy fellow learners to build a hab
 <p align="center">
   <a href="#" target="_blank"><img src="1.png" width="200"></a>
   <a href="#" target="_blank"><img src="2.png" width="200"></a>
-  <a href="#" target="_blank"><img src="3.png" width="200"></a>
 </p>
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
