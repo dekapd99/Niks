@@ -12,7 +12,7 @@
   <a href="#about">About</a> •
   <a href="#preview">Preview</a> •
   <a href="#installation">Installation</a> •
-  <a href="#features">Installation</a> •
+  <a href="#features">Features</a> •
   <a href="#contributors">Contributors</a> •
   <a href="#license">License</a>
 </p>
