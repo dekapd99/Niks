@@ -139,4 +139,6 @@ DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPO
 
 Assets Source: [SF Symbols 4 Icon](https://developer.apple.com/sf-symbols/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Figma Projects: [Niks Figma](https://www.figma.com/file/n8fhBUJc7Y4XWuvc83zUVZ/Mini-Challenge-1?type=design&node-id=0%3A1&t=wG3k42XnGWk3ohSh-1)
+
+<p align="right">(<a href="#about">back to top</a>)</p>
