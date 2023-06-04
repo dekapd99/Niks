@@ -28,15 +28,28 @@ Niks is an app that we crafted to empower academy fellow learners to build a hab
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
 ## Folder & File Structure
-Beriut strukur fl dan folder pada Niks:
+Here is the file and folder structure for Niks:
 
     .
-    ├── Assets                              # Aset Warna, Logo & Gambar
-    ├── Data                    
-    │   └── FruitData.swift                 # Berisikan Static Local Data Variable
+    ├── Assets                              # Contains Colors, Logo & Images
+    ├── Component                           # Contains Reusable & Recyclable Components
+    │   ├── BubbleDialogueComponent.swift
+    │   ├── BubblePopupComponent.swift
+    │   ├── LoadingComponent.swift
+    │   ├── SidebarComponent.swift
+    │   └── TimerComponent.swift                 
     │
-    ├── Model                   
-    │   └── FruitModel.swift                # Berisikan Fruit Local Data Type Declaration
+    ├── Core                                # Contains Constant & Custom Modifier
+    │   ├── BackButtonStyle.swift
+    │   ├── ButtonStyle.swift
+    │   ├── EffectStyle.swift
+    │   ├── FontStyle.swift
+    │   ├── IconStyle.swift
+    │   ├── ImageStyle.swift
+    │   └── Constant
+    │       ├── Constant.swift
+    │       ├── Dialogues.swift
+    │       └── Shapes.swift             
     │
     ├── Component                   
     │   ├── FruitCardComponent.swift        # Berisikan Komponen Fruit Onboarding Card (OnBoardingView)
@@ -58,13 +71,19 @@ Beriut strukur fl dan folder pada Niks:
 <!-- List of Features -->
 # Features:
 
+* Yoga (Ujayyi Breath Method)
+* Countdown Timer
+* Interactive Progress Bar
 * Reusable Components
 * All Stacks (HStack, VStack, ZStack)
-* Custom Modifier
-* User Notifications (Daily Notification every 10.00 pm)
+* Custom Modifier (Extension)
+* User Notifications (Daily Notification at 10.00 P.M.)
+* User Notifications Permission
+* Shimmering & Pulse Animation Object
 * Watch Connectivity
-* AVKit for Music
-* Animation Sequence
+* AVKit for Apps Default Music
+* Splash Screen
+* Animation Sequence (PNG Sequence)
 
 <!-- Used Tools -->
 ## Build With
@@ -72,7 +91,7 @@ Beriut strukur fl dan folder pada Niks:
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
 * [Xcode](https://developer.apple.com/xcode/)
-* [Figma](https://developer.apple.com/xcode/)
+* [Figma](https://www.figma.com/)
 
 <!-- Contributors -->
 ## Contributors
@@ -81,25 +100,25 @@ Beriut strukur fl dan folder pada Niks:
 | --- | --- |
 | [Adriel Bernard Rusli](https://github.com/Adrielrusli) | Fullstack Developer |
 | [Abner Edgar](https://github.com/AbnerEdgar) | Fullstack Developer |
-| [Bobby Sugiharto](https://github.com/bobbysaa) | Animator & Designer |
+| [Bobby Sugiharto](https://github.com/bobbysaa) | Animator & UI / UX Designer |
 | [Deka Primatio Deandra](https://www.github.com/dekapd99) | Fullstack Developer |
-| [Millennian Ibnu Adriansyah Karinda](https://github.com/Adriankrnd) | Animator & Designer |
+| [Millennian Ibnu Adriansyah Karinda](https://github.com/Adriankrnd) | Animator & UI / UX Designer |
 | [Rachmaniar Larasati](https://github.com/niarlaras10) | Project Manager |
 
 <!-- How to Install -->
 # Installation
-Untuk menggunakan repositori ini, ikutilah petunjuk penggunaan berikut dan pastikan git sudah terinstall pada komputer (semua perintah dilaksanakan pada `cmd.exe` atau `terminal`):
+To use this repository, please follow the usage instructions below and make sure that Git is installed on your computer (execute all commands in cmd.exe or terminal):
 
-1. Lakukan download .zip atau `clone` repositori dengan cara:
+1. Download the .zip file or clone the repository using the following command:
 ```bash
 git clone https://github.com/dekapd99/Niks.git
 ```
 
-2. Jika sudah Download / Clone Project, silahkan buka Project di Xcode dengan Klik Open a Project or File.
+2. Once the project is downloaded or cloned, open the project in Xcode by clicking on "Open a Project or File".
 
-3. Pastikan untuk memilih iPhone 14 pada Target Simulator (Kolom Device dibagian atas XCode). 
+3. Make sure to select iPad as the target simulator (Device column at the top of Xcode).
 
-4. Build & Run
+4. Build and Run the project.
 
 <!-- What Kind of License? -->
 # License
