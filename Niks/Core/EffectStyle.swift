@@ -215,11 +215,3 @@ struct ShimmerConfig {
     var speed: CGFloat = 2
 }
 
-//MARK: - BACKGROUND EXAMPLE PREVIEW
-struct EffectStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        BackgroundExampleView()
-            .previewInterfaceOrientation(.landscapeLeft)
-            .previewLayout(.sizeThatFits)
-    }
-}
