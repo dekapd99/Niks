@@ -22,8 +22,7 @@ Niks is an app that we crafted to empower academy fellow learners to build a hab
 
 ### Preview
 <p align="center">
-  <a href="#" target="_blank"><img src="1.png" width="200"></a>
-  <a href="#" target="_blank"><img src="2.png" width="200"></a>
+  <a href="#" target="_blank"><img src="preview.gif"></a>
 </p>
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
@@ -32,6 +31,11 @@ Here is the file and folder structure for Niks:
 
     .
     ├── Assets                              # Contains Colors, Logo & Images
+    ├── Shared                              # Contains Watch Connectivity Manager
+    ├── Audio                               # Contains Audio Files for Apps Default Music
+    ├── NiksWatch Watch App                 # Contains Niks Watch Apps
+    ├── NiksApp                             # Contains Niks Root Project
+    ├── ContentView                         # Contains Preview Page Logic with HomeView
     ├── Component                           # Contains Reusable & Recyclable Components
     │   ├── BubbleDialogueComponent.swift
     │   ├── BubblePopupComponent.swift
@@ -51,35 +55,42 @@ Here is the file and folder structure for Niks:
     │       ├── Dialogues.swift
     │       └── Shapes.swift             
     │
-    ├── Component                   
-    │   ├── FruitCardComponent.swift        # Berisikan Komponen Fruit Onboarding Card (OnBoardingView)
-    │   ├── StartButtonComponent.swift      # Berisikan Komponen Start Button (OnBoardingView)
-    │   ├── FruitRowComponent.swift         # Berisikan Komponen Fruit Row (ContentView)
-    │   ├── FruitHeaderComponent.swift      # Berisikan Komponen Fruit Header (FruitDetailView)
-    │   ├── SourceLinkComponent.swift       # Berisikan Komponen Source Link (FruitDetailView)
-    │   ├── FruitNutrientsComponent.swift   # Berisikan Komponen Fruit Nutrient Value (FruitDetailView)
-    │   ├── SettingLabelComponent.swift     # Berisikan Komponen Settings Label (SettingsView)
-    │   └── SettingRowComponent.swift       # Berisikan Komponen Settings Row (SettingsView)
+    ├── Model                               # Contains Data & Their Type for Each Content
+    │   ├── AnimatorModel.swift       
+    │   ├── AudioPlayerModel.swift      
+    │   └── MusicModel.swift       
     │
-    └── View                     
-        ├── OnBoardingView.swift            # Tampilan OnBoarding Page
-        ├── Tutti_Fruity.swift              # Root Project: Konfigurasi ContentView
-        ├── ContentView.swift               # Tampilan Home Page
-        ├── FruitDetailView.swift           # Tampilan Detail Page for Each Fruit
-        └── SettingsView.swift              # Tampilan Halaman Setting
+    ├── ViewModel                           # Contains Reusable General Function
+    │   └── AnimatorViewModel.swift
+    │
+    └── View                                # Contains Reusable Main Apps View
+        ├── StretchPreview.swift
+        ├── LoadingView.swift
+        ├── GetReadyView.swift
+        ├── TutorialView.swift
+        ├── StretchingView.swift
+        ├── HomePageView.swift
+        ├── SleepView.swift    
+        ├── SplashScreenView.swift    
+        └── TotallySleepView.swift          
 
 <!-- List of Features -->
 # Features:
 
 * Yoga (Ujayyi Breath Method)
-* Countdown Timer
+* Yoga Tutorial Movement
+* Voice Over Yoga Tutorial
+* Interactive Sleeping Music and Background
+* Sleep Notifications (Daily Sleep Reminder at 10.00 P.M.)
+* Yoga Countdown Timer
 * Interactive Progress Bar
+* Interactive Character & Object
+* Shimmering & Pulse Animation Object
+* Close the Apps Automatically after 15 Minutes
 * Reusable Components
 * All Stacks (HStack, VStack, ZStack)
 * Custom Modifier (Extension)
-* User Notifications (Daily Notification at 10.00 P.M.)
 * User Notifications Permission
-* Shimmering & Pulse Animation Object
 * Watch Connectivity
 * AVKit for Apps Default Music
 * Splash Screen
