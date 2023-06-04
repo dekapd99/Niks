@@ -39,7 +39,7 @@ struct ContentView: View {
                 }
         }else {
             if !viewModel.end {
-                StretchPreview(viewModel: viewModel,
+                StretchingPreview(viewModel: viewModel,
                                previewStretch: $previewStretch)
                 .onAppear{
                     viewModel.prevPage = 10

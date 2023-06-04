@@ -26,6 +26,8 @@
 		2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2A3D17472A046D9B001EC0C0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */; };
 		2A5D9B6B2A08736100E5E569 /* AnimatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5D9B6A2A08736100E5E569 /* AnimatorViewModel.swift */; };
+		2A680D5A2A2C90A400F20C6C /* ProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A680D592A2C90A400F20C6C /* ProgressComponent.swift */; };
+		2A680D5C2A2C910E00F20C6C /* StretchingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A680D5B2A2C910E00F20C6C /* StretchingPreview.swift */; };
 		2AAF4E2629F94F5600266573 /* BackgroundExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */; };
 		2AC5A1E62A0726FE00B9FF65 /* VO_CorpsePose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1DD2A0726FD00B9FF65 /* VO_CorpsePose.mp3 */; };
 		2AC5A1E72A0726FE00B9FF65 /* VO_LegsChair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5A1DE2A0726FD00B9FF65 /* VO_LegsChair.mp3 */; };
@@ -41,8 +43,6 @@
 		2ADF32852A035AD300F39075 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF32842A035AD300F39075 /* HomePageView.swift */; };
 		2AE2B4522A06163A00496394 /* TotallySleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2B4512A06163A00496394 /* TotallySleepView.swift */; };
 		2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE502B129F945F9000D7C06 /* ExampleView.swift */; };
-		761AD2652A013C51004D9415 /* StretchPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2642A013C51004D9415 /* StretchPreview.swift */; };
-		761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */; };
 		764105302A063D3D00B97086 /* AudioPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C17DD2A03941A0062E051 /* AudioPlayerModel.swift */; };
 		7676A3AB2A03EED300254520 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3AA2A03EED300254520 /* ConnectivityManager.swift */; };
 		7676A3B32A03F3F000254520 /* NiksWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676A3B22A03F3F000254520 /* NiksWatchApp.swift */; };
@@ -112,6 +112,8 @@
 		2A3D173F2A0462D8001EC0C0 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2A5D9B6A2A08736100E5E569 /* AnimatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorViewModel.swift; sourceTree = "<group>"; };
+		2A680D592A2C90A400F20C6C /* ProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComponent.swift; sourceTree = "<group>"; };
+		2A680D5B2A2C910E00F20C6C /* StretchingPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingPreview.swift; sourceTree = "<group>"; };
 		2AAF4E2529F94F5600266573 /* BackgroundExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundExampleView.swift; sourceTree = "<group>"; };
 		2AC5A1DD2A0726FD00B9FF65 /* VO_CorpsePose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_CorpsePose.mp3; sourceTree = "<group>"; };
 		2AC5A1DE2A0726FD00B9FF65 /* VO_LegsChair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VO_LegsChair.mp3; sourceTree = "<group>"; };
@@ -127,8 +129,6 @@
 		2ADF32842A035AD300F39075 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		2AE2B4512A06163A00496394 /* TotallySleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotallySleepView.swift; sourceTree = "<group>"; };
 		2AE502B129F945F9000D7C06 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
-		761AD2642A013C51004D9415 /* StretchPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StretchPreview.swift; path = Niks/StretchPreview.swift; sourceTree = SOURCE_ROOT; };
-		761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarComponent.swift; path = Niks/ProgressBarComponent.swift; sourceTree = SOURCE_ROOT; };
 		7676A3AA2A03EED300254520 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		7676A3B02A03F3F000254520 /* NiksWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiksWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7676A3B22A03F3F000254520 /* NiksWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiksWatchApp.swift; sourceTree = "<group>"; };
@@ -219,7 +219,6 @@
 		2A097F2F29F7884C00ED9644 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				761AD2642A013C51004D9415 /* StretchPreview.swift */,
 				2A1934B729FFF88B00D6C5F5 /* LoadingView.swift */,
 				2A0BABD22A000BE40040650C /* GetReadyView.swift */,
 				2A0BABD42A000DC40040650C /* TutorialView.swift */,
@@ -228,6 +227,7 @@
 				2A3D173F2A0462D8001EC0C0 /* SleepView.swift */,
 				2A3D17452A046D9B001EC0C0 /* SplashScreenView.swift */,
 				2AE2B4512A06163A00496394 /* TotallySleepView.swift */,
+				2A680D5B2A2C910E00F20C6C /* StretchingPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,13 +245,13 @@
 		2A097F3129F7885C00ED9644 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				761AD2662A013C5E004D9415 /* ProgressBarComponent.swift */,
 				DD96F93129FA19DB0053790D /* ButtonComponent.swift */,
 				DD93645629FA3370009BAFEE /* TimerComponent.swift */,
 				DD93645829FA345F009BAFEE /* SidebarComponent.swift */,
 				2A1934B129FFF18400D6C5F5 /* LoadingComponent.swift */,
 				2A0BABD029FFFE450040650C /* BubbleDialogueComponent.swift */,
 				2ADF327D2A03499000F39075 /* BubblePopupComponent.swift */,
+				2A680D592A2C90A400F20C6C /* ProgressComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -463,10 +463,11 @@
 				2A1934A829FFD5E000D6C5F5 /* FontStyle.swift in Sources */,
 				2A3D17462A046D9B001EC0C0 /* SplashScreenView.swift in Sources */,
 				2A1934B029FFEC4A00D6C5F5 /* IconStyle.swift in Sources */,
+				2A680D5A2A2C90A400F20C6C /* ProgressComponent.swift in Sources */,
 				2ADF32822A034C7100F39075 /* Shapes.swift in Sources */,
-				761AD2672A013C5E004D9415 /* ProgressBarComponent.swift in Sources */,
 				DD334B512A00ADF2001A935A /* MusicModel.swift in Sources */,
 				2A3D17402A0462D8001EC0C0 /* SleepView.swift in Sources */,
+				2A680D5C2A2C910E00F20C6C /* StretchingPreview.swift in Sources */,
 				DD334B5E2A00D1A9001A935A /* StretchingView.swift in Sources */,
 				DD334B5C2A00C91E001A935A /* Dialogues.swift in Sources */,
 				2A1934B829FFF88B00D6C5F5 /* LoadingView.swift in Sources */,
@@ -487,7 +488,6 @@
 				2AE502B229F945F9000D7C06 /* ExampleView.swift in Sources */,
 				2A0BABD32A000BE40040650C /* GetReadyView.swift in Sources */,
 				2A0BABD92A007EDD0040650C /* ImageStyle.swift in Sources */,
-				761AD2652A013C51004D9415 /* StretchPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
